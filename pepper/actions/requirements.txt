@@ -1,0 +1,4 @@
+rasa
+unidecode
+requests>= 2.25.0
+googletrans

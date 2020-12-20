@@ -1,0 +1,444 @@
+# ======================================================================
+
+define
+
+# ----------------------------------------------------------------------
+
+name sub attribute,
+  datatype string;
+
+# ----------------------------------------------------------------------
+
+office sub attribute,
+  datatype string;
+
+person sub entity,
+  has name,
+  has office;
+
+# ----------------------------------------------------------------------
+
+professor sub person,
+  plays teacher;
+
+# ----------------------------------------------------------------------
+
+year sub attribute,
+  datatype long;
+
+series sub attribute,
+  datatype string;
+
+groupName sub attribute,
+  datatype string;
+
+student sub person,
+  has year,
+  has series,
+  has groupName;
+
+# ----------------------------------------------------------------------
+
+floor sub attribute,
+  datatype string;
+
+room sub entity,
+  has name,
+  has floor,
+  plays location;
+
+# ----------------------------------------------------------------------
+
+course sub entity,
+  has name,
+  plays subject;
+
+# ----------------------------------------------------------------------
+
+class_type sub attribute,
+  datatype string;
+
+group_name sub attribute,
+  datatype string;
+
+start_date sub attribute,
+  datatype date;
+
+end_date sub attribute,
+  datatype date;
+
+recurrence sub attribute,
+  datatype string;
+
+last_date sub attribute,
+  datatype date;
+
+class sub relation,
+  relates subject,
+  relates teacher,
+  relates location,
+  has class_type,
+  has group_name,
+  has start_date,
+  has end_date,
+  has recurrence,
+  has last_date;
+
+# ----------------------------------------------------------------------
+
+direction sub attribute,
+  datatype string;
+
+map sub relation,
+  relates location,
+  has direction;
+
+# ======================================================================
+# Data
+
+insert
+
+# ----------------------------------------------------------------------
+
+$professor-adela-almasi                  isa professor, has name "Adela Almasi",                  has office "?";
+$professor-adina-magda-florea            isa professor, has name "Adina Magda Florea",            has office "?";
+$professor-adrian-surpateanu             isa professor, has name "Adrian Surpateanu",             has office "?";
+$professor-adriana-cristina-draghici     isa professor, has name "Adriana Cristina Drăghici",     has office "?";
+$professor-alexandra-stefania-ghita      isa professor, has name "Alexandra Ștefania Ghiță",      has office "?";
+$professor-alexandru-boicea              isa professor, has name "Alexandru Boicea",              has office "?";
+$professor-alexandru-egner               isa professor, has name "Alexandru Egner",               has office "?";
+$professor-alexandru-gradinaru           isa professor, has name "Alexandru Gradinaru",           has office "?";
+$professor-alexandru-herisanu            isa professor, has name "Alexandru Herisanu",            has office "?";
+$professor-alexandru-olteanu             isa professor, has name "Alexandru Olteanu",             has office "?";
+$professor-alexandru-predescu            isa professor, has name "Alexandru Predescu",            has office "PR604";
+$professor-alexandru-radovici            isa professor, has name "Alexandru Radovici",            has office "?";
+$professor-alin-dragos-bogdan-moldoveanu isa professor, has name "Alin Dragos Bogdan Moldoveanu", has office "?";
+$professor-anca-morar                    isa professor, has name "Anca Morar",                    has office "?";
+$professor-andreea-urzica                isa professor, has name "Andreea Urzica",                has office "?";
+$professor-andrei-cristian-lambru        isa professor, has name "Andrei Cristian Lambru",        has office "?";
+$professor-andrei-horia-mogos            isa professor, has name "Andrei Horia Mogos",            has office "?";
+$professor-andrei-olaru                  isa professor, has name "Andrei Olaru",                  has office "PR307";
+$professor-andrei-voinescu               isa professor, has name "Andrei Voinescu",               has office "?";
+$professor-carmen-odubasteanu            isa professor, has name "Carmen Odubasteanu",            has office "?";
+$professor-catalin-leordeanu             isa professor, has name "Catalin Leordeanu",             has office "?";
+$professor-catalin-morosan               isa professor, has name "Catalin Morosan",               has office "?";
+$professor-ciprian-dobre                 isa professor, has name "Ciprian Dobre",                 has office "PR601/PR605";
+$professor-ciprian-octavian-truica       isa professor, has name "Ciprian-Octavian Truica",       has office "PR608";
+$professor-claudia-ifrim                 isa professor, has name "Claudia Ifrim",                 has office "?";
+$professor-constantin-eduard-st-niloiu   isa professor, has name "Constantin Eduard Stăniloiu",   has office "?";
+$professor-constantin-ilas               isa professor, has name "Constantin Ilas",               has office "?";
+$professor-cornel-popescu                isa professor, has name "Cornel Popescu",                has office "?";
+$professor-costin-anton-boiangiu         isa professor, has name "Costin-Anton Boiangiu",         has office "?";
+$professor-costin-gabriel-chiru          isa professor, has name "Costin Gabriel Chiru",          has office "?";
+$professor-cristina-stan                 isa professor, has name "Cristina Stan",                 has office "?";
+$professor-costin-raiciu                 isa professor, has name "Costin Raiciu",                 has office "?";
+$professor-cristian-chilipirea           isa professor, has name "Cristian Chilipirea",           has office "?";
+$professor-cristian-gratie               isa professor, has name "Cristian Gratie",               has office "?";
+$professor-dan-dragomir                  isa professor, has name "Dan Dragomir",                  has office "?";
+$professor-dan-schrager                  isa professor, has name "Dan Schrager",                  has office "PR302";
+$professor-dan-stefan-tudose             isa professor, has name "Dan Stefan Tudose",             has office "?";
+$professor-daniel-popeanga               isa professor, has name "Daniel Popeanga",               has office "?";
+$professor-daniel-rosner                 isa professor, has name "Daniel Rosner",                 has office "?";
+$professor-decebal-popescu               isa professor, has name "Decebal Popescu",               has office "PR602";
+$professor-drago-georgian-corl-tescu     isa professor, has name "Dragoș Georgian Corlătescu",    has office "?";
+$professor-dragos-stefan-niculescu       isa professor, has name "Dragos Stefan Niculescu",       has office "PR203";
+$professor-dumitru-clementin-cercel      isa professor, has name "Dumitru Clementin Cercel",      has office "?";
+$professor-dumitru-cristian-tranc        isa professor, has name "Dumitru-Cristian Trancă",       has office "?";
+$professor-elena-simona-apostol          isa professor, has name "Elena Simona Apostol",          has office "PR608";
+$professor-eliana-dina-andreica          isa professor, has name "Eliana Dina Andreica",          has office "?";
+$professor-emil-ioan-slusanschi          isa professor, has name "Emil Ioan Slusanschi",          has office "?";
+$professor-emilian-radoi                 isa professor, has name "Emilian Radoi",                 has office "PR702";
+$professor-florica-moldoveanu            isa professor, has name "Florica Moldoveanu",            has office "?";
+$professor-florin-pop                    isa professor, has name "Florin Pop",                    has office "PR601";
+$professor-florin-radulescu              isa professor, has name "Florin Radulescu",              has office "?";
+$professor-francisc-iacob                isa professor, has name "Francisc Iacob",                has office "?";
+$professor-gavril-godza                  isa professor, has name "Gavril Godza",                  has office "?";
+$professor-george-cristian-p-tru         isa professor, has name "George Cristian Pătru",         has office "?";
+$professor-george-iordache               isa professor, has name "George Iordache",               has office "?";
+$professor-george-milescu                isa professor, has name "George Milescu",                has office "?";
+$professor-george-pantelimon-popescu     isa professor, has name "George Pantelimon Popescu",     has office "?";
+$professor-george-sarbu                  isa professor, has name "George Sarbu",                  has office "?";
+$professor-giorgiana-violeta-vl-sceanu   isa professor, has name "Giorgiana Violeta Vlăsceanu",   has office "?";
+$professor-irina-mocanu                  isa professor, has name "Irina Mocanu",                  has office "?";
+$professor-iuliu-vasilescu               isa professor, has name "Iuliu Vasilescu",               has office "?";
+$professor-laura-cristina-ruse           isa professor, has name "Laura Cristina Ruse",           has office "?";
+$professor-laura-mihaela-vasilescu       isa professor, has name "Laura Mihaela Vasilescu",       has office "?";
+$professor-laurentiu-cristian-duca       isa professor, has name "Laurentiu-Cristian Duca",       has office "?";
+$professor-liliana-grigoriu              isa professor, has name "Liliana Grigoriu",              has office "?";
+$professor-liviana-nicoleta-tudor        isa professor, has name "Liviana Nicoleta Tudor",        has office "?";
+$professor-lorina-negreanu               isa professor, has name "Lorina Negreanu",               has office "?";
+$professor-lucian-mogosanu               isa professor, has name "Lucian Mogosanu",               has office "PR708";
+$professor-marian-iordache               isa professor, has name "Marian Iordache",               has office "?";
+$professor-mariana-mocanu                isa professor, has name "Mariana Mocanu",                has office "?";
+$professor-marios-omar-choudary          isa professor, has name "Marios Omar Choudary",          has office "PR203";
+$professor-marius-dorian-zaharia         isa professor, has name "Marius Dorian Zaharia",         has office "?";
+$professor-marius-leordeanu              isa professor, has name "Marius Leordeanu",              has office "?";
+$professor-matei-popovici                isa professor, has name "Matei Popovici",                has office "?";
+$professor-mihaela-balint                isa professor, has name "Mihaela Balint",                has office "?";
+$professor-mihai-carabas                 isa professor, has name "Mihai Carabas",                 has office "?";
+$professor-mihai-daniel-chiroiu          isa professor, has name "Mihai Daniel Chiroiu",          has office "PR702";
+$professor-mihai-dascalu                 isa professor, has name "Mihai Dascalu",                 has office "PR301/PR306";
+$professor-mihnea-muraru                 isa professor, has name "Mihnea Muraru",                 has office "?";
+$professor-mircea-bardac                 isa professor, has name "Mircea Bardac",                 has office "?";
+$professor-nicolae-tapus                 isa professor, has name "Nicolae Tapus",                 has office "?";
+$professor-nirvana-popescu               isa professor, has name "Nirvana Popescu",               has office "PR602";
+$professor-oana-balan                    isa professor, has name "Oana Balan",                    has office "PR701";
+$professor-oana-ferche                   isa professor, has name "Oana Ferche",                   has office "?";
+$professor-octavian-grigorescu           isa professor, has name "Octavian Grigorescu",           has office "?";
+$professor-paul-flondor                  isa professor, has name "Paul Flondor",                  has office "?";
+$professor-radu-iacob                    isa professor, has name "Radu Iacob",                    has office "?";
+$professor-razvan-deaconescu             isa professor, has name "Razvan Deaconescu",             has office "PR708";
+$professor-razvan-musaloiu               isa professor, has name "Razvan Musaloiu",               has office "?";
+$professor-razvan-rughinis               isa professor, has name "Razvan Rughinis",               has office "?";
+$professor-razvan-tataroiu               isa professor, has name "Razvan Tataroiu",               has office "?";
+$professor-serban-radu                   isa professor, has name "Serban Radu",                   has office "?";
+$professor-sergiu-costea                 isa professor, has name "Sergiu Costea",                 has office "?";
+$professor-silvia-cristina-stegaru       isa professor, has name "Silvia Cristina Stegaru",       has office "?";
+$professor-sorin-ciolofan                isa professor, has name "Sorin Ciolofan",                has office "?";
+$professor-sorin-ciureanu                isa professor, has name "Sorin Ciureanu",                has office "?";
+$professor-stefan-ruseti                 isa professor, has name "Stefan Ruseti",                 has office "PR301";
+$professor-stefan-trausan-matu           isa professor, has name "Stefan Trausan Matu",           has office "?";
+$professor-traian-popeea                 isa professor, has name "Traian Popeea",                 has office "?";
+$professor-traian-rebedea                isa professor, has name "Traian Rebedea",                has office "?";
+$professor-tudor-berariu                 isa professor, has name "Tudor Berariu",                 has office "?";
+$professor-valentin-cristea              isa professor, has name "Valentin Cristea",              has office "?";
+$professor-valentin-lungu                isa professor, has name "Valentin Lungu",                has office "?";
+$professor-victor-asavei                 isa professor, has name "Victor Asavei",                 has office "?";
+$professor-vlad-ciobanu                  isa professor, has name "Vlad Ciobanu",                  has office "PR602";
+$professor-vlad-posea                    isa professor, has name "Vlad Posea",                    has office "?";
+$professor-voichita-iancu                isa professor, has name "Voichita Iancu",                has office "?";
+
+# ----------------------------------------------------------------------
+
+$an-030                isa room, has name "AN 030";
+$an-213                isa room, has name "AN 213";
+$ec-105                isa room, has name "EC 105";
+$eg-105                isa room, has name "EG 105";
+$eg-403                isa room, has name "EG 403";
+
+$pr-001                isa room, has name "PR 001", has floor "parter";
+$pr-002                isa room, has name "PR 002";
+$pr-003                isa room, has name "PR 003";
+$grup-sanitar-1-parter isa room, has name "grup sanitar 1 - parter";
+$grup-sanitar-2-parter isa room, has name "grup sanitar 2 - parter";
+$terasa-etaj-1         isa room, has name "terasa etaj 1";
+$pr-108                isa room, has name "PR 108";
+$pr-107                isa room, has name "PR 107";
+$pr-106                isa room, has name "PR 106";
+$pr-105                isa room, has name "PR 105";
+$pr-104                isa room, has name "PR 104";
+$pr-103                isa room, has name "PR 103";
+$pr-103b               isa room, has name "PR 103b";
+$pr-102                isa room, has name "PR 102";
+$pr-101                isa room, has name "PR 101";
+$grup-sanitar-1-etaj-1 isa room, has name "grup sanitar 1 - etaj 1";
+$grup-sanitar-2-etaj-1 isa room, has name "grup sanitar 2 - etaj 1";
+$pr-208                isa room, has name "PR 208";
+$pr-207                isa room, has name "PR 207";
+$pr-206                isa room, has name "PR 206";
+$pr-205                isa room, has name "PR 205";
+$pr-204                isa room, has name "PR 204";
+$pr-203                isa room, has name "PR 203";
+$pr-202                isa room, has name "PR 202";
+$pr-201                isa room, has name "PR 201";
+$grup-sanitar-1-etaj-2 isa room, has name "grup sanitar 1 - etaj 2";
+$grup-sanitar-2-etaj-2 isa room, has name "grup sanitar 2 - etaj 2";
+$pr-308                isa room, has name "PR 308";
+$pr-307                isa room, has name "PR 307";
+$pr-306                isa room, has name "PR 306";
+$pr-305                isa room, has name "PR 305";
+$pr-304                isa room, has name "PR 304";
+$pr-303                isa room, has name "PR 303";
+$pr-302                isa room, has name "PR 302";
+$pr-301                isa room, has name "PR 301";
+$grup-sanitar-1-etaj-3 isa room, has name "grup sanitar 1 - etaj 3";
+$grup-sanitar-2-etaj-3 isa room, has name "grup sanitar 2 - etaj 3";
+$pr-408                isa room, has name "PR 408";
+$pr-407                isa room, has name "PR 407";
+$pr-406                isa room, has name "PR 406";
+$pr-405                isa room, has name "PR 405";
+$pr-404                isa room, has name "PR 404";
+$pr-403                isa room, has name "PR 403";
+$pr-402                isa room, has name "PR 402";
+$pr-401                isa room, has name "PR 401";
+$grup-sanitar-etaj-4   isa room, has name "grup sanitar - etaj 4";
+$pr-508                isa room, has name "PR 508";
+$pr-507                isa room, has name "PR 507";
+$pr-506                isa room, has name "PR 506";
+$pr-505                isa room, has name "PR 505";
+$pr-504                isa room, has name "PR 504";
+$pr-503                isa room, has name "PR 503";
+$pr-502                isa room, has name "PR 502";
+$pr-501                isa room, has name "PR 501";
+$grup-sanitar-etaj-5   isa room, has name "grup sanitar - etaj 5";
+$pr-608                isa room, has name "PR 608";
+$pr-607                isa room, has name "PR 607";
+$pr-606                isa room, has name "PR 606";
+$pr-605                isa room, has name "PR 605";
+$pr-604                isa room, has name "PR 604";
+$pr-603                isa room, has name "PR 603";
+$pr-602                isa room, has name "PR 602";
+$pr-601                isa room, has name "PR 601";
+$grup-sanitar-etaj-6   isa room, has name "grup sanitar - etaj 6";
+$pr-708                isa room, has name "PR 708";
+$pr-707                isa room, has name "PR 707";
+$pr-706                isa room, has name "PR 706";
+$pr-705                isa room, has name "PR 705";
+$pr-704                isa room, has name "PR 704";
+$pr-703                isa room, has name "PR 703";
+$pr-702                isa room, has name "PR 702";
+$pr-701                isa room, has name "PR 701";
+$grup-sanitar-etaj-7   isa room, has name "grup sanitar - etaj 7";
+
+# ----------------------------------------------------------------------
+
+$course-AD   isa course, has name "Achizitii de Date";
+$course-APD  isa course, has name "Algoritmi Paraleli si Distribuiti";
+$course-AA   isa course, has name "Analiza Algoritmilor";
+$course-ASC  isa course, has name "Arhitectura Sistemelor de Calcul";
+$course-BD1  isa course, has name "Baze de Date 1";
+$course-ELTH isa course, has name "Bazele Electrotehnicii";
+$course-B    isa course, has name "Biochimie";
+$course-CN1  isa course, has name "Calculatoare Numerice 1";
+$course-CN2  isa course, has name "Calculatoare Numerice 2";
+$course-CC   isa course, has name "Cultura si Civilizatie";
+$course-DP   isa course, has name "Doctrine Politice";
+$course-EF   isa course, has name "Economia Firmei";
+$course-EG   isa course, has name "Economie Generala";
+$course-ED   isa course, has name "Electronica Digitala";
+$course-EEA  isa course, has name "Elemente de Electronica Analogica";
+$course-EGC  isa course, has name "Elemente de Grafica pe Calculator";
+$course-En   isa course, has name "Engleza";
+$course-FCT  isa course, has name "Filosofia Culturii Tehnice";
+$course-FC   isa course, has name "Filosofie Cognitivista";
+$course-F    isa course, has name "Fizica";
+$course-FMAC isa course, has name "Fizica Moderna Asistata de Calculator";
+$course-Fr   isa course, has name "Franceza";
+$course-G    isa course, has name "Germana";
+$course-GI   isa course, has name "Grafica Inginereasca";
+$course-IC   isa course, has name "Ingineria Calculatoarelor";
+$course-IP   isa course, has name "Ingineria Programelor";
+$course-IV   isa course, has name "Instrumentatie Virtuala";
+$course-II   isa course, has name "Instrumente Informatice";
+$course-II   isa course, has name "Introducere in Informatica";
+$course-IF   isa course, has name "Istoria Filosofiei";
+$course-IR   isa course, has name "Istoria Religiilor";
+$course-LS1  isa course, has name "Limba Straina 1";
+$course-LS2  isa course, has name "Limba Straina 2";
+$course-LS3  isa course, has name "Limba Straina 3";
+$course-LS4  isa course, has name "Limba Straina 4";
+$course-LFA  isa course, has name "Limbaje Formale si Automate";
+$course-L    isa course, has name "Logica";
+$course-M1   isa course, has name "Matematica 1";
+$course-M2   isa course, has name "Matematica 2";
+$course-M3   isa course, has name "Matematica 3";
+$course-M    isa course, has name "Mecanica";
+$course-MN   isa course, has name "Metode Numerice";
+$course-PP   isa course, has name "Paradigme de Programare";
+$course-Poli isa course, has name "Politologie";
+$course-PI   isa course, has name "Prelucrarea Informatiei";
+$course-PLA  isa course, has name "Programare in Limbaj de Asamblare";
+$course-POO  isa course, has name "Programare Orientata pe Obiecte";
+$course-PC   isa course, has name "Programarea Calculatoarelor";
+$course-PL   isa course, has name "Proiectare Logica";
+$course-PA   isa course, has name "Proiectarea Algoritmilor";
+$course-PM   isa course, has name "Proiectarea cu Microprocesoare";
+$course-PC   isa course, has name "Protocoale de Comunicatii";
+$course-Psi  isa course, has name "Psihoinventica";
+$course-RL   isa course, has name "Retele Locale";
+$course-SO   isa course, has name "Sisteme de Operare";
+$course-SD   isa course, has name "Structuri de Date";
+$course-TC   isa course, has name "Tehnici de Comunicare";
+$course-TS   isa course, has name "Teoria Sistemelor";
+$course-USO  isa course, has name "Utilizarea Sistemelor de Operare";
+
+# ----------------------------------------------------------------------
+
+$class-ELTH-1CB-1 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T08:00:00, has end_date 2020-02-20T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-ELTH-1CB-2 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-25T10:00:00, has end_date 2020-02-25T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-En-311CB   (subject: $course-En,                                                 location: $pr-103b) isa class, has class_type "seminar",   has group_name "311CB",  has start_date 2020-02-17T14:00:00, has end_date 2020-02-17T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-F-1CB      (subject: $course-F,    teacher: $professor-cristina-stan,            location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T14:00:00, has end_date 2020-02-20T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-M3-1CB-1   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T10:00:00, has end_date 2020-02-20T12:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-M3-1CB-2   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T10:00:00, has end_date 2020-03-18T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-M3-311CB   (subject: $course-M3,                                                 location: $an-213)  isa class, has class_type "seminar",   has group_name "311CB",  has start_date 2020-02-17T12:00:00, has end_date 2020-02-17T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-MN-1CB-1   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-27T12:00:00, has end_date 2020-02-27T14:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-MN-1CB-2   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T08:00:00, has end_date 2020-02-18T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-MN-312CB   (subject: $course-MN,                                                 location: $eg-403)  isa class, has class_type "laborator", has group_name "312CB",  has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T08:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-SD-1CB-1   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T12:00:00, has end_date 2020-02-20T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-SD-1CB-2   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T12:00:00, has end_date 2020-02-18T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-SD-312CBa  (subject: $course-SD,                                                 location: $eg-105)  isa class, has class_type "laborator", has group_name "312CBa", has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+
+# ----------------------------------------------------------------------
+
+$loc-pr-001                  ( location: $pr-001                ) isa map, has direction "vis-a-vis de grupurile sanitare", has direction "accesibil din holul principal";
+$loc-pr-002                  ( location: $pr-002                ) isa map, has direction "langa grupul sanitar dinspre campus", has direction "vis-a-vis de scarile de urgenta";
+$loc-pr-003                  ( location: $pr-003                ) isa map, has direction "langa camera administrativa", has direction "la intrarea dinspre bulevardul Iuliu Maniu pe partea dreapta";
+$loc-grup-sanitar-1-parter   ( location: $grup-sanitar-1-parter ) isa map, has direction "accesibil din holul principal", has direction "vis-a-vis de sala PR001";
+$loc-grup-sanitar-2-parter   ( location: $grup-sanitar-2-parter ) isa map, has direction "la intrarea dinspre campus pe partea stanga";
+$loc-terasa-etaj-1           ( location: $terasa-etaj-1         ) isa map, has direction "accesibil din holul principal", has direction "la iesirea din lift pe partea dreapta";
+$loc-pr-108                  ( location: $pr-108                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-107                  ( location: $pr-107                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-106                  ( location: $pr-106                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 107";
+$loc-pr-105                  ( location: $pr-105                ) isa map, has direction "intre sala 106 si grupul sanitar", has direction "pe partea opusa lifturilor";
+$loc-pr-104                  ( location: $pr-104                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii", has direction "in fata grupului sanitar";
+$loc-pr-103                  ( location: $pr-103                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-102                  ( location: $pr-102                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-101                  ( location: $pr-101                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+$loc-grup-sanitar-1-etaj-1   ( location: $grup-sanitar-1-etaj-1 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-grup-sanitar-2-etaj-1   ( location: $grup-sanitar-1-etaj-1 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "pe colt";
+$loc-pr-208                  ( location: $pr-208                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-207                  ( location: $pr-207                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-206                  ( location: $pr-206                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 207";
+$loc-pr-205                  ( location: $pr-205                ) isa map, has direction "intre sala 206 si grupul sanitar", has direction "pe partea opusa lifturilor";
+$loc-pr-204                  ( location: $pr-204                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii", has direction "in fata grupului sanitar";
+$loc-pr-203                  ( location: $pr-203                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-202                  ( location: $pr-202                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-201                  ( location: $pr-201                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+$loc-grup-sanitar-1-etaj-2   ( location: $grup-sanitar-1-etaj-2 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-grup-sanitar-2-etaj-2   ( location: $grup-sanitar-1-etaj-2 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "pe colt";
+$loc-pr-308                  ( location: $pr-308                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-307                  ( location: $pr-307                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-306                  ( location: $pr-306                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 307";
+$loc-pr-305                  ( location: $pr-305                ) isa map, has direction "intre sala 306 si grupul sanitar", has direction "pe partea opusa lifturilor";
+$loc-pr-304                  ( location: $pr-304                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii", has direction "in fata grupului sanitar";
+$loc-pr-303                  ( location: $pr-303                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-302                  ( location: $pr-302                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-301                  ( location: $pr-301                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+$loc-grup-sanitar-1-etaj-3   ( location: $grup-sanitar-1-etaj-3 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-grup-sanitar-2-etaj-3   ( location: $grup-sanitar-1-etaj-3 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "pe colt";
+$loc-pr-408                  ( location: $pr-408                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-407                  ( location: $pr-407                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-406                  ( location: $pr-406                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 407";
+$loc-pr-405                  ( location: $pr-405                ) isa map, has direction "langa sala 406", has direction "pe partea opusa lifturilor";
+$loc-pr-404                  ( location: $pr-404                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii", has direction "in fata grupului sanitar";
+$loc-pr-403                  ( location: $pr-403                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-402                  ( location: $pr-402                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-401                  ( location: $pr-401                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+#$loc-grup-sanitar-etaj-4     ( location: $grup-sanitar-1-etaj-4 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-pr-508                  ( location: $pr-508                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-507                  ( location: $pr-507                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-506                  ( location: $pr-506                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 507";
+$loc-pr-505                  ( location: $pr-505                ) isa map, has direction "langa sala 506", has direction "pe partea opusa lifturilor";
+$loc-pr-504                  ( location: $pr-504                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii";
+$loc-pr-503                  ( location: $pr-503                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-502                  ( location: $pr-502                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-501                  ( location: $pr-501                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+#$loc-grup-sanitar-etaj-5     ( location: $grup-sanitar-1-etaj-5 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-pr-608                  ( location: $pr-608                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-607                  ( location: $pr-607                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-606                  ( location: $pr-606                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 607";
+$loc-pr-605                  ( location: $pr-605                ) isa map, has direction "langa sala 606", has direction "pe partea opusa lifturilor";
+$loc-pr-604                  ( location: $pr-604                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii";
+$loc-pr-603                  ( location: $pr-603                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-602                  ( location: $pr-602                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-601                  ( location: $pr-601                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+#$loc-grup-sanitar-etaj-6     ( location: $grup-sanitar-1-etaj-6 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";
+$loc-pr-708                  ( location: $pr-708                ) isa map, has direction "vis-a-vis de lift", has direction "in fata liftului";
+$loc-pr-707                  ( location: $pr-707                ) isa map, has direction "la iesirea din lift pe partea stanga";
+$loc-pr-706                  ( location: $pr-706                ) isa map, has direction "la iesirea din lift pe partea stanga", has direction "langa sala 707";
+$loc-pr-705                  ( location: $pr-705                ) isa map, has direction "langa sala 706", has direction "pe partea opusa lifturilor";
+$loc-pr-704                  ( location: $pr-704                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "in coltul cladirii";
+$loc-pr-703                  ( location: $pr-703                ) isa map, has direction "faci dreapta cand iesi din lift", has direction "vis-a-vis de grupul sanitar";
+$loc-pr-702                  ( location: $pr-702                ) isa map, has direction "sala din dreapta liftului";
+$loc-pr-701                  ( location: $pr-701                ) isa map, has direction "sala din dreapta liftului", has direction "in coltul din partea dreapta";
+#$loc-grup-sanitar-etaj-7     ( location: $grup-sanitar-1-etaj-7 ) isa map, has direction "faci dreapta cum iesi din lift", has direction "langa lift";

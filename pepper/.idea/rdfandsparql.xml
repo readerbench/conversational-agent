@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RDFAndSPARQL.SPARQLEndpointManager">
+    <option name="endpoints">
+      <map>
+        <entry key="05980478-226c-44e2-bbcd-69e4e7d3a488">
+          <value>
+            <SPARQLEndpointConfig>
+              <option name="id" value="05980478-226c-44e2-bbcd-69e4e7d3a488" />
+              <option name="name" value="GraphDB" />
+              <option name="url" value="http://localhost:7200/repositories/pepper" />
+            </SPARQLEndpointConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

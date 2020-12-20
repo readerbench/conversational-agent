@@ -1,0 +1,102 @@
+version: "2.0"
+
+intents:
+  - fill_class_type
+  - fill_group_name
+  - find_professor
+  - find_room
+  - find_schedule_with_class_and_class_type
+  - find_schedule_with_course
+  - find_schedule_with_course_and_class_and_class_type
+  - general_knowledge
+  - greet
+  - thanks
+
+entities:
+  - class_type
+  - course
+  - entity
+  - group_name
+  - professor
+  - room
+
+actions:
+  - action_find_class
+  - action_find_professor
+  - action_find_room
+  - action_find_schedule
+  - action_general_knowledge
+
+forms:
+  get_next_input:
+    input:
+      - type: from_text
+      - intent: None
+
+slots:
+  course:
+    type: text
+  group_name:
+    type: text
+  class_type:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hei, cu ce te pot ajuta?"
+    - text: "Buna. Cu ce pot sa-ti fiu de ajutor?"
+    - text: "Buna! Cum te pot ajuta?"
+
+  utter_thanks:
+    - text: "Ma bucur ca te-am putut ajuta."
+    - text: "Cu mare drag!"
+    - text: "Cu mare placere."
+
+  utter_unknown:
+    - text: "Nu detin această informatie"
+    - text: "Nu cunosc acest lucru"
+    - text: "Scuze, dar nu te pot ajuta cu această întrebare"
+    - text: "Din păcate nu te pot ajuta"
+
+  utter_professor_office:
+    - text: "{professor} are biroul în sala {office}"
+    - text: "Poți găsi pe {professor} în sala {office}"
+
+  utter_select_from_multiple_matches:
+    - text: "La cine te referi dintre {options}?"
+    - text: "Am găsit mai multe variante apropiate: {options}. Alege una:"
+
+  utter_entity_not_detected:
+    - text: "Nu am putut extrage {entity} din întrebare"
+    - text: "Scuze, dar nu pot identifica {entity} în întrebarea ta"
+    - text: "Trebuie să specifici în mod corect {entity}"
+
+  utter_no_info:
+    - text: "Nu cunosc această informație despre {entity} de care întrebi"
+    - text: "Pentru {entity} de care ai întrebat nu știu"
+    - text: "Din păcate nu am informații despre {entity} din întrebare"
+
+  utter_room_location:
+    - text: "Sala {room_input} e {direction}."
+    - text: "Sala {room_input} este {direction}."
+    - text: "{room_input} e {direction}."
+    - text: "{room_input} este {direction}."
+    - text: "Incearca {direction}."
+
+  utter_ask_course:
+    - text: "Imi poti da mai multe informatii despre ce materie este vorba?"
+    - text: "Imi poti oferi mai multe detalii despre materia care te intereseaza?"
+
+  utter_ask_group_name:
+    - text: "Din ce serie si grupa faci parte?"
+
+  utter_ask_class_type:
+    - text: "Curs, seminar sau laborator?"
+
+  utter_schedule:
+    - text: "Urmatorul {class_type} de {course} pentru {group_name} se tine {time} in sala {room}"
+    - text: "Urmatorul {class_type} de {course} pentru {group_name} se desfasoara {time} in sala {room}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

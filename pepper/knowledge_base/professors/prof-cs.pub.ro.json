@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Emil Ioan Slusanschi",
+    "position": "Professor, Dr., Head of Department",
+    "office": "EF303"
+  },
+  {
+    "name": "Mihai Dascalu",
+    "position": "Professor, Dr., Department Council",
+    "office": "PRECIS 301/306 si ED405"
+  },
+  {
+    "name": "Adina Magda Florea",
+    "position": "Professor, Dr., Dean",
+    "office": "EF201"
+  },
+  {
+    "name": "Alin Dragos Bogdan Moldoveanu",
+    "position": "Professor, Dr., Vice Dean",
+    "office": "ED419"
+  },
+  {
+    "name": "Florin Pop",
+    "position": "Professor, Dr., Department Council",
+    "office": "PRECIS-601/EG403"
+  },
+  {
+    "name": "Florin Radulescu",
+    "position": "Professor, Dr., Vice Dean",
+    "office": "EF309"
+  },
+  {
+    "name": "Razvan Rughinis",
+    "position": "Professor, Dr., Vice Dean",
+    "office": "EF303"
+  },
+  {
+    "name": "Nicolae Tapus",
+    "position": "Professor, Dr., Vice Rector",
+    "office": "EF304"
+  },
+  {
+    "name": "Stefan Trausan Matu",
+    "position": "Professor, Dr., Department Council",
+    "office": "ED405"
+  },
+  {
+    "name": "Mihai Carabas",
+    "position": "Associate Professor, Dr., Department Council",
+    "office": "EF108"
+  },
+  {
+    "name": "Mihai Daniel Chiroiu",
+    "position": "Associate Professor, Dr., Department Council",
+    "office": "PR702"
+  },
+  {
+    "name": "Răzvan Deaconescu",
+    "position": "Associate Professor, Dr., Department Council",
+    "office": "PRECIS 708"
+  },
+  {
+    "name": "Irina Mocanu",
+    "position": "Associate Professor, Dr., Department Council",
+    "office": "EF201"
+  },
+  {
+    "name": "Iuliu Vasilescu",
+    "position": "Associate Professor, Dr., Department Council",
+    "office": "Campus"
+  },
+  {
+    "name": "Costin-Anton Boiangiu",
+    "position": "Professor, Dr.",
+    "office": "EG405"
+  },
+  {
+    "name": "Valentin Cristea",
+    "position": "Professor, Dr.",
+    "office": "EF103"
+  },
+  {
+    "name": "Ciprian Dobre",
+    "position": "Professor, Dr.",
+    "office": "PRECIS - 601 / 605"
+  },
+  {
+    "name": "Francisc Iacob",
+    "position": "Professor, Dr.",
+    "office": "EF202."
+  },
+  {
+    "name": "Constantin Ilas",
+    "position": "Professor, Dr.",
+    "office": "ED 416"
+  },
+  {
+    "name": "Mariana Mocanu",
+    "position": "Professor, Dr.",
+    "office": "ED402"
+  },
+  {
+    "name": "Florica Moldoveanu",
+    "position": "Professor, Dr.",
+    "office": "ED420"
+  },
+  {
+    "name": "Lorina Negreanu",
+    "position": "Professor, Dr.",
+    "office": "."
+  },
+  {
+    "name": "Decebal Popescu",
+    "position": "Professor, Dr.",
+    "office": "PRECIS-602"
+  },
+  {
+    "name": "George Pantelimon Popescu",
+    "position": "Professor, Dr.",
+    "office": "EF108"
+  },
+  {
+    "name": "Nirvana Popescu",
+    "position": "Professor",
+    "office": "PR 602"
+  },
+  {
+    "name": "Elena Simona Apostol",
+    "position": "Associate Professor",
+    "office": "PRECIS 608"
+  },
+  {
+    "name": "Alexandru Boicea",
+    "position": "Associate Professor, Dr.",
+    "office": "EF309"
+  },
+  {
+    "name": "Costin Gabriel Chiru",
+    "position": "Associate Professor, Dr.",
+    "office": "EF308"
+  },
+  {
+    "name": "Sorin Ciureanu",
+    "position": "Associate Professor, Dr.",
+    "office": "-"
+  },
+  {
+    "name": "Marius Leordeanu",
+    "position": "Associate Professor, Dr.",
+    "office": "-"
+  },
+  {
+    "name": "Oana Mitruț",
+    "position": "Associate Professor",
+    "office": "PRECIS 701"
+  },
+  {
+    "name": "Andrei Olaru",
+    "position": "Associate Professor, Dr.",
+    "office": "PR307"
+  },
+  {
+    "name": "Cornel Popescu",
+    "position": "Associate Professor, Dr.",
+    "office": "EF305"
+  },
+  {
+    "name": "Costin Raiciu",
+    "position": "Associate Professor, Dr.",
+    "office": "ED217"
+  },
+  {
+    "name": "Traian Rebedea",
+    "position": "Associate Professor, Dr.",
+    "office": "EF308"
+  },
+  {
+    "name": "Daniel Rosner",
+    "position": "Associate Professor, Dr.",
+    "office": "EF303"
+  },
+  {
+    "name": "Adrian Surpateanu",
+    "position": "Associate Professor, Dr.",
+    "office": "EF104"
+  },
+  {
+    "name": "Dan Stefan Tudose",
+    "position": "Associate Professor, Dr.",
+    "office": "ED422"
+  },
+  {
+    "name": "Marius Dorian Zaharia",
+    "position": "Associate Professor",
+    "office": ".EF206"
+  },
+  {
+    "name": "Eliana Dina Andreica",
+    "position": "Lecturer, Dr.",
+    "office": "EG303"
+  },
+  {
+    "name": "Victor Asavei",
+    "position": "Lecturer, Dr.",
+    "office": "ED419"
+  },
+  {
+    "name": "Mircea Bardac",
+    "position": "Lecturer, Dr.",
+    "office": "EF302"
+  },
+  {
+    "name": "Dumitru Clementin Cercel",
+    "position": "Lecturer, Dr.",
+    "office": "EF308"
+  },
+  {
+    "name": "Marios Omar Choudary",
+    "position": "Associate Professor, Dr.",
+    "office": "PR203"
+  },
+  {
+    "name": "Vlad Ciobanu",
+    "position": "Lecturer, Dr.",
+    "office": "PRECIS - 602"
+  },
+  {
+    "name": "Laura Cristina Ruse",
+    "position": "Lecturer, Dr.",
+    "office": "EG208"
+  },
+  {
+    "name": "Gavril Godza",
+    "position": "Lecturer, Dr.",
+    "office": "-"
+  },
+  {
+    "name": "Liliana Grigoriu",
+    "position": "Lecturer",
+    "office": "EF 203"
+  },
+  {
+    "name": "Voichita Iancu",
+    "position": "Lecturer, Dr.",
+    "office": "EF302"
+  },
+  {
+    "name": "Catalin Leordeanu",
+    "position": "Lecturer, Dr.",
+    "office": "EG303"
+  },
+  {
+    "name": "Valentin Lungu",
+    "position": "Lecturer, Dr.",
+    "office": "EF301"
+  },
+  {
+    "name": "George Milescu",
+    "position": "Lecturer, Dr.",
+    "office": "EF302"
+  },
+  {
+    "name": "Andrei Horia Mogos",
+    "position": "Lecturer, Dr.",
+    "office": "EF201"
+  },
+  {
+    "name": "Anca Morar",
+    "position": "Associate Professor",
+    "office": "ED419"
+  },
+  {
+    "name": "Mihnea Muraru",
+    "position": "Lecturer, Dr.",
+    "office": "."
+  },
+  {
+    "name": "Dragoș Ștefan Niculescu",
+    "position": "Lecturer",
+    "office": "Precis 203"
+  },
+  {
+    "name": "Carmen Odubasteanu",
+    "position": "Lecturer, Dr.",
+    "office": "EF206"
+  },
+  {
+    "name": "Alexandru Olteanu",
+    "position": "Lecturer, Dr.",
+    "office": "ED422"
+  },
+  {
+    "name": "Matei Popovici",
+    "position": "Lecturer, Dr.",
+    "office": "ED405"
+  },
+  {
+    "name": "Vlad Posea",
+    "position": "Lecturer, Dr.",
+    "office": "EF308"
+  },
+  {
+    "name": "Emilian Radoi",
+    "position": "Lecturer",
+    "office": "PR 702"
+  },
+  {
+    "name": "Alexandru Radovici",
+    "position": "Lecturer, Dr.",
+    "office": "EG106"
+  },
+  {
+    "name": "Serban Radu",
+    "position": "Lecturer, Dr.",
+    "office": "EF201"
+  },
+  {
+    "name": "Dan Schrager",
+    "position": "Lecturer, Dr.",
+    "office": "PRECIS-302"
+  },
+  {
+    "name": "Dumitru-Cristian Trancă",
+    "position": "Lecturer, Dr.",
+    "office": "ED421"
+  },
+  {
+    "name": "Ciprian-Octavian Truică",
+    "position": "Lecturer, Dr.",
+    "office": "PR608"
+  },
+  {
+    "name": "Liviana Nicoleta Tudor",
+    "position": "Lecturer",
+    "office": "EF203"
+  },
+  {
+    "name": "Andreea Urzica",
+    "position": "Lecturer, Dr.",
+    "office": "EF302"
+  },
+  {
+    "name": "Adela Almasi",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "-"
+  },
+  {
+    "name": "Mihaela Balint",
+    "position": "Teaching Assistant, Dr.",
+    "office": "."
+  },
+  {
+    "name": "Tudor Berariu",
+    "position": "Teaching Assistant",
+    "office": "-"
+  },
+  {
+    "name": "Cristian Chilipirea",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "EG403"
+  },
+  {
+    "name": "Sorin N. Ciolofan",
+    "position": "Lecturer, Dr.",
+    "office": "EG311"
+  },
+  {
+    "name": "Dragoș Georgian Corlătescu",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Sergiu Costea",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "EG208"
+  },
+  {
+    "name": "Adriana Cristina Drăghici",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "ED422"
+  },
+  {
+    "name": "Dan Dragomir",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "ED422"
+  },
+  {
+    "name": "Laurentiu-Cristian Duca",
+    "position": "Teaching Assistant, Dr.",
+    "office": "EF305"
+  },
+  {
+    "name": "Alexandru Egner",
+    "position": "Teaching Assistant, Dr.",
+    "office": "-"
+  },
+  {
+    "name": "Oana Ferche",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "-"
+  },
+  {
+    "name": "Alexandra Ștefania Ghiță",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Alexandru Gradinaru",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "-"
+  },
+  {
+    "name": "Cristian Gratie",
+    "position": "Teaching Assistant, Dr.",
+    "office": "EF301"
+  },
+  {
+    "name": "Octavian Grigorescu",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Alexandru Herisanu",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "EF108"
+  },
+  {
+    "name": "Radu Iacob",
+    "position": "Teaching Assistant",
+    "office": "-"
+  },
+  {
+    "name": "Claudia Ifrim",
+    "position": "Teaching Assistant",
+    "office": "-"
+  },
+  {
+    "name": "George Iordache",
+    "position": "Teaching Assistant",
+    "office": "-"
+  },
+  {
+    "name": "Andrei Cristian Lambru",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Lucian Mogoșanu",
+    "position": "Teaching Assistant, PhD Student",
+    "office": ".PRECIS 708"
+  },
+  {
+    "name": "Catalin Morosan",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "-"
+  },
+  {
+    "name": "Razvan Musaloiu",
+    "position": "Dr.",
+    "office": "-"
+  },
+  {
+    "name": "George Cristian Pătru",
+    "position": "Teaching Assistant",
+    "office": "ED421"
+  },
+  {
+    "name": "Daniel Popeanga",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Traian Popeea",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "-"
+  },
+  {
+    "name": "Alexandru Predescu",
+    "position": "Teaching Assistant",
+    "office": "PR604"
+  },
+  {
+    "name": "Stefan Ruseti",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "PRECIS 301"
+  },
+  {
+    "name": "George Sarbu",
+    "position": "Teaching Assistant",
+    "office": "-"
+  },
+  {
+    "name": "Constantin Eduard Stăniloiu",
+    "position": "Teaching Assistant",
+    "office": "?"
+  },
+  {
+    "name": "Silvia Cristina Stegaru",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "ED422"
+  },
+  {
+    "name": "Razvan Tataroiu",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "ED421"
+  },
+  {
+    "name": "Laura Mihaela Vasilescu",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "P203"
+  },
+  {
+    "name": "Giorgiana Violeta Vlăsceanu",
+    "position": "Teaching Assistant, PhD Student",
+    "office": "EG405"
+  },
+  {
+    "name": "Andrei Voinescu",
+    "position": "Teaching Assistant, Dr.",
+    "office": "ED422"
+  }
+]

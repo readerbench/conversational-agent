@@ -1,0 +1,46 @@
+version: "2.0"
+
+nlu:
+  - intent: find_schedule_with_course
+    examples: |
+      - Ajută-mă să găsesc sala unde se ține [Programare Orientata pe Obiecte](course)!
+      - Arată-mi sala în care se desfășoară [Elemente de Electronica Analogica](course)!
+      - Mă poți ajuta să găsesc unde are loc [Logica](course)?
+      - Spune-mi, te rog, în ce sală pot participa la [Cultura si Civilizatie](course)?
+      - Unde are loc [Instrumente Informatice](course)?
+      - Unde se desfășoară [Paradigme de Programare](course)?
+      - Unde se predă [Proiectarea Algoritmilor](course)?
+      - Unde trebuie să mă duc pentru a participa la [Istoria Religiilor](course)?
+      - Unde va avea loc [Filosofie Cognitivista](course)?
+      - Îmi poți spune, te rog, unde se va ține [Retele Locale](course)?
+      - În ce loc se ține [Ingineria Calculatoarelor](course)?
+      - În ce sală are loc [Mecanica](course)?
+      - Știi unde se desfășoară [Proiectare Logica](course)?
+      - Știi unde se va ține [Algoritmi Paraleli si Distribuiti](course)?
+      - Unde se ține [Metode Numerice](course)?
+
+  - intent: find_schedule_with_class_and_class_type
+    examples: |
+      - Unde se ține [laboratorul](class_type) pentru grupa [311CC](group_name)?
+      - Unde se ține [cursul](class_type) pentru seria [CB](group_name)?
+      - Zi-mi te rog unde are loc [curs](class_type) pentru seria [CA](class_name)
+      - Vreau să știu unde se desfășoară [seminarul](class_type) grupei [222AC](class_name)
+
+  - intent: find_schedule_with_course_and_class_and_class_type
+    examples: |
+      - Unde se ține [cursul](class_type) de [Electronica Digitala](course) pentru seria [CC](group_name)?
+      - Unde se ține [seminarul](class_type) de [Teoria Sistemelor](course) pentru grupa [315CB](group_name)?
+      - Unde se ține [seminar](class_type) de [Engleza](course) pentru grupa [321CC](group_name)?
+      - Aș vrea să știu unde e [seminarul](class_type) de [Mate](course) pentru grupa [142BB](group_name)
+      - Zi-mi unde va fi [cursul](class_type) seriei [S1](group_name) de [analiză matematică](course)
+
+  - intent: fill_group_name
+    examples: |
+      - [312CB](group_name)
+      - [CC](group_name)
+
+  - intent: fill_class_type
+    examples: |
+      - [curs](class_type)
+      - [laborator](class_type)
+      - [seminar](class_type)

@@ -1,0 +1,15 @@
+version: "2.0"
+
+nlu:
+  - intent: find_professor
+    examples: |
+      - Unde are biroul [Mihai Dascalu](professor)?
+      - Unde este [Răzvan Deaconescu](professor)?
+      - Unde il pot gasi pe [Florin Pop](professor)?
+      - Care e biroul lui [Marius Leordeanu](professor)
+      - Spune-mi te rog unde se află biroul lui [Mihnea Moisescu](professor)
+      - Știi unde îl pot găsi pe profesorul [Dan Tudose](professor)?
+      - Oare unde este domnul profesor [Traian Rebedea](professor)?
+      - Zi-mi și mie unde are [Mariana Mocanu](professor) biroul în facultate
+      - Unde îl găsesc pe asistentul [Emilian Rădoi](professor)?
+      - Spune care e biroul domnului [Gologan](professor)

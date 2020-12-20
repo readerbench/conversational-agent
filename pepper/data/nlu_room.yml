@@ -1,0 +1,44 @@
+version: "2.0"
+
+nlu:
+  - intent: find_room
+    examples: |
+      - Afișează-mi harta etajului corespunzător sălii [PR 303](room)!
+      - Ajută-mă să găsesc sala [PR 706](room)!
+      - Ajută-mă să găsesc sala [PR 103b](room)!
+      - Am nevoie de ajutor să găsesc drumul către sala [PR 303](room)!
+      - Arată-mi calea către sala [PR 701](room)!
+      - Arată-mi harta cu sala [PR 002](room) reprezentată.
+      - Care este direcția către sala [PR 605](room)?
+      - Care este drumul către sala [PR 706](room)?
+      - Care este drumul spre sala [PR 103a](room)?
+      - Condu-mă la sala [PR 305](room)!
+      - Cum pot ajunge la sala [PR 603](room)?
+      - Există vreo hartă pentru a vizualiza localizarea sălii [PR 403](room)?
+      - Explică-mi cum ajung la sala [PR 403](room)!
+      - Indică-mi drumul către sala [PR 003](room)!
+      - La ce etaj se află sala [PR 604](room)?
+      - Mă conduci până la sala [PR 103a](room)?
+      - Mă poți ghida către sala [PR 608](room)?
+      - Mă poți îndrepta către sala [PR 002](room)?
+      - Mă poți îndruma către sala [PR 408](room)?
+      - Pe unde se află sala [PR 604](room)?
+      - Pe unde să o iau ca să ajung la sala [PR 702](room)?
+      - Poti să mă conduci la sala [PR 701](room), te rog?
+      - Poți să îmi indici drumul către sala [PR 608](room)?
+      - Spune-mi unde găsesc sala [PR 001](room)!
+      - Unde e sala [PR 305](room)?
+      - Unde este localizată sala [PR 708](room)?
+      - Unde găsesc sala [PR 103b](room)?
+      - Unde pot găsi sala [PR 001](room)?
+      - Unde se află sala [PR 606](room)?
+      - Vreau să văd harta cu sala [PR 301](room) reprezentată.
+      - Zi-mi unde găsesc sala [PR 003](room)!
+      - Îmi poți arăta calea către sala [PR 702](room), te rog?
+      - Îmi poți arăta o hartă cu sala [PR 106](room) reprezentată.
+      - Îmi poți explica unde se află sala [PR 302](room), te rog?
+      - În ce direcție se găsește sala [PR 601](room)?
+      - În ce loc se află sala [PR 605](room)?
+      - În ce sens se află sala [PR 307](room)?
+      - Încotro să o iau către sala [PR 203](room)?
+      - Știi unde se află sala [PR 606](room)?
