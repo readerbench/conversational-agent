@@ -11,13 +11,13 @@ def write_to_file(file_name, entities):
 
 def main():
     courses = get_grakn_entities("course")
-    write_to_file("data/lookup/course.txt", set(map(lambda x: x["name"], courses)))
+    write_to_file("microworlds/university_guide/data/lookup/course.txt", set(map(lambda x: x["name"], courses)))
 
     professors = get_grakn_entities("professor")
-    write_to_file("data/lookup/professor.txt", set(map(lambda x: x["name"], professors)))
+    write_to_file("microworlds/university_guide/data/lookup/professor.txt", set(map(lambda x: x["name"], professors)))
 
     rooms = get_grakn_entities("room")
-    write_to_file("data/lookup/room.txt", set(map(lambda x: x["name"], rooms)))
+    write_to_file("microworlds/university_guide/data/lookup/room.txt", set(map(lambda x: x["name"], rooms)))
 
 
 if __name__ == "__main__":

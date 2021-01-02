@@ -84,11 +84,11 @@ def get_activities_schedule():
 
 def get_rooms():
     query = """
-            PREFIX : <%s>
-            select ?id ?direction ?room { 
-            ?room a :Room ;
-                    :id ?id ;
-                    :direction ?direction .
+        PREFIX : <%s>
+        select ?id ?direction ?room { 
+        ?room a :Room ;
+                :id ?id ;
+                :direction ?direction .
     } 
     """ % graphdb_base_uri
 

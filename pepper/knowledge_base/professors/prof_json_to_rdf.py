@@ -35,7 +35,7 @@ def clean(string):
 def serialize_rdf_graph(rdf_graph):
     """ Export the RDF triples as a Turtle file (.ttl). """
 
-    with codecs.open("../../data/kb/professors.ttl", "w", "utf-8") as rdf_file:
+    with codecs.open("../../microworlds/university_guide/data/kb/professors.ttl", "w", "utf-8") as rdf_file:
         # Add a description of the data
         rdf_file.write('\n'.join([
             '# This file contains the RDF representation of data about teachers from',

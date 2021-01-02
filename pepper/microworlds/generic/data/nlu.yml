@@ -1,0 +1,63 @@
+version: "2.0"
+
+nlu:
+  - intent: generic.greet
+    examples: |
+      - Bună!
+      - Hei
+      - hey
+      - salut
+      - bună
+      - salutare
+      - hello
+      - bună ziua
+      - Salut
+      - hi
+      - hei!
+
+  - intent: generic.thanks
+    examples: |
+      - Îți multumesc mult pentru ajutor
+      - Mulțumesc de ajutor
+      - Mi-ai fost de mare ajutor
+      - Mersi!
+      - Mulțu
+      - Mulțumesc!
+      - super
+      - Tare
+      - Cool
+      - Nice
+
+  - intent: generic.goodbye
+    examples: |
+      - bye
+      - pa
+      - paa
+      - paaa
+      - pa pa
+      - papa
+      - gata
+
+  - intent: generic.affirm
+    examples: |
+      - da
+      - daa
+      - da da
+      - dada
+      - dap
+      - sigur
+      - ok
+      - yep
+      - yes
+
+  - intent: generic.general_knowledge
+    examples: |
+      - Ce e o [minge](entity)?
+      - Ce e un [calculator](entity)?
+      - Cine e [Bill Gates](entity)?
+
+  - intent: generic.out_of_scope
+    examples: |
+      - Cum te cheamă?
+      - De ce e frig afară?
+      - Îmi este somn

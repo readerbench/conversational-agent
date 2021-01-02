@@ -1,0 +1,63 @@
+version: "2.0"
+
+stories:
+  - story: greet
+    steps:
+      - intent: generic.greet
+      - action: utter_greet
+
+  - story: goodbye
+    steps:
+      - intent: generic.goodbye
+      - action: utter_goodbye
+
+  - story: out of scope
+    steps:
+      - intent: generic.out_of_scope
+      - action: utter_out_of_scope
+
+  - story: retrieve location
+    steps:
+      - intent: mem_assistant.get_location
+      - action: action_get_location
+
+  - story: store location
+    steps:
+      - intent: mem_assistant.store_request
+      - action: utter_listening
+      - intent: mem_assistant.store_location
+      - action: action_store_location
+      - action: utter_stored
+
+  - story: retrieve attribute
+    steps:
+      - intent: mem_assistant.get_attr
+      - action: action_get_attr
+
+  - story: store attribute
+    steps:
+      - intent: mem_assistant.store_request
+      - action: utter_listening
+      - intent: mem_assistant.store_attr
+      - action: action_store_attr
+      - action: utter_stored
+
+  - story: retrieve timestamp
+    steps:
+      - intent: mem_assistant.get_timestamp
+      - action: action_get_time
+
+  - story: store timestamp
+    steps:
+      - intent: mem_assistant.store_timestamp
+      - action: action_store_time
+      - action: utter_stored
+
+  - story: store following attribute
+    steps:
+      - intent: mem_assistant.store_following_attr
+      - action: action_keep_raw_attr_entity
+      - action: raw_data_store_form
+      - active_loop: raw_data_store_form
+      - active_loop: null
+      - action: utter_stored
