@@ -1,15 +1,15 @@
-from graphdb_client import execute_sparql_query, graphdb_base_uri
+from actions.sparql_client import execute_sparql_query, KB_BASE_URI
 
 
 def get_professor_offices():
     query = """
-        PREFIX : <%s>
+        PREFIX : <%s#>
         select ?name ?office {
             ?prof a :Professor .
             ?prof :name ?name .
             ?prof :office ?office .
         }
-    """ % graphdb_base_uri
+    """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
 
@@ -23,7 +23,7 @@ def get_professor_offices():
 
 def get_activities_schedule():
     query = """
-        PREFIX : <%s>
+        PREFIX : <%s#>
         select ?id ?name ?type ?room ?teacher ?group ?semigroup {
             ?activity a :Activity ;
                         :id ?id ;
@@ -41,7 +41,7 @@ def get_activities_schedule():
                 :duration ?duration;
             ] .
         }
-    """ % graphdb_base_uri
+    """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
 
@@ -57,13 +57,13 @@ def get_activities_schedule():
 
 def get_rooms():
     query = """
-        PREFIX : <%s>
+        PREFIX : <%s#>
         select ?id ?direction ?room { 
         ?room a :Room ;
                 :id ?id ;
                 :direction ?direction .
     } 
-    """ % graphdb_base_uri
+    """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
 

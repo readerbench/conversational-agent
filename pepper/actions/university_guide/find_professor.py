@@ -5,7 +5,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.utils import get_entities, match_multitoken_string
-from actions.knowledge_base_bridge import get_professor_offices
+from actions.university_guide.knowledge_base_bridge import get_professor_offices
 
 logger = logging.getLogger(__name__)
 

@@ -8,7 +8,7 @@ from googletrans import Translator
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-from .utils import get_entities
+from actions.utils import get_entities
 
 
 logger = logging.getLogger(__name__)

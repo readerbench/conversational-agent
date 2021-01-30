@@ -9,6 +9,10 @@ from copy import deepcopy
 
 
 class DomainClassifier(DIETClassifier):
+    """
+    DIET-based Classifier for detecting the microworld (the generic domain) that an utterance represents.
+    """
+
     def train(self, training_data: TrainingData, config: Optional[RasaNLUModelConfig] = None, **kwargs: Any) -> None:
 
         # Preprocess the training data: Alter the intents of the train examples to their domain (microworld)

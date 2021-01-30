@@ -1,4 +1,6 @@
 import logging
+import yaml
+from pathlib import Path
 from typing import Any, List, Type, Text, Dict, Optional
 
 from rasa.nlu.classifiers.classifier import IntentClassifier
@@ -15,7 +17,6 @@ from rasa.shared.nlu.constants import (
     INTENT,
     INTENT_NAME_KEY,
     INTENT_RANKING_KEY,
-    PREDICTED_CONFIDENCE_KEY,
 )
 
 GENERIC_INTENT = 'microworld'
@@ -23,14 +24,28 @@ GENERIC_INTENT_RANKING = f'{GENERIC_INTENT}_ranking'
 
 logger = logging.getLogger(__name__)
 
-microworlds = [
-    'university_guide',
-    'mem_assistant',
-]
+
+def get_microworlds():
+    """ Load the microworlds registered in the config file. """
+
+    with open('config.yml') as config_file:
+        # The FullLoader parameter handles the conversion from YAML scalar values to Python dict
+        config = yaml.load(config_file, Loader=yaml.FullLoader)
+
+        microworld_clf_config = next(c for c in config['pipeline'] if c['name'].endswith("MicroworldClassifier"))
+        microworlds = list(microworld_clf_config['microworlds'].keys())
+
+    logger.info("Registered microworlds: " + str(microworlds))
+    return microworlds
 
 
 class MicroworldClassifier(IntentClassifier):
+    """
+    DIET-based classifier that detects the microworld-specific intent and entities.
+    """
+
     defaults = DIETClassifier.defaults
+    microworlds = get_microworlds()
 
     def __init__(self, component_config: Optional[Dict[Text, Any]] = None,
                  index_label_id_mapping: Optional[Dict[int, Text]] = None,
@@ -38,7 +53,8 @@ class MicroworldClassifier(IntentClassifier):
         super().__init__(component_config)
 
         self.classifiers = {}
-        for microworld in microworlds:
+
+        for microworld in self.microworlds:
             if component_config and 'microworlds' in component_config:
                 mw_component_config = component_config['microworlds'][microworld].copy()
                 mw_component_config['name'] = 'DIETClassifier'
@@ -86,7 +102,7 @@ class MicroworldClassifier(IntentClassifier):
     ) -> None:
         """Train the embedding intent classifier on a data set."""
 
-        for microworld in microworlds:
+        for microworld in self.microworlds:
             # Extract the training examples corresponding to the current microworld
             mw_training_data = training_data.filter_training_examples(
                 lambda msg: 'intent' not in msg.data or
@@ -102,7 +118,7 @@ class MicroworldClassifier(IntentClassifier):
         Return the metadata necessary to load the model again.
         """
 
-        for microworld in microworlds:
+        for microworld in self.microworlds:
             self.classifiers[microworld].persist(f"{file_name}_{microworld}", model_dir)
 
         return {"file": file_name}
@@ -120,9 +136,8 @@ class MicroworldClassifier(IntentClassifier):
 
         mw_classif = cls()
         component_name = meta['file']
-        for microworld in microworlds:
+        for microworld in cls.microworlds:
             meta['file'] = f"{component_name}_{microworld}"
-            mw_classif.classifiers[microworld] = DIETClassifier.load(meta, model_dir,
-                                                                     model_metadata, None, **kwargs)
+            mw_classif.classifiers[microworld] = DIETClassifier.load(meta, model_dir, model_metadata, None, **kwargs)
 
         return mw_classif
