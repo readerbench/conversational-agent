@@ -13,18 +13,18 @@ pipeline:
     max_ngram: 4
   # Domain Classifier for detecting the microworld
   - name: components.domain_classifier.DomainClassifier
-    epochs: 100
+    epochs: 300
     entity_recognition: False
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier
-    epochs: 100
+    epochs: 300
     microworlds:
       generic:
-        epochs: 100
+        epochs: 300
       university_guide:
-        epochs: 100
+        epochs: 300
       mem_assistant:
-        epochs: 100
+        epochs: 300
   - name: components.syntactic_parser.SyntacticParser
   - name: EntitySynonymMapper
   - name: ResponseSelector

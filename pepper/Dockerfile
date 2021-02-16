@@ -1,11 +1,10 @@
 FROM python:3.8-slim-buster
 
 RUN pip3 install rasa
+RUN pip3 install spacy==2.2.3
 
 WORKDIR /opt/pepper/
 
 COPY . .
 
-EXPOSE 5005
-
-CMD ["rasa", "run", "--enable-api", "--cors *"]
+CMD rasa run -p 80 --model models --enable-api --endpoints endpoints.compose.yml --cors *

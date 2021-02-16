@@ -1,4 +1,3 @@
-import typing
 from typing import Any, Optional, Text, Dict, List, Type
 
 from rasa.nlu.components import Component
@@ -12,10 +11,9 @@ from rasa.shared.nlu.constants import (
 import spacy
 from spacy.tokens import Span
 from spacy.lookups import Lookups
-from spacy.lang.ro import tag_map
-
-if typing.TYPE_CHECKING:
-    from rasa.nlu.model import Metadata
+import spacy.symbols as symbols
+from spacy.symbols import POS, ADJ, ADP, ADV, INTJ, NOUN, NUM, PART, PRON, PROPN, PUNCT, SYM, VERB, X, CCONJ, SCONJ, DET, AUX
+from spacy.lang.ro.tag_map import TAG_MAP
 
 SEMANTIC_ROLES = "semantic_roles"
 
@@ -58,10 +56,10 @@ class SyntacticParser(Component):
         pron_lemmas = spacy.lookups.Table.from_dict(pronouns)
 
         return {
-            tag_map.NOUN: noun_lemmas,
-            tag_map.PROPN: prop_noun_lemmas,
-            tag_map.VERB: verb_lemmas,
-            tag_map.PRON: pron_lemmas,
+            symbols.NOUN: noun_lemmas,
+            symbols.PROPN: prop_noun_lemmas,
+            symbols.VERB: verb_lemmas,
+            symbols.PRON: pron_lemmas,
         }
 
     def __init__(self, component_config: Optional[Dict[Text, Any]] = None) -> None:
@@ -92,20 +90,20 @@ class SyntacticParser(Component):
         """ Return the part of speech code for a given POS detailed tag. """
 
         stub_tag_map = {
-            "A": tag_map.ADJ,
-            "D": tag_map.DET,
-            "C": tag_map.CCONJ,
-            "I": tag_map.INTJ,
-            "M": tag_map.NUM,
-            "N": tag_map.NOUN,
-            "P": tag_map.PRON,
-            "R": tag_map.ADV,
-            "T": tag_map.DET,
-            "V": tag_map.VERB,
+            "A": symbols.ADJ,
+            "D": symbols.DET,
+            "C": symbols.CCONJ,
+            "I": symbols.INTJ,
+            "M": symbols.NUM,
+            "N": symbols.NOUN,
+            "P": symbols.PRON,
+            "R": symbols.ADV,
+            "T": symbols.DET,
+            "V": symbols.VERB,
         }
 
-        if tag in tag_map.TAG_MAP:
-            return tag_map.TAG_MAP[tag][tag_map.POS]
+        if tag in TAG_MAP:
+            return TAG_MAP[tag][symbols.POS]
         return stub_tag_map.get(tag[0])
 
     def __lemmatize(self, token):
@@ -120,20 +118,20 @@ class SyntacticParser(Component):
         word = token.text
 
         # POS = proper noun
-        if word in self.lemmas[tag_map.PROPN]:
-            return self.lemmas[tag_map.PROPN][word]
+        if word in self.lemmas[symbols.PROPN]:
+            return self.lemmas[symbols.PROPN][word]
 
         # POS = pronoun
-        if word in self.lemmas[tag_map.PRON]:
-            return self.lemmas[tag_map.PRON][word]
+        if word in self.lemmas[symbols.PRON]:
+            return self.lemmas[symbols.PRON][word]
 
         # POS = noun
-        if pos == tag_map.NOUN:
-            return self.lemmas[tag_map.NOUN].get(word, word)
+        if pos == symbols.NOUN:
+            return self.lemmas[symbols.NOUN].get(word, word)
 
         # POS = verb
-        if pos == tag_map.VERB:
-            return self.lemmas[tag_map.VERB].get(word, word)
+        if pos == symbols.VERB:
+            return self.lemmas[symbols.VERB].get(word, word)
 
         # TODO numeral - doi/două -> 2
 
@@ -236,8 +234,8 @@ class SyntacticParser(Component):
 
             # Infer the subject (me) if the action is at the 1st person, singular
             if token.dep_ == 'ROOT' and (
-                    (tag_map.TAG_MAP[token.tag_.split('__')[0]].get('Person', '') == '1' and
-                     tag_map.TAG_MAP[token.tag_.split('__')[0]].get('Number', '') == 'Sing')
+                    (TAG_MAP[token.tag_.split('__')[0]].get('Person', '') == '1' and
+                     TAG_MAP[token.tag_.split('__')[0]].get('Number', '') == 'Sing')
                     or
                     any(t.text == 'am' and t.dep_ == '-' and t.head.dep_ == 'ROOT' for t in doc)
             ):
