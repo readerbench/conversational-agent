@@ -34,3 +34,20 @@ docker run -p7200:7200 -v graphdb:/opt/graphdb-instance --name graphdb graphdb
 ```shell
 curl -X POST --header "Content-Type:multipart/form-data" -F "config=@/opt/graphdb-free-9.4.1/configs/config.ttl" "http://localhost:7200/rest/repositories"
 ```
+
+## Deployment
+
+Build all docker images
+```shell
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web -f ../pepper-web-frontend/Dockerfile .
+docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web
+
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server -f Dockerfile .
+docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server
+
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions  -f actions/Dockerfile .
+docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions
+
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb -f graphdb.dockerfile .
+docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
+```

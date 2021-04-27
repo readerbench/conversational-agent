@@ -24,6 +24,7 @@ def get_professor_offices():
 def get_activities_schedule():
     query = """
         PREFIX : <%s#>
+        
         select ?id ?name ?type ?room ?teacher ?group ?semigroup {
             ?activity a :Activity ;
                         :id ?id ;
@@ -40,6 +41,7 @@ def get_activities_schedule():
                 :time ?time;
                 :duration ?duration;
             ] .
+
         }
     """ % KB_BASE_URI
 
