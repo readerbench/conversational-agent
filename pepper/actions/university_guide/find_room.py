@@ -9,7 +9,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.utils import get_entities
-from actions.university_guide.knowledge_base_bridge import get_rooms
+from .knowledge_base_bridge import get_rooms
 
 logger = logging.getLogger(__name__)
 

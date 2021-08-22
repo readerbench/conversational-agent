@@ -3,7 +3,7 @@ import random
 import requests
 from typing import Any, Text, Dict, List
 
-from googletrans import Translator
+# from googletrans import Translator
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -41,8 +41,8 @@ class ActionGeneralKnowledge(Action):
             dispatcher.utter_message(template="utter_unknown")
             return []
 
-        translator = Translator().translate(output, src='en', dest='ro')
-        logger.debug('translator = ' + str(translator))
+        # translator = Translator().translate(output, src='en', dest='ro')
+        # logger.debug('translator = ' + str(translator))
 
         dispatcher.utter_message(text=translator.text)
         return []

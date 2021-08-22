@@ -120,7 +120,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :AA_Marți-12_321CB-None a :Activity ;
@@ -589,7 +589,7 @@
     :teacher "FLORIN POP" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :ASR_Marți-18_SUBGRUPA1-None a :Activity ;
@@ -776,7 +776,7 @@
     :teacher "AL. BOICEA" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :BD_Miercuri-14_335CA-1 a :Activity ;
@@ -845,7 +845,7 @@
     :series "5A-AII-MPI" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "seminar" .
 
 :CTSS_Joi-18_SEMIGRUPA1-None a :Activity ;
@@ -874,7 +874,7 @@
     :teacher "V. CALOFIR" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :DATA_SCIENCE_Joi-8_OPT6C-CTI-6CM-G3-None a :Activity ;
@@ -892,7 +892,7 @@
     :series "6C-CTI-6CM-G3" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :DMDW_Miercuri-16_SEMIGRUPA1-None a :Activity ;
@@ -1131,7 +1131,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EEA_Luni-8_321CB-2 a :Activity ;
@@ -1143,7 +1143,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EEA_Marți-18_323CB-1 a :Activity ;
@@ -1203,7 +1203,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EEA_Marți-8_324CB-2 a :Activity ;
@@ -1215,7 +1215,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EEA_Miercuri-10_322CB-1 a :Activity ;
@@ -1397,7 +1397,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EP_Marți-10_341C5-1 a :Activity ;
@@ -1433,7 +1433,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :EP_Miercuri-10_342C5-2 a :Activity ;
@@ -1457,7 +1457,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :FABD_Joi-18_OPT6C-CTI-6CM-SPF-None a :Activity ;
@@ -1548,7 +1548,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "seminar" .
 
 :FCT_Vineri-12_321CB-None a :Activity ;
@@ -1799,7 +1799,7 @@
     :teacher "LILIANA DOBRICA" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :IC_Joi-14_332CA-2 a :Activity ;
@@ -1898,7 +1898,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IC_Luni-8_335CA-None a :Activity ;
@@ -1909,7 +1909,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IC_Miercuri-16_332CA-1 a :Activity ;
@@ -2001,7 +2001,7 @@
     :teacher "DR.ING. ANCA" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :IOCA_Miercuri-10_OPT6C-CTI-6CM-SPF-None a :Activity ;
@@ -2054,7 +2054,7 @@
     :teacher "V. POSEA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :IOCLA_Joi-10_321CB-None a :Activity ;
@@ -2217,7 +2217,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IP_Joi-8_333CA-None a :Activity ;
@@ -2228,7 +2228,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IP_Joi-8_334CA-None a :Activity ;
@@ -2239,7 +2239,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IP_Joi-8_335CA-None a :Activity ;
@@ -2252,10 +2252,10 @@
     :series "3CA" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ],
+            :time "08:00:00"^^xsd:time ],
         [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :IP_Luni-12_331CA-None a :Activity ;
@@ -2387,7 +2387,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :IP_Miercuri-8_331CA-2 a :Activity ;
@@ -2398,7 +2398,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :IP_Miercuri-8_334CA-1 a :Activity ;
@@ -2409,7 +2409,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :IP_Miercuri-8_334CA-2 a :Activity ;
@@ -2420,7 +2420,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :IP_Miercuri-8_335CA-1 a :Activity ;
@@ -2431,7 +2431,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :IP_Miercuri-8_335CA-2 a :Activity ;
@@ -2442,7 +2442,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :ISI_Joi-14_OPT4C5-1 a :Activity ;
@@ -2497,7 +2497,7 @@
     :teacher "MARIANA MOCANU" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :ISI_Luni-8_OPT4C5-None a :Activity ;
@@ -2509,7 +2509,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :ISI_Marți-10_342C5-1 a :Activity ;
@@ -2593,7 +2593,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :KESE_Marți-10_SUBGRUPA1-None a :Activity ;
@@ -2922,7 +2922,7 @@
     :series "6C-CTI-6CM-G3" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :MFDA_Vineri-12_SEMIGRUPA1-None a :Activity ;
@@ -2975,7 +2975,7 @@
     :teacher "ECATERINA OLTEAN" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :MFDRC_Joi-16_SEMIGRUPA1-None a :Activity ;
@@ -3156,10 +3156,10 @@
     :series "6C-CTI-6CM-MTI" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ],
+            :time "08:00:00"^^xsd:time ],
         [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course",
         "lab" .
 
@@ -3174,10 +3174,10 @@
     :series "6C-CTI-6CM-MTI" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ],
+            :time "08:00:00"^^xsd:time ],
         [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course",
         "lab" .
 
@@ -3192,10 +3192,10 @@
     :series "6C-CTI-6CM-MTI" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ],
+            :time "08:00:00"^^xsd:time ],
         [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course",
         "lab" .
 
@@ -3371,7 +3371,7 @@
     :teacher "ECATERINA OLTEAN" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :MPRIT_Miercuri-18_SUBGRUPA1-None a :Activity ;
@@ -3501,7 +3501,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :MPS_Marți-8_342C5-2 a :Activity ;
@@ -3513,7 +3513,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :MPS_Miercuri-16_343C5-1 a :Activity ;
@@ -3537,7 +3537,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :MPS_Vineri-8_OPT4C5-2 a :Activity ;
@@ -3549,7 +3549,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :MP_Vineri-10_341C5-None a :Activity ;
@@ -3615,7 +3615,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "seminar" .
 
 :MSI_Vineri-14_SUBGRUPA1-None a :Activity ;
@@ -3995,7 +3995,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :PM_Luni-8_332CA-2 a :Activity ;
@@ -4007,7 +4007,7 @@
     :series "3CA" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :PM_Marți-16_331CA-1 a :Activity ;
@@ -4208,7 +4208,7 @@
     :series "2CB" ;
     :timeSlot [ :day "Luni" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :POO_Marți-14_322CB-1 a :Activity ;
@@ -4372,7 +4372,7 @@
     :teacher "D. TUDOSE" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :SAIIS_Joi-19_OPT6C-CTI-6CM-MTI-None a :Activity ;
@@ -4595,7 +4595,7 @@
     :teacher "GRIGORE STAMATESCU" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT10H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :SMIAA_Vineri-11_SEMIGRUPA1-None a :Activity ;
@@ -4667,7 +4667,7 @@
     :series "6C-CTI-6CM-SCPD-en" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :SOS_Marți-16_SUBGRUPA1-None a :Activity ;
@@ -4866,7 +4866,7 @@
     :teacher "A. RADOVICI" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :SO_Miercuri-16_335CA-2 a :Activity ;
@@ -5002,7 +5002,7 @@
     :teacher "MARIANA MOCANU" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :SSI_Marți-10_OPT6C-CTI-6CM-SSA-None a :Activity ;
@@ -5092,7 +5092,7 @@
     :series "6C-CTI-6CM-SCPD-en" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :SSI_Marți-8_SEMIGRUPA1-None a :Activity ;
@@ -5109,7 +5109,7 @@
     :teacher "ADRIAN CURAJ" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :SSI_Marți-8_SUBGRUPA1-None a :Activity ;
@@ -5131,10 +5131,10 @@
     :teacher "C. DOBRE" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ],
+            :time "08:00:00"^^xsd:time ],
         [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course",
         "p" .
 
@@ -5147,7 +5147,7 @@
     :series "6C-CTI-6CM-SCPD-en" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "p" .
 
 :SSI_Vineri-12_SEMIGRUPA1-None a :Activity ;
@@ -5247,7 +5247,7 @@
     :teacher "IULIA STAMATESCU" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT10H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :TASCR_Joi-19_OPT6C-CTI-6CM-SCPD-en-None a :Activity ;
@@ -5392,7 +5392,7 @@
     :series "6C-CTI-6CM-G3" ;
     :timeSlot [ :day "Marți" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :TSW_Joi-16_OPT6C-CTI-6CM-G3-None a :Activity ;
@@ -5566,7 +5566,7 @@
     :teacher "V. CALOFIR" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :UBD_Joi-10_OPT4C5-1 a :Activity ;
@@ -5662,7 +5662,7 @@
     :series "4C5" ;
     :timeSlot [ :day "Miercuri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "lab" .
 
 :_Joi-10_331CA-None a :Activity ;
@@ -5782,7 +5782,7 @@
     :teacher "MARIANA MOCANU" ;
     :timeSlot [ :day "Joi" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :_Marți-16_341C5-None a :Activity ;
@@ -5907,7 +5907,7 @@
     :teacher "D. TUDOSE" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :_Vineri-8_333CA-2 a :Activity ;
@@ -5922,7 +5922,7 @@
     :teacher "D. TUDOSE" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 
 :_Vineri-8_335CA-2 a :Activity ;
@@ -5937,6 +5937,6 @@
     :teacher "D. TUDOSE" ;
     :timeSlot [ :day "Vineri" ;
             :duration "PT2H"^^xsd:duration ;
-            :time "8:00:00"^^xsd:time ] ;
+            :time "08:00:00"^^xsd:time ] ;
     :type "course" .
 

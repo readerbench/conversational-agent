@@ -2,6 +2,7 @@ import requests
 from os import environ
 from enum import Enum
 import logging
+import time
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +15,18 @@ class QueryType(Enum):
     SELECT = 'query'
     UPDATE = 'update'
 
+def get(query_params, headers, num_retries=7):
+    try:
+        logger.info("Sending DB request to " + KB_API_URL + ". Num retries left:" + str(num_retries))
+        r = requests.get(KB_API_URL, params=query_params, headers=headers)
+        logger.info("DB response code " + str(r.status_code))
+        return r.json().get('results', {}).get('bindings', None)
+    except Exception as err:
+        logger.error(f'GraphDB query error: {err}')
+        if num_retries > 0:
+            time.sleep(5)
+            return get(query_params, headers, num_retries - 1)
+    return None
 
 def execute_sparql_query(query):
     """ Perform a SPARQL query on the knowledge base. """
@@ -28,9 +41,7 @@ def execute_sparql_query(query):
         'query': query
     }
 
-    r = requests.get(KB_API_URL, params=query_params, headers=headers)
-    # logger.debug("RESPONSE", r.text)
-    return r.json().get('results', {}).get('bindings', None)
+    return get(query_params, headers)
 
 
 def execute_sparql_update(query):
@@ -46,8 +57,11 @@ def execute_sparql_update(query):
         'update': query
     }
 
-    r = requests.post(KB_UPDATE_API_URL, params=query_params, headers=headers)
-    # logger.debug("RESPONSE", r.text)
+    try:
+        r = requests.post(KB_UPDATE_API_URL, params=query_params, headers=headers)
+        logger.debug("DB response code", r.status_code)
+    except Exception as err:
+        logger.error(f'GraphDB update error: {err}')
 
 
 def prefix_list_to_string(prefixes):

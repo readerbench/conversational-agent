@@ -8,7 +8,7 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.utils import get_entity_or_slot
-from actions.university_guide.knowledge_base_bridge import get_activities_schedule
+from .knowledge_base_bridge import get_activities_schedule
 
 logger = logging.getLogger(__name__)
 

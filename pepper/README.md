@@ -39,15 +39,31 @@ curl -X POST --header "Content-Type:multipart/form-data" -F "config=@/opt/graphd
 
 Build all docker images
 ```shell
-docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web -f ../pepper-web-frontend/Dockerfile .
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web -f ../pepper-web-frontend/web-ui.prod.dockerfile .
 docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web
 
-docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server -f Dockerfile .
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server -f rasa-agent.dockerfile .
 docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server
 
-docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions  -f actions/Dockerfile .
+docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions -f actions/rasa-actions.dockerfile .
 docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions
 
 docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb -f graphdb.dockerfile .
 docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
+```
+
+### Setup nodes
+
+Allow access to the Docker images registry:
+
+```shell
+docker login -u <username> -p <deploy_token> registry.gitlab.com # Needs GitLab deploy token
+```
+
+Pull images and deploy the service stack:
+
+```shell
+docker stack deploy -c stack.yml --with-registry-auth pepper # Start service stack
+docker stack rm pepper # Stop the service stack
+docker service ls # Check running services
 ```

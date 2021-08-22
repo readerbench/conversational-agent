@@ -352,7 +352,7 @@ def export_schedule_rdf(schedule):
 
         time = BNode()
         rdf_graph.add((time, _.day, Literal(activity["time"][0])))
-        rdf_graph.add((time, _.time, Literal(f'{activity["time"][1]}:00:00', datatype=XSD.time)))
+        rdf_graph.add((time, _.time, Literal(f'{activity["time"][1].zfill(2)}:00:00', datatype=XSD.time)))
         rdf_graph.add((time, _.duration, Literal(f'PT{activity["time"][2]}H', datatype=XSD.duration)))
         rdf_graph.add((act_id, _.timeSlot, time))
 

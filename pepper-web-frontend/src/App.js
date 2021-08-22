@@ -46,7 +46,7 @@ function App() {
             <img src={illustration} className="illustration" alt="Bot illustration"/>
             <div className="container">
                 <div className="header">
-                    <p><span style={{color: "#cad9ea"}}></span>Conversational agent</p>
+                    <p><span style={{color: "#cad9ea"}}></span>Pepper - Conversational agent</p>
                 </div>
                 <div className="scrollable-pane">
                     <div className="wrapper">

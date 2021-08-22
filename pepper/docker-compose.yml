@@ -16,7 +16,7 @@ services:
       RASA_ACTIONS_API_PORT: 5055
     ports:
       - 5005:5005
-    command: "rasa run --enable-api --endpoints endpoints.compose.yml --cors *"
+    command: "rasa run --enable-api --endpoints endpoints.prod.yml --cors *"
     depends_on:
       - actions
 

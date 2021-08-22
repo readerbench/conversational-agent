@@ -1,0 +1,36 @@
+_format_version: "2.1"
+
+services:
+  - name: rasa-agent
+    url: http://rasa-server
+    routes:
+      - name: conv-agent-route
+        paths:
+          - /pepper
+
+  - name: graphdb-workbench
+    url: http://graphdb
+    routes:
+      - name: graphdb-route
+        paths:
+          - /graphdb
+
+#  - name: grapbdb-apis
+#    url: http://graphdb
+#    routes:
+#      - name: graphdb-rest-route
+#        strip_path: false
+#        paths:
+#          - /rest
+
+  - name: web-ui-service
+    url: http://web-ui
+    routes:
+      - name: web-ui-service-route
+        paths:
+          - /
+
+consumers:
+  - username: user
+    keyauth_credentials:
+      - key: pass

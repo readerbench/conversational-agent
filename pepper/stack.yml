@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # API Gateway
+  kong:
+    image: kong:latest
+    volumes:
+      - ./kong.yml:/usr/local/kong/declarative/kong.yml
+    environment:
+      KONG_DATABASE: 'off'
+      KONG_DECLARATIVE_CONFIG: /usr/local/kong/declarative/kong.yml
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
+    ports:
+      - "80:8000"
+      - "443:8443"
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [ node.role == manager ]
+        max_replicas_per_node: 1
+      update_config:
+        order: start-first
+      rollback_config:
+        order: stop-first
+    networks:
+      - net-api-gateway
+
+  # React web UI for interacting with the bot
+  web-ui:
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web
+    environment:
+      RASA_SERVER_HOST: pepper_rasa-server
+    networks:
+      - net-api-gateway
+    deploy:
+      replicas: 1
+      placement:
+        max_replicas_per_node: 1
+
+#  # Conversational agent server
+  rasa-server:
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server
+    environment:
+      RASA_ACTIONS_API_HOST: rasa-actions
+      RASA_ACTIONS_API_PORT: 80
+    command: "rasa run -p 80 --enable-api --endpoints endpoints.prod.yml"
+    networks:
+      - net-api-gateway
+      - net-rasa
+    depends_on:
+      - rasa-actions
+
+  # RASA actions HTTP server
+  rasa-actions:
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions
+    environment:
+      KB_API_URL: "http://graphdb/repositories/pepper"
+      KB_BASE_URI: "http://www.readerbench.com/pepper"
+    command: "rasa run actions -p 80"
+    networks:
+      - net-rasa
+      - net-db
+    depends_on:
+      - graphdb
+    deploy:
+      update_config:
+        delay: 15s
+      resources:
+        limits:
+          memory: 200M
+
+  # Knowledge base
+  graphdb:
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
+    volumes:
+      - vol-graphdb:/opt/graphdb-instance/
+    networks:
+      - net-api-gateway
+      - net-db
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 900M
+
+volumes:
+  vol-graphdb: # DB persistence volume
+
+networks:
+  net-api-gateway:  # Connect services to Kong API Gateway
+  net-db:           # Access to DB service
+  net-rasa:         # Connect Rasa server to Rasa actions server

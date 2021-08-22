@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_HOST = process.env.RASA_SERVER_HOST;
-const BOT_ENDPOINT = `${API_HOST}/webhooks/rest/webhook`;
-const PREDICT_ENDPOINT = `${API_HOST}/conversations/0/messages`;
+const API_URL = `http://${window.location.hostname}/pepper`;
+const BOT_ENDPOINT = `${API_URL}/webhooks/rest/webhook`;
+const PREDICT_ENDPOINT = `${API_URL}/conversations/0/messages`;
 
 export const sendMsgAndGetReply = async (msg) => {
     const config = {
