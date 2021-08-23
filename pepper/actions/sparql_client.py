@@ -15,6 +15,7 @@ class QueryType(Enum):
     SELECT = 'query'
     UPDATE = 'update'
 
+
 def get(query_params, headers, num_retries=7):
     try:
         logger.info("Sending DB request to " + KB_API_URL + ". Num retries left:" + str(num_retries))
@@ -27,6 +28,7 @@ def get(query_params, headers, num_retries=7):
             time.sleep(5)
             return get(query_params, headers, num_retries - 1)
     return None
+
 
 def execute_sparql_query(query):
     """ Perform a SPARQL query on the knowledge base. """

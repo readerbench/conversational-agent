@@ -5,34 +5,37 @@ services:
   web:
     image: pepper-web
     ports:
-      - 3000:3000
+      - "3000:3000"
     stdin_open: true
 
   # Conversational agent server
   rasa-server:
     image: pepper-rasa
     environment:
-      RASA_ACTIONS_API_HOST: actions
-      RASA_ACTIONS_API_PORT: 5055
+      RASA_ACTIONS_API_HOST: rasa-actions
+      RASA_ACTIONS_API_PORT: 5003
     ports:
-      - 5005:5005
-    command: "rasa run --enable-api --endpoints endpoints.prod.yml --cors *"
+      - "5005:5005"
+    command: "rasa run --enable-api --endpoints endpoints.yml --cors * -p 5005"
     depends_on:
-      - actions
+      - rasa-actions
 
   # RASA actions HTTP server
-  actions:
-    image: pepper-actions
+  rasa-actions:
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions
     environment:
-      GRAPHDB_API_HOST: graphdb:7200
+      GRAPHDB_API_HOST: graphdb
+    command: "rasa run actions -p 5003"
+    ports:
+      - "5003:5003"
     depends_on:
       - graphdb
 
   # Knowledge base
   graphdb:
-    image: graphdb
+    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
     ports:
-      - 7200:7200 # Export GraphDB port to access the GraphDB Workbench
+      - "80:80" # Export GraphDB port to access the GraphDB Workbench
     volumes:
       - graphdb:/opt/graphdb-instance/
 
