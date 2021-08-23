@@ -95,7 +95,7 @@ class QueryBuilder:
                 """
             elif spec['question'] == 'al cui':
                 query += f"""
-                    ?{inner_id}) :HAS ?{eid} .
+                    ?{inner_id} :HAS ?{eid} .
                 """
 
         return query, eid
@@ -115,50 +115,58 @@ class DbBridge:
     def set_value(self, entity, value, type=MemAssistInfoType.VAL):
         """ Store a detail of an entity in the knowledge base. """
 
-        query, node_id, _ = QueryBuilder.query_create_noun_phrase(entity, match_existing=True)
+        try:
+            query, node_id, _ = QueryBuilder.query_create_noun_phrase(entity, match_existing=True)
 
-        if type == MemAssistInfoType.VAL:
-            query += f""" 
-                :{node_id} :{type.value} [:value "{value}"] .
-            """
-        elif type == MemAssistInfoType.LOC:
-            query_create_location, location_node_id, _ = QueryBuilder.query_create_noun_phrase(value)
-            query += query_create_location
-            query += f""" 
-                :{node_id} :{type.value} :{location_node_id} .
-            """
-        elif type in [MemAssistInfoType.TIME_POINT,
-                      MemAssistInfoType.TIME_START,
-                      MemAssistInfoType.TIME_END,
-                      MemAssistInfoType.TIME_RANGE,
-                      MemAssistInfoType.TIME_DURATION]:
-            query += f""" 
-                :{node_id} :{type.value} [
-                    a :time ;
-                    :value "{value}"
-                ] .
-            """
+            if type == MemAssistInfoType.VAL:
+                query += f""" 
+                    :{node_id} :{type.value} [:value "{value}"] .
+                """
+            elif type == MemAssistInfoType.LOC:
+                query_create_location, location_node_id, _ = QueryBuilder.query_create_noun_phrase(value)
+                query += query_create_location
+                query += f""" 
+                    :{node_id} :{type.value} :{location_node_id} .
+                """
+            elif type in [MemAssistInfoType.TIME_POINT,
+                          MemAssistInfoType.TIME_START,
+                          MemAssistInfoType.TIME_END,
+                          MemAssistInfoType.TIME_RANGE,
+                          MemAssistInfoType.TIME_DURATION]:
+                query += f""" 
+                    :{node_id} :{type.value} [
+                        a :time ;
+                        :value "{value}"
+                    ] .
+                """
 
-        query = RDF_PREFIXES + insert_data(query)
-        logger.debug(query)
-        execute_sparql_update(query)
+            query = RDF_PREFIXES + insert_data(query)
+            logger.debug(query)
+            execute_sparql_update(query)
+            return True
+        except Exception as err:
+            logger.error(f"[set_value()] {err}")
+            return False
 
     def get_value(self, entity, type=MemAssistInfoType.VAL):
         """ Get a detail of an entity from the knowledge base. """
 
-        query, node_id = QueryBuilder.query_match_noun_phrase(entity)
-        query += f""" 
-            ?{node_id}
-                :value ?entity ;
-                :{type.value} [:value ?val] .
-        """
+        try:
+            query, node_id = QueryBuilder.query_match_noun_phrase(entity)
+            query += f""" 
+                ?{node_id}
+                    :value ?entity ;
+                    :{type.value} [:value ?val] .
+            """
 
-        query = RDF_PREFIXES + select(f"?entity ?val", query)
-        logger.debug(query)
-        result = execute_sparql_query(query)
-        values = [[value(record['val']), value(record['entity'])] for record in result]
-
-        return self.__prettify_result(values)
+            query = RDF_PREFIXES + select(f"?entity ?val", query)
+            logger.debug(query)
+            result = execute_sparql_query(query)
+            values = [[value(record['val']), value(record['entity'])] for record in result]
+            return self.__prettify_result(values)
+        except Exception as err:
+            logger.error(f"[get_value()] {err}")
+            return None
 
     def store_action(self, components):
         """
@@ -166,43 +174,48 @@ class DbBridge:
         (location, timestamp, direct object, etc.).
         """
 
-        query, subj_node_id, _ = QueryBuilder.query_create_noun_phrase(components['subj'], match_existing=True)
+        try:
+            query, subj_node_id, _ = QueryBuilder.query_create_noun_phrase(components['subj'], match_existing=True)
 
-        act = uuid().hex
-        query += f"""
-            :{subj_node_id} :ACTION [
-                a :action ;
-                :value: "{components["action"]}"
-            ] .
-         """
+            act = uuid().hex
+            query += f"""
+                :{subj_node_id} :ACTION [
+                    a :action ;
+                    :value: "{components["action"]}"
+                ] .
+             """
 
-        if components['ce']:
-            sub_query, node_id, _ = QueryBuilder.query_create_noun_phrase(components['ce'])
-            query += sub_query
-            query += f""" 
-                :{act} :CE :{node_id} .
-            """
-
-        if components['loc']:
-            for loc in components['loc']:
-                query_create_location, location_node_id, _ = QueryBuilder.query_create_noun_phrase(loc)
-                query += query_create_location
+            if components['ce']:
+                sub_query, node_id, _ = QueryBuilder.query_create_noun_phrase(components['ce'])
+                query += sub_query
                 query += f""" 
-                    :{act} :LOC :{location_node_id} .
+                    :{act} :CE :{node_id} .
                 """
 
-        if components['time']:
-            for i, time in enumerate(components['time']):
-                query += f""" 
-                    :{act} :{time[1].value} [
-                        a :time ;
-                        :value: "{time[0]}"
-                    ] .
-                """
+            if components['loc']:
+                for loc in components['loc']:
+                    query_create_location, location_node_id, _ = QueryBuilder.query_create_noun_phrase(loc)
+                    query += query_create_location
+                    query += f""" 
+                        :{act} :LOC :{location_node_id} .
+                    """
 
-        query = RDF_PREFIXES + insert_data(query)
-        logger.debug(query)
-        result = execute_sparql_query(query)
+            if components['time']:
+                for i, time in enumerate(components['time']):
+                    query += f""" 
+                        :{act} :{time[1].value} [
+                            a :time ;
+                            :value: "{time[0]}"
+                        ] .
+                    """
+
+            query = RDF_PREFIXES + insert_data(query)
+            logger.debug(query)
+            execute_sparql_query(query)
+            return True
+        except Exception as err:
+            logger.error(f"[store_action()] {err}")
+            return False
 
     def get_action_time(self, components, info_type=MemAssistInfoType.TIME_POINT):
         """
@@ -210,50 +223,54 @@ class DbBridge:
         (containing more than the entity whose time is requested).
         """
 
-        # try to find the subject of the action
-        query, subj_node_id = QueryBuilder.query_match_noun_phrase(components['subj'])
+        try:
+            # try to find the subject of the action
+            query, subj_node_id = QueryBuilder.query_match_noun_phrase(components['subj'])
 
-        # match the requested action
-        query += f"""
-            ?{subj_node_id} :ACTION ?act .
-            ?act :value "{components["action"]}" . 
-        """
-
-        noun_phrase_nodes = [subj_node_id]
-        if components['ce']:
-            sub_query, node_id = QueryBuilder.query_match_noun_phrase(components['ce'])
-            query += sub_query
+            # match the requested action
             query += f"""
-                ?act :CE ?{node_id} .
+                ?{subj_node_id} :ACTION ?act .
+                ?act :value "{components["action"]}" . 
             """
-            noun_phrase_nodes.append(node_id)
 
-        if components['loc']:
-            for loc in components['loc']:
-                query_create_location, location_node_id = QueryBuilder.query_match_noun_phrase(loc)
-                query += query_create_location
+            noun_phrase_nodes = [subj_node_id]
+            if components['ce']:
+                sub_query, node_id = QueryBuilder.query_match_noun_phrase(components['ce'])
+                query += sub_query
                 query += f"""
-                    ?act :LOC ?{location_node_id} .
+                    ?act :CE ?{node_id} .
                 """
-                noun_phrase_nodes.append(location_node_id)
+                noun_phrase_nodes.append(node_id)
 
-        if components['time']:
-            for i, time in enumerate(components['time']):
-                query += f"""
-                    ?act :{time[1].value}  [ :value: "{time[0]}" ] .
-                """
+            if components['loc']:
+                for loc in components['loc']:
+                    query_create_location, location_node_id = QueryBuilder.query_match_noun_phrase(loc)
+                    query += query_create_location
+                    query += f"""
+                        ?act :LOC ?{location_node_id} .
+                    """
+                    noun_phrase_nodes.append(location_node_id)
 
-        # extract the requested property of the action
-        query += f"""
-            ?act :{info_type.value} ?time .
-        """
+            if components['time']:
+                for i, time in enumerate(components['time']):
+                    query += f"""
+                        ?act :{time[1].value}  [ :value: "{time[0]}" ] .
+                    """
 
-        query = RDF_PREFIXES + select('*', query)
-        logger.debug(query)
-        result = execute_sparql_query(query)
-        values = [[value(record['time'])] + [value(record[np]) for np in noun_phrase_nodes] for record in result]
+            # extract the requested property of the action
+            query += f"""
+                ?act :{info_type.value} ?time .
+            """
 
-        return self.__prettify_result(values)
+            query = RDF_PREFIXES + select('*', query)
+            logger.debug(query)
+            result = execute_sparql_query(query)
+            values = [[value(record['time'])] + [value(record[np]) for np in noun_phrase_nodes] for record in result]
+
+            return self.__prettify_result(values)
+        except Exception as err:
+            logger.error(f"[get_action_time()] {err}")
+            return None
 
     @staticmethod
     def __prettify_result(values):

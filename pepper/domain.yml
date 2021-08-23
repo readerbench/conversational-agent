@@ -6,6 +6,8 @@ intents:
   - generic.goodbye
   - generic.affirm
   - generic.general_knowledge
+  - generic.agent_abilities
+  - generic.interaction_examples
   - generic.out_of_scope
   - university_guide.fill_class_type
   - university_guide.fill_group_name
@@ -26,6 +28,7 @@ intents:
   - mem_assistant.get_subject
 
 entities:
+  # university_guide
   - class_type
   - course
   - entity
@@ -51,6 +54,7 @@ entities:
   - time
 
 actions:
+  # university_guide
   - action_find_class
   - action_find_professor
   - action_find_room
@@ -73,6 +77,7 @@ forms:
   raw_data_store_form:
 
 slots:
+  # university_guide
   course:
     type: text
   group_name:
@@ -90,6 +95,12 @@ slots:
     influence_conversation: false
 
 responses:
+  utter_error_storing_data:
+    - text: "Nu am putut salva informațiile"
+
+  utter_error_getting_data:
+    - text: "Nu am putut extrage informația"
+
   # generic
 
   utter_greet:
@@ -120,13 +131,34 @@ responses:
     - text: "Scuze, nu te pot ajuta"
 
   utter_not_implemented:
-    - text: "Nu pot deocamdată"
+    - text: "Nu te pot ajuta deocamdată"
+
+  utter_agent_abilities:
+    - text: "
+      Salutare! \n
+      Te pot ajuta cu informații din Universitatea POLITEHNICA din București: unde poți găsi un profesor, unde se află o sală, când are loc un curs. \n
+      De asemenea, pot reține informații concise și ți le pot reaminti la nevoie: locații, momente de timp, diverse valori. \n
+
+      Îți pot da exemple dacă dorești. Să începem!"
+
+  utter_examples:
+    - text: "
+      Ghid UPB: \n
+          ▪ Unde este biroul lui <Ion Popescu>? \n
+          ▪ Cum pot ajunge la sala <PR001>? \n
+          ▪ Unde se ține seminarul de Fizică pentru grupa 321CC? \n
+
+      Asistent de memorie: \n
+          ▪ Am pus cheile în sertarul din hol. / Unde mi-am lăsat cheile? \n
+          ▪ Abonamentul de metrou expiră pe 16 martie. / Când expiră abonamentul de metrou? \n
+          ▪ Numărul de telefon al lui Ion este 0123456789. / Care e numărul lui Ion?"
 
   # university_guide
 
   utter_professor_office:
     - text: "{professor} are biroul în sala {office}"
     - text: "Poți găsi pe {professor} în sala {office}"
+    - text: "Biroul lui {professor} este la sala {office}"
 
   utter_select_from_multiple_matches:
     - text: "La cine te referi dintre {options}?"
@@ -179,6 +211,7 @@ responses:
   utter_ask_raw_attr_val:
     - text: "da:"
     - text: "ascult:"
+    - text: "poți introduce valoarea atributului:"
 
 session_config:
   session_expiration_time: 60

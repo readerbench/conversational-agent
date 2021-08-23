@@ -11,4 +11,4 @@ WORKDIR /opt/pepper/actions
 
 EXPOSE 80
 
-CMD sleep 15; rasa run actions -p 80
+CMD rasa run actions -p 80

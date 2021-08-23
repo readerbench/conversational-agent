@@ -16,12 +16,16 @@ class QueryType(Enum):
     UPDATE = 'update'
 
 
-def get(query_params, headers, num_retries=7):
+def get(query_params, headers, num_retries=5):
     try:
         logger.info("Sending DB request to " + KB_API_URL + ". Num retries left:" + str(num_retries))
+        logger.info("Query: " + query_params['query'])
+
         r = requests.get(KB_API_URL, params=query_params, headers=headers)
         logger.info("DB response code " + str(r.status_code))
-        return r.json().get('results', {}).get('bindings', None)
+
+        if r.status_code < 400:
+            return r.json().get('results', {}).get('bindings', None)
     except Exception as err:
         logger.error(f'GraphDB query error: {err}')
         if num_retries > 0:
@@ -60,6 +64,7 @@ def execute_sparql_update(query):
     }
 
     try:
+        logger.info("Sending DB POST request. Query: " + query_params['query'])
         r = requests.post(KB_UPDATE_API_URL, params=query_params, headers=headers)
         logger.debug("DB response code", r.status_code)
     except Exception as err:

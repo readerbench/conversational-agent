@@ -69,6 +69,8 @@ nlu:
       - [până unde](query_word_loc) a alergat aseară Marius?
       - până unde au ajuns radiațiile de la Cernobâl
       - de unde am luat draperiile din sufragerie?
+      - spune-mi te rog unde a pus Alina dosarul cu actele de la serviciu
+      - ai putea să îmi zici unde era casa lui Teo?
 
   - intent: mem_assistant.store_following_attr
     examples: |
@@ -86,6 +88,8 @@ nlu:
       - ecuația fluxului electromagnetic [e](a_fi) cea care urmează
       - colegii mei de liceu [erau](a_fi) cei ce urmează
       - dioptriile mele de la ochelari [erau](a_fi) ultima dată cele ce urmează
+      - programul de la notarul de la Universitate este acesta:
+      - programul de lucru al lui Cristian e ăsta
 
   - intent: mem_assistant.store_attr
     examples: |

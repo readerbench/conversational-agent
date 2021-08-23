@@ -12,6 +12,8 @@ def get_professor_offices():
     """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
+    if not result:
+        return []
 
     professors = [{
         'name': professor['name']['value'],
@@ -46,6 +48,8 @@ def get_activities_schedule():
     """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
+    if not result:
+        return []
 
     activities = []
     for activity in result:
@@ -68,6 +72,8 @@ def get_rooms():
     """ % KB_BASE_URI
 
     result = execute_sparql_query(query)
+    if not result:
+        return []
 
     rooms = [{k: v['value'] for (k, v) in activity.items()} for activity in result]
 

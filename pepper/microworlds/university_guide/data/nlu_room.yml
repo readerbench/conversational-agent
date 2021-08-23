@@ -1,6 +1,9 @@
 version: "2.0"
 
 nlu:
+  - regex: room
+    examples: |
+      - [a-zA-Z]{2}\s?[0-9]{2,}\s?[a-zA-Z]?
   - intent: university_guide.find_room
     examples: |
       - Afișează-mi harta etajului corespunzător sălii [PR 303](room)!
@@ -42,3 +45,5 @@ nlu:
       - În ce sens se află sala [PR 307](room)?
       - Încotro să o iau către sala [PR 203](room)?
       - Știi unde se află sala [PR 606](room)?
+      - Unde e [AN 02](room)
+      - Cum ajung în [EG413](room)?

@@ -43,7 +43,9 @@ class ActionStoreAttribute(Action):
 
         # insert data into the database
         if entity and value:
-            db_bridge.set_value(entity, value)
+            success = db_bridge.set_value(entity, value)
+            if not success:
+                dispatcher.utter_message(template="utter_error_storing_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
 
@@ -73,7 +75,10 @@ class ActionGetAttribute(Action):
         # query the database
         if entity:
             result = db_bridge.get_value(entity)
-            dispatcher.utter_message(result)
+            if result:
+                dispatcher.utter_message(result)
+            else:
+                dispatcher.utter_message(template="utter_error_getting_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
         return []
@@ -103,7 +108,9 @@ class ActionStoreLocation(Action):
 
         # query the database
         if entity and location:
-            db_bridge.set_value(entity, location, type=MemAssistInfoType.LOC)
+            success = db_bridge.set_value(entity, location, type=MemAssistInfoType.LOC)
+            if not success:
+                dispatcher.utter_message(template="utter_error_storing_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
         return []
@@ -130,7 +137,10 @@ class ActionGetLocation(Action):
 
         if entity:
             result = db_bridge.get_value(entity, type=MemAssistInfoType.LOC)
-            dispatcher.utter_message(result)
+            if result:
+                dispatcher.utter_message(result)
+            else:
+                dispatcher.utter_message(template="utter_error_getting_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
         return []
@@ -230,7 +240,10 @@ class ActionGetTime(Action):
             else:
                 sentence_components = extract_sentence_components(semantic_roles)
                 result = db_bridge.get_action_time(sentence_components, info_type)
-            dispatcher.utter_message(result)
+            if result:
+                dispatcher.utter_message(result)
+            else:
+                dispatcher.utter_message(template="utter_error_getting_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
         return []
@@ -270,10 +283,12 @@ class ActionStoreTime(Action):
 
         if entity:
             if is_simple_event:
-                db_bridge.set_value(entity, (time['pre'] + " " + time['ext_value']).strip(), type=info_type)
+                success = db_bridge.set_value(entity, (time['pre'] + " " + time['ext_value']).strip(), type=info_type)
             else:
                 sentence_components = extract_sentence_components(semantic_roles)
-                db_bridge.store_action(sentence_components)
+                success = db_bridge.store_action(sentence_components)
+            if not success:
+                dispatcher.utter_message(template="utter_error_storing_data")
         else:
             dispatcher.utter_message(entity_extraction_failure_msg)
         return []

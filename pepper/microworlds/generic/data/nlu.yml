@@ -27,6 +27,8 @@ nlu:
       - Tare
       - Cool
       - Nice
+      - mersi mult
+      - merci
 
   - intent: generic.goodbye
     examples: |
@@ -55,6 +57,25 @@ nlu:
       - Ce e o [minge](entity)?
       - Ce e un [calculator](entity)?
       - Cine e [Bill Gates](entity)?
+
+  - intent: generic.agent_abilities
+    examples: |
+      - Ce știi să faci?
+      - Cu ce mă poți ajuta?
+      - Ce pot să te întreb?
+      - Ce știi?
+      - La ce fel de întrebări poți răspunde?
+      - Spune-mi ce te pot întreba
+      - Ce informații pot afla?
+      - Help
+      - Care sunt tipurile de întrebări la care răspunzi?
+
+  - intent: generic.interaction_examples
+    examples: |
+      - Vreau exemple de întrebări
+      - Dă-mi exemplu de ce te pot întreba
+      - vreau exemple
+      - care sunt exemplele?
 
   - intent: generic.out_of_scope
     examples: |

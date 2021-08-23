@@ -5,3 +5,13 @@ rules:
     steps:
       - intent: generic.out_of_scope
       - action: utter_out_of_scope
+
+  - rule: help
+    steps:
+      - intent: generic.agent_abilities
+      - action: utter_agent_abilities
+
+  - rule: get-examples
+    steps:
+      - intent: generic.interaction_examples
+      - action: utter_examples

@@ -60,15 +60,13 @@ services:
     environment:
       KB_API_URL: "http://graphdb/repositories/pepper"
       KB_BASE_URI: "http://www.readerbench.com/pepper"
-    command: "rasa run actions -p 80"
+    command: bash -c "echo Waiting... && sleep 30 && rasa run actions -p 80" # Wait for the DB to initialize
     networks:
       - net-rasa
       - net-db
     depends_on:
       - graphdb
     deploy:
-      update_config:
-        delay: 15s
       resources:
         limits:
           memory: 200M
