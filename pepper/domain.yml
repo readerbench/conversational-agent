@@ -138,7 +138,6 @@ responses:
       Salutare! \n
       Te pot ajuta cu informații din Universitatea POLITEHNICA din București: unde poți găsi un profesor, unde se află o sală, când are loc un curs. \n
       De asemenea, pot reține informații concise și ți le pot reaminti la nevoie: locații, momente de timp, diverse valori. \n
-
       Îți pot da exemple dacă dorești. Să începem!"
 
   utter_examples:
@@ -147,7 +146,6 @@ responses:
           ▪ Unde este biroul lui <Ion Popescu>? \n
           ▪ Cum pot ajunge la sala <PR001>? \n
           ▪ Unde se ține seminarul de Fizică pentru grupa 321CC? \n
-
       Asistent de memorie: \n
           ▪ Am pus cheile în sertarul din hol. / Unde mi-am lăsat cheile? \n
           ▪ Abonamentul de metrou expiră pe 16 martie. / Când expiră abonamentul de metrou? \n

@@ -3,7 +3,21 @@
 language: ro
 
 pipeline:
-  - name: WhitespaceTokenizer
+  - name: SpacyNLP
+    # language model to load
+    model: "ro"
+
+    # when retrieving word vectors, this will decide if the casing
+    # of the word is relevant. E.g. `hello` and `Hello` will
+    # retrieve the same vector, if set to `False`. For some
+    # applications and models it makes sense to differentiate
+    # between these two words, therefore setting this to `True`.
+    case_sensitive: False
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+    # Specify what pooling operation should be used to calculate the vector of
+    # the complete utterance. Available options: 'mean' and 'max'.
+    "pooling": "mean"
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer

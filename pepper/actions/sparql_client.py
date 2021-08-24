@@ -64,7 +64,7 @@ def execute_sparql_update(query):
     }
 
     try:
-        logger.info("Sending DB POST request. Query: " + query_params['query'])
+        logger.info("Sending DB POST request. Query: " + query)
         r = requests.post(KB_UPDATE_API_URL, params=query_params, headers=headers)
         logger.debug("DB response code", r.status_code)
     except Exception as err:

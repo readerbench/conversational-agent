@@ -90,6 +90,7 @@ nlu:
       - dioptriile mele de la ochelari [erau](a_fi) ultima dată cele ce urmează
       - programul de la notarul de la Universitate este acesta:
       - programul de lucru al lui Cristian e ăsta
+      - explicatia indicatorului albastru este asta
 
   - intent: mem_assistant.store_attr
     examples: |
