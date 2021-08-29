@@ -6,7 +6,6 @@ pipeline:
   - name: SpacyNLP
     # language model to load
     model: "ro"
-
     # when retrieving word vectors, this will decide if the casing
     # of the word is relevant. E.g. `hello` and `Hello` will
     # retrieve the same vector, if set to `False`. For some

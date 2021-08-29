@@ -43,7 +43,6 @@ def get_activities_schedule():
                 :time ?time;
                 :duration ?duration;
             ] .
-
         }
     """ % KB_BASE_URI
 

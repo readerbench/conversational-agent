@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import SpeechToText from "./services/speech-to-text";
 import {sendMsgAndGetReply} from "./services/bot-bridge";
@@ -40,6 +40,20 @@ function App() {
             ]);
         });
     };
+
+    useEffect(() => {
+        // Bot challenge to get welcome message
+        sendMsgAndGetReply("Help").then(([reply, predictedIntent]) => {
+            setMessages(messages => [
+                ...messages,
+                {
+                    author: "bot",
+                    text: reply,
+                    metadata: ''
+                }
+            ]);
+        });
+    }, []);
 
     return (
         <>

@@ -1,6 +1,5 @@
 import logging
 import yaml
-from pathlib import Path
 from typing import Any, List, Type, Text, Dict, Optional
 
 from rasa.nlu.classifiers.classifier import IntentClassifier

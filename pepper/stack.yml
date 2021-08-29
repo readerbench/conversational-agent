@@ -41,7 +41,7 @@ services:
       placement:
         max_replicas_per_node: 1
 
-#  # Conversational agent server
+  # Conversational agent server
   rasa-server:
     image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-server
     environment:
