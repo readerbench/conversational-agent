@@ -1,12 +1,6 @@
 version: '3.8'
 
 services:
-  # React web UI for interacting with the bot
-  web:
-    image: pepper-web
-    ports:
-      - "3000:3000"
-    stdin_open: true
 
   # Conversational agent server
   rasa-server:
@@ -35,7 +29,7 @@ services:
   graphdb:
     image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
     ports:
-      - "80:80" # Export GraphDB port to access the GraphDB Workbench
+      - "8085:80" # Export GraphDB port to access the GraphDB Workbench
     volumes:
       - graphdb:/opt/graphdb-instance/
 
