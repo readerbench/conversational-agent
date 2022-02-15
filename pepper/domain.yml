@@ -8,6 +8,7 @@ intents:
   - generic.general_knowledge
   - generic.agent_abilities
   - generic.interaction_examples
+  - generic.find_transport
   - generic.out_of_scope
   - university_guide.fill_class_type
   - university_guide.fill_group_name

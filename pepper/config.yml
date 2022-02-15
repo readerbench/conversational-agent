@@ -10,7 +10,7 @@ pipeline:
     # of the word is relevant. E.g. `hello` and `Hello` will
     # retrieve the same vector, if set to `False`. For some
     # applications and models it makes sense to differentiate
-    # between these two words, therefore setting this to `True`.
+    # between these two words
     case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
@@ -20,10 +20,11 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
+    analyzer: word
   - name: CountVectorsFeaturizer
     analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
+    min_ngram: 2
+    max_ngram: 5
   # Domain Classifier for detecting the microworld
   - name: components.domain_classifier.DomainClassifier
     epochs: 300

@@ -1,12 +1,32 @@
 # Pepper conversational agent
 
-## Training the agent with multiple microworlds
+## Description
+
+Conversational agent (supporting Romanian language), that can make use of a knowledge graph database to represent, store
+and retrieve natural language information.
+
+## Setup and training
+
+#### Configuring custom spaCy ro model:
+```shell
+python -m spacy link <absolute_path>/pepper/models/spacy-ro/ro_model0 ro
+```
+
+#### Training the agent with multiple microworlds
 
 ```shell
 rasa train --data \
   microworlds/generic/data \
   microworlds/mem_assistant/data \
   microworlds/university_guide/data
+```
+
+#### Testing the NLU pipeline
+
+A separate dataset for testing the NLU pipeline of the RASA agent is defined in _microworlds/test_.
+
+```shell
+rasa test nlu --nlu microworlds/test
 ```
 
 ## Running the agent
@@ -41,7 +61,7 @@ curl -X POST --header "Content-Type:multipart/form-data" -F "config=@/opt/graphd
 
 ## Deployment
 
-### Build docker images
+#### Build docker images
 
 ```shell
 docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/pepper-web -f ../pepper-web-frontend/web-ui.prod.dockerfile .
@@ -57,7 +77,7 @@ docker build -t registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb -
 docker push registry.gitlab.com/gabrielboroghina/pepper-conv-agent/graphdb
 ```
 
-### Setup nodes
+#### Setup nodes
 
 1. Allow access to the Docker images registry (get deploy token e.g. from GitLab project's settings -> Repository ->
    Deploy tokens):

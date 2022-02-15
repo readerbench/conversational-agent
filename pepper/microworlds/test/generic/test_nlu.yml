@@ -1,0 +1,42 @@
+version: "2.0"
+
+nlu:
+  - intent: generic.greet
+    examples: |
+      - Buna
+      - hei!
+      - hi
+      - salut
+      - hello
+
+  - intent: generic.thanks
+    examples: |
+      - super!
+      - merci
+      - mulțumesc mult
+      - mersi de informație
+
+  - intent: generic.agent_abilities
+    examples: |
+      - Cum poti sa ma ajuti
+      - ce te pot intreba
+      - ajutor
+      - mă poți ajuta cu ceva?
+      - la ce te pricepi
+      - care sunt lucrurile pe care știi să le faci?
+      - ce știi?
+
+  - intent: generic.interaction_examples
+    examples: |
+      - Niște exemple de întrebări te rog
+      - vreau ceva exemple
+      - arata-mi niște exemple de întrebări
+
+  - intent: generic.find_transport
+    examples: |
+      - Cum aș putea să ajung până la Universitate?
+      - Dă-mi trasee către Voluntari
+      - vreau rutele de transport spre spitalul floreasca
+      - as vrea sa merg la dedeman
+      - vreau sa ma duc la Lujerului
+      - ce iau ca să ajung în Băneasa

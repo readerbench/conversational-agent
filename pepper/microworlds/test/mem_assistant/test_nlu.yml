@@ -1,25 +1,13 @@
 version: "2.0"
 
 nlu:
-  - intent: greet
-    examples: |
-      - hei
-      - salut
-  - intent: goodbye
-    examples: |
-      - merci
-      - pa
-  - intent: affirm
-    examples: |
-      - ok
-      - da
-      - dap
-  - intent: store_request
+  - intent: mem_assistant.store_request
     examples: |
       - Reține te rog
       - memo te rog
       - ține minte ceva
-  - intent: store_location
+
+  - intent: mem_assistant.store_location
     examples: |
       - atlasul de geografie se află pe raftul cu dicționarul
       - am pus bateria externă în rucsacul albastru
@@ -39,7 +27,8 @@ nlu:
       - geanta de voiaj este de la Samsonite
       - cadoul este de la colegul meu de apartament
       - am luat ochelarii de la mall
-  - intent: get_location
+
+  - intent: mem_assistant.get_location
     examples: |
       - unde am pus caietul de matematică 1?
       - știi unde sunt burghiele mici
@@ -51,7 +40,8 @@ nlu:
       - de unde mi-am luat cravata cea grena
       - zi-mi unde am lăsat certificatul meu de naștere
       - unde este setul de baterii pentru mouse?
-  - intent: store_following_attr
+
+  - intent: mem_assistant.store_following_attr
     examples: |
       - codul meu IBAN este următorul
       - linkul de la concursul ACM de anul trecut e următorul
@@ -63,7 +53,8 @@ nlu:
       - teorema lui Pitagora este asta
       - modelul SSD-ului meu e ăsta
       - hotelul la care ne-am cazat anul trecut la mare e acesta:
-  - intent: store_attr
+
+  - intent: mem_assistant.store_attr
     examples: |
       - telefonul Dianei este 0745789654
       - prețul ceasului meu Atlantic a fost 500 de lei
@@ -76,7 +67,8 @@ nlu:
       - tipul de baterii de la tastatură este AAA
       - modelul tastaturii mele este logitech mx keys
       - ziua de naștere a Grațielei este pe 12 mai 1995
-  - intent: get_attr
+
+  - intent: mem_assistant.get_attr
     examples: |
       - care este telefonul Dianei
       - care este prețul ceasului meu Atlantic
@@ -90,7 +82,8 @@ nlu:
       - care e vărsta de pensionare la bărbați
       - care era modelul tastaturii mele?
       - care este înălțimea vârfului Everest?
-  - intent: get_specifier
+
+  - intent: mem_assistant.get_specifier
     examples: |
       - la ce apartament stă Alex Marin?
       - ce fel de bec am pus la bucătărie
@@ -106,7 +99,8 @@ nlu:
       - care bomboane sunt pentru ziua ei
       - ce os a înghițit acel băiat
       - care bomboane sunt de la auchan
-  - intent: store_timestamp
+
+  - intent: mem_assistant.store_timestamp
     examples: |
       - mâine se termină perioada de rodaj a mașinii
       - examenul la ML este peste 4 zile
@@ -130,7 +124,8 @@ nlu:
       - copierea fișierelor de pe un disk pe altul a durat 4 minute
       - am alergat timp de o oră și jumătate
       - acum 3 ore și 15 minute președintele John Kennedy a ținut un discurs
-  - intent: get_timestamp
+
+  - intent: mem_assistant.get_timestamp
     examples: |
       - când începe vacanța de iarnă
       - când am fost la mare anul trecut
@@ -148,7 +143,8 @@ nlu:
       - în ce perioadă se vor da biletele gratis la operă
       - în ce interval o să se ia apa la apartament
       - peste cât timp o să se aprindă focul de tabără
-  - intent: get_subject
+
+  - intent: mem_assistant.get_subject
     examples: |
       - cine a inventat motorul cu reacție
       - cine a fost la ziua mea acum 3 ani

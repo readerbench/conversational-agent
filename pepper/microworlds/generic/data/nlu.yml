@@ -77,6 +77,32 @@ nlu:
       - vreau exemple
       - care sunt exemplele?
 
+  - intent: generic.find_transport
+    examples: |
+      - vreau să ajung la casa presei libere
+      - as dori sa ajung la piata unirii
+      - cum ajung repede in otopeni?
+      - poti sa-mi zici cum sa ajung in Pantelimon?
+      - vreau să merg la dristor
+      - aș dori să mă duc la facultate
+      - arata-mi directii spre universitate
+      - vreau direcții către palatul parlamentului
+      - cum fac să merg in Herăstrău?
+      - care sunt rutele să ajung la mausoleu?
+      - cum pot să merg până la parcul tineretului?
+      - cum merg spre bragadiru?
+      - arată-mi rute către stația de metrou Orizont
+      - zi-mi cum ajung pe lacul morii
+      - Arata-mi te rog cum merg la Gara de Nord
+      - Vreau sa vad cum mă duc la Apusului
+      - Aș vrea să merg în parcul sticlariei
+      - ce mijloace de transport merg spre promenada
+      - ce mijloace pot să iau până la farmacia tei?
+      - cum pot ajunge rapid la laserul de la Măgurele
+      - vreau să merg în sectorul 5
+      - trebuie să ajung pe strada lalelelor
+      - dă-mi transport către arena națională
+
   - intent: generic.out_of_scope
     examples: |
       - Cum te cheamă?

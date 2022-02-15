@@ -12,7 +12,6 @@ import spacy
 from spacy.tokens import Span
 from spacy.lookups import Lookups
 import spacy.symbols as symbols
-from spacy.symbols import POS, ADJ, ADP, ADV, INTJ, NOUN, NUM, PART, PRON, PROPN, PUNCT, SYM, VERB, X, CCONJ, SCONJ, DET, AUX
 from spacy.lang.ro.tag_map import TAG_MAP
 
 SEMANTIC_ROLES = "semantic_roles"
