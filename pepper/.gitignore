@@ -1,3 +1,4 @@
 models/
-results/
+results/intent_errors.json
 graphdb/graphdb-free-9.9.0
+__pycache__/
