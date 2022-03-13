@@ -1,21 +1,6 @@
-version: "2.0"
+version: "3.0"
 
 stories:
-  - story: greet
-    steps:
-      - intent: generic.greet
-      - action: utter_greet
-
-  - story: goodbye
-    steps:
-      - intent: generic.goodbye
-      - action: utter_goodbye
-
-  - story: out of scope
-    steps:
-      - intent: generic.out_of_scope
-      - action: utter_out_of_scope
-
   - story: retrieve location
     steps:
       - intent: mem_assistant.get_location
@@ -53,11 +38,19 @@ stories:
       - action: action_store_time
       - action: utter_stored
 
-  - story: store following attribute
+rules:
+  - rule: store following attribute start
     steps:
-      - intent: mem_assistant.store_following_attr
+      - intent: mem_assistant.store_following_attr  # intent that triggers form activation
       - action: action_keep_raw_attr_entity
+      - action: raw_data_store_form  # run the form
+      - active_loop: raw_data_store_form  # this form is active
+
+  - rule: store following attribute submit
+    condition:
+      - active_loop: raw_data_store_form  # this form must be active
+    steps:
       - action: raw_data_store_form
-      - active_loop: raw_data_store_form
-      - active_loop: null
+      - active_loop: null  # the form is no longer active because it has been filled
+      - action: action_raw_data_store  # action to take after the form is complete
       - action: utter_stored

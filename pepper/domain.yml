@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 intents:
   - generic.greet
@@ -9,14 +9,10 @@ intents:
   - generic.agent_abilities
   - generic.interaction_examples
   - generic.find_transport
-  - generic.out_of_scope
-  - university_guide.fill_class_type
-  - university_guide.fill_group_name
   - university_guide.find_professor
   - university_guide.find_room
-  - university_guide.find_schedule_with_class_and_class_type
-  - university_guide.find_schedule_with_course
-  - university_guide.find_schedule_with_course_and_class_and_class_type
+  - university_guide.find_schedule
+  - university_guide.find_schedule_fill_slots
   - mem_assistant.store_request
   - mem_assistant.store_location
   - mem_assistant.get_location
@@ -33,7 +29,7 @@ entities:
   - class_type
   - course
   - entity
-  - group_name
+  - group
   - professor
   - room
   # mem_assistant
@@ -69,31 +65,70 @@ actions:
   - action_get_time
   - action_store_time
   - action_keep_raw_attr_entity
+  - action_raw_data_store
 
 forms:
-  get_next_input:
-    input:
-      - type: from_text
-      - intent: None
   raw_data_store_form:
+    required_slots:
+      - raw_attr_val
+
+  find_schedule_params_form:
+    required_slots:
+      - course
+      - group
+      - class_type
 
 slots:
   # university_guide
   course:
     type: text
-  group_name:
+    mappings:
+      - type: from_entity
+        entity: course
+        intent: university_guide.find_schedule
+      - type: from_entity
+        entity: course
+        conditions:
+          - active_loop: find_schedule_params_form
+
+  group:
     type: text
+    mappings:
+      - type: from_entity
+        entity: group
+        intent: university_guide.find_schedule
+      - type: from_entity
+        entity: group
+        conditions:
+          - active_loop: find_schedule_params_form
+
   class_type:
     type: text
+    mappings:
+      - type: from_entity
+        entity: class_type
+        intent: university_guide.find_schedule
+      - type: from_entity
+        entity: class_type
+        conditions:
+          - active_loop: find_schedule_params_form
+
   # mem_assistant
+
   raw_attr_entity:
     type: text
-    auto_fill: false
     influence_conversation: false
+    mappings:
+      - type: custom # Will be automatically set by action_keep_raw_attr_entity
+
   raw_attr_val:
     type: text
-    auto_fill: false
     influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: raw_data_store_form
+            requested_slot: raw_attr_val
 
 responses:
   utter_error_storing_data:
@@ -101,6 +136,9 @@ responses:
 
   utter_error_getting_data:
     - text: "Nu am putut extrage informația"
+
+  utter_error_semantic_entity_extraction:
+    - text: "Nu am putut extrage entitățile semantice"
 
   # generic
 
@@ -184,15 +222,21 @@ responses:
     - text: "Imi poti da mai multe informatii despre ce materie este vorba?"
     - text: "Imi poti oferi mai multe detalii despre materia care te intereseaza?"
 
-  utter_ask_group_name:
+  utter_ask_group:
     - text: "Din ce serie si grupa faci parte?"
 
   utter_ask_class_type:
     - text: "Curs, seminar sau laborator?"
 
-  utter_schedule:
-    - text: "Urmatorul {class_type} de {course} pentru {group_name} se tine {time} in sala {room}"
-    - text: "Urmatorul {class_type} de {course} pentru {group_name} se desfasoara {time} in sala {room}"
+  utter_activity_place:
+    - text: "În sala {room}"
+    - text: "Are loc în {room}"
+    - text: "{class_type} de {course} de la {group} are loc în sala {room}"
+    - text: "La materia {course}, {class_type} pentru {group} se ține în sala {room}"
+
+  utter_activity_schedule:
+    - text: "Urmatorul {class_type} de {course} pentru {group} se tine {time} in sala {room}"
+    - text: "Urmatorul {class_type} de {course} pentru {group} se desfasoara {time} in sala {room}"
 
   # mem_assistant
 
@@ -208,9 +252,9 @@ responses:
     - text: "Notat!"
 
   utter_ask_raw_attr_val:
-    - text: "da:"
-    - text: "ascult:"
-    - text: "poți introduce valoarea atributului:"
+    - text: "Da:"
+    - text: "Introdu valoarea"
+    - text: "Poți introduce valoarea atributului"
 
 session_config:
   session_expiration_time: 60

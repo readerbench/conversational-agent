@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 nlu:
   - intent: generic.greet
@@ -8,6 +8,12 @@ nlu:
       - hi
       - salut
       - hello
+
+  - intent: generic.goodbye
+    examples: |
+      - papa
+      - paa
+      - o zi buna
 
   - intent: generic.thanks
     examples: |

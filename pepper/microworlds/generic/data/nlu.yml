@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 nlu:
   - intent: generic.greet
@@ -39,6 +39,7 @@ nlu:
       - pa pa
       - papa
       - gata
+      - o zi frumoasă
 
   - intent: generic.affirm
     examples: |
@@ -102,9 +103,3 @@ nlu:
       - vreau să merg în sectorul 5
       - trebuie să ajung pe strada lalelelor
       - dă-mi transport către arena națională
-
-  - intent: generic.out_of_scope
-    examples: |
-      - Cum te cheamă?
-      - De ce e frig afară?
-      - Îmi este somn

@@ -1,16 +1,18 @@
+from typing import Any, List, Type, Text, Dict
 import logging
 import yaml
-from typing import Any, List, Type, Text, Dict, Optional
+from pathlib import Path
 
+from rasa.engine.graph import GraphComponent, ExecutionContext
+from rasa.engine.recipes.default_recipe import DefaultV1Recipe
+from rasa.engine.storage.resource import Resource
+from rasa.engine.storage.storage import ModelStorage
+from rasa.engine.storage.local_model_storage import LocalModelStorage
 from rasa.nlu.classifiers.classifier import IntentClassifier
-from rasa.nlu.classifiers.diet_classifier import DIETClassifier, EntityTagSpec
-from rasa.nlu.components import Component
+from rasa.nlu.classifiers.diet_classifier import DIETClassifier
 from rasa.nlu.featurizers.featurizer import Featurizer
-from rasa.nlu.config import RasaNLUModelConfig
-from rasa.nlu.model import Metadata
 from rasa.shared.nlu.training_data.message import Message
 from rasa.shared.nlu.training_data.training_data import TrainingData
-from rasa.utils.tensorflow.models import RasaModel
 
 from rasa.shared.nlu.constants import (
     INTENT,
@@ -38,67 +40,109 @@ def get_microworlds():
     return microworlds
 
 
-class MicroworldClassifier(IntentClassifier):
+class MultiModelStorage(LocalModelStorage):
+    def __init__(self, storage_path: Path, subfolder: str) -> None:
+        """Creates storage (see parent class for full docstring)."""
+        super().__init__(storage_path)
+        self._subfolder = subfolder
+
+    def _directory_for_resource(self, resource: Resource) -> Path:
+        directory = self._storage_path / resource.name / self._subfolder
+
+        if not directory.exists():
+            directory.mkdir(parents=True)
+
+        return directory
+
+
+@DefaultV1Recipe.register(
+    DefaultV1Recipe.ComponentType.INTENT_CLASSIFIER, is_trainable=True
+)
+class MicroworldClassifier(GraphComponent, IntentClassifier):
     """
     DIET-based classifier that detects the microworld-specific intent and entities.
     """
 
-    defaults = DIETClassifier.defaults
-    microworlds = get_microworlds()
+    microworlds: List[str] = get_microworlds()
 
-    def __init__(self, component_config: Optional[Dict[Text, Any]] = None,
-                 index_label_id_mapping: Optional[Dict[int, Text]] = None,
-                 entity_tag_specs: Optional[List[EntityTagSpec]] = None, model: Optional[RasaModel] = None) -> None:
-        super().__init__(component_config)
+    def __init__(
+            self,
+            config: Dict[Text, Any],
+            model_storage: ModelStorage,
+            resource: Resource,
+            execution_context: ExecutionContext
+    ) -> None:
+        self.component_config = config
+        self._model_storage = model_storage
+        self._resource = resource
+        self._execution_context = execution_context
 
-        self.classifiers = {}
-
-        for microworld in self.microworlds:
-            if component_config and 'microworlds' in component_config:
-                mw_component_config = component_config['microworlds'][microworld].copy()
-                mw_component_config['name'] = 'DIETClassifier'
-            else:
-                mw_component_config = component_config
-
-            self.classifiers[microworld] = DIETClassifier(mw_component_config,
-                                                          index_label_id_mapping,
-                                                          entity_tag_specs,
-                                                          model)
+        self.classifiers: Dict[str, DIETClassifier] = {}
 
     @classmethod
-    def required_components(cls) -> List[Type[Component]]:
-        return [IntentClassifier, Featurizer]
+    def create(
+            cls,
+            config: Dict[Text, Any],
+            model_storage: ModelStorage,
+            resource: Resource,
+            execution_context: ExecutionContext
+    ) -> GraphComponent:
+        instance = cls(config, model_storage, resource, execution_context)
+
+        for microworld in cls.microworlds:
+            mw_config = DIETClassifier.get_default_config()
+
+            # Determine configuration for the microworld that is being set up
+            if 'microworlds' in config:
+                mw_cfg = config['microworlds']
+                assert microworld in mw_cfg
+                mw_config.update(mw_cfg[microworld].copy())
+            else:
+                mw_config.update(config)
+
+            # Create classifier for the specific microworld
+            mw_output_fingerprint = f"{resource.output_fingerprint}_{microworld}"
+            mw_model_storage = MultiModelStorage(model_storage._storage_path, microworld)
+            mw_resource = Resource(resource.name, output_fingerprint=mw_output_fingerprint)
+            instance.classifiers[microworld] = DIETClassifier.create(mw_config,
+                                                                     mw_model_storage,
+                                                                     mw_resource,
+                                                                     execution_context)
+
+        return instance
+
+    @classmethod
+    def required_components(cls) -> List[Type]:
+        return [Featurizer]
 
     # package safety checks
     @classmethod
     def required_packages(cls) -> List[Text]:
         return DIETClassifier.required_packages()
 
-    def process(self, message: Message, **kwargs: Any) -> None:
+    def process(self, messages: List[Message]) -> List[Message]:
         """
         Proxy component that dispatches the classification task to the classifier specific
         to the microworld the current message belongs to.
 
-        :param message: The :class:`rasa.shared.nlu.training_data.message.Message` to process.
-        :return None, just updates the message structure
+        :param messages: List of :class:`rasa.shared.nlu.training_data.message.Message` items to process.
+        :return The list of processed messages
         """
 
-        # Select the classifier corresponding to the detected microworld
-        generic_intent = message.get(INTENT).get(INTENT_NAME_KEY)
+        for message in messages:
+            # Select the classifier corresponding to the detected microworld
+            generic_intent = message.get(INTENT).get(INTENT_NAME_KEY)
 
-        # Rename the intent information extracted by the domain classifier
-        message.set(GENERIC_INTENT, message.get(INTENT), add_to_output=True)
-        message.set(GENERIC_INTENT_RANKING, message.get(INTENT_RANKING_KEY), add_to_output=True)
+            # Rename the intent information extracted by the domain classifier
+            message.set(GENERIC_INTENT, message.get(INTENT), add_to_output=True)
+            message.set(GENERIC_INTENT_RANKING, message.get(INTENT_RANKING_KEY), add_to_output=True)
 
-        # Call the classifier, passing the arguments unchanged
-        self.classifiers[generic_intent.split('.')[0]].process(message, **kwargs)
+            # Call the classifier, passing the arguments unchanged
+            self.classifiers[generic_intent.split('.')[0]].process([message])
 
-    def train(
-            self,
-            training_data: TrainingData,
-            config: Optional[RasaNLUModelConfig] = None,
-            **kwargs: Any,
-    ) -> None:
+        return messages
+
+    def train(self, training_data: TrainingData) -> Resource:
         """Train the embedding intent classifier on a data set."""
 
         for microworld in self.microworlds:
@@ -108,35 +152,41 @@ class MicroworldClassifier(IntentClassifier):
                             msg.data['intent'].startswith(microworld)
             )
 
-            logger.info(f"Training DIETClassifier for microworld: {microworld}")
-            self.classifiers[microworld].train(mw_training_data, config, **kwargs)
+            logger.info(f"Training DIETClassifier for microworld: {microworld}. "
+                        f"Number of examples: {len(mw_training_data.intent_examples)}")
+            self.classifiers[microworld].train(mw_training_data)
 
-    def persist(self, file_name: Text, model_dir: Text) -> Dict[Text, Any]:
-        """Persist this model into the passed directory.
+        return self._resource
 
-        Return the metadata necessary to load the model again.
-        """
-
+    def persist(self) -> None:
         for microworld in self.microworlds:
-            self.classifiers[microworld].persist(f"{file_name}_{microworld}", model_dir)
-
-        return {"file": file_name}
+            # Each microworld model will be persisted separately according to its _resource member
+            self.classifiers[microworld].persist()
 
     @classmethod
     def load(
             cls,
-            meta: Dict[Text, Any],
-            model_dir: Text = None,
-            model_metadata: Metadata = None,
-            cached_component: Optional["MicroworldClassifier"] = None,
+            config: Dict[Text, Any],
+            model_storage: ModelStorage,
+            resource: Resource,
+            execution_context: ExecutionContext,
             **kwargs: Any,
     ) -> "MicroworldClassifier":
         """Loads the trained model from the provided directory."""
 
-        mw_classif = cls()
-        component_name = meta['file']
+        mw_classif = cls(config, model_storage, resource, execution_context)
+
         for microworld in cls.microworlds:
-            meta['file'] = f"{component_name}_{microworld}"
-            mw_classif.classifiers[microworld] = DIETClassifier.load(meta, model_dir, model_metadata, None, **kwargs)
+            mw_config = DIETClassifier.get_default_config()
+            mw_config.update(config)
+
+            mw_output_fingerprint = f"{resource.output_fingerprint}_{microworld}"
+            mw_resource = Resource(resource.name, output_fingerprint=mw_output_fingerprint)
+            mw_model_storage = MultiModelStorage(model_storage._storage_path, microworld)
+            mw_classif.classifiers[microworld] = DIETClassifier.load(mw_config,
+                                                                     mw_model_storage,
+                                                                     mw_resource,
+                                                                     execution_context,
+                                                                     **kwargs)
 
         return mw_classif

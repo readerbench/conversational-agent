@@ -58,7 +58,7 @@ course sub entity,
 class_type sub attribute,
   datatype string;
 
-group_name sub attribute,
+group sub attribute,
   datatype string;
 
 start_date sub attribute,
@@ -78,7 +78,7 @@ class sub relation,
   relates teacher,
   relates location,
   has class_type,
-  has group_name,
+  has group,
   has start_date,
   has end_date,
   has recurrence,
@@ -354,19 +354,19 @@ $course-USO  isa course, has name "Utilizarea Sistemelor de Operare";
 
 # ----------------------------------------------------------------------
 
-$class-ELTH-1CB-1 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T08:00:00, has end_date 2020-02-20T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-ELTH-1CB-2 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-25T10:00:00, has end_date 2020-02-25T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
-$class-En-311CB   (subject: $course-En,                                                 location: $pr-103b) isa class, has class_type "seminar",   has group_name "311CB",  has start_date 2020-02-17T14:00:00, has end_date 2020-02-17T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-F-1CB      (subject: $course-F,    teacher: $professor-cristina-stan,            location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T14:00:00, has end_date 2020-02-20T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-M3-1CB-1   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T10:00:00, has end_date 2020-02-20T12:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-M3-1CB-2   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T10:00:00, has end_date 2020-03-18T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
-$class-M3-311CB   (subject: $course-M3,                                                 location: $an-213)  isa class, has class_type "seminar",   has group_name "311CB",  has start_date 2020-02-17T12:00:00, has end_date 2020-02-17T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-MN-1CB-1   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-27T12:00:00, has end_date 2020-02-27T14:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
-$class-MN-1CB-2   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T08:00:00, has end_date 2020-02-18T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-MN-312CB   (subject: $course-MN,                                                 location: $eg-403)  isa class, has class_type "laborator", has group_name "312CB",  has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T08:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-SD-1CB-1   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $an-030)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-20T12:00:00, has end_date 2020-02-20T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
-$class-SD-1CB-2   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $ec-105)  isa class, has class_type "curs",      has group_name "1CB",    has start_date 2020-02-18T12:00:00, has end_date 2020-02-18T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
-$class-SD-312CBa  (subject: $course-SD,                                                 location: $eg-105)  isa class, has class_type "laborator", has group_name "312CBa", has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-ELTH-1CB-1 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $an-030)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-20T08:00:00, has end_date 2020-02-20T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-ELTH-1CB-2 (subject: $course-ELTH, teacher: $professor-marian-iordache,          location: $ec-105)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-25T10:00:00, has end_date 2020-02-25T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-En-311CB   (subject: $course-En,                                                 location: $pr-103b) isa class, has class_type "seminar",   has group "311CB",  has start_date 2020-02-17T14:00:00, has end_date 2020-02-17T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-F-1CB      (subject: $course-F,    teacher: $professor-cristina-stan,            location: $an-030)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-20T14:00:00, has end_date 2020-02-20T16:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-M3-1CB-1   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $an-030)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-20T10:00:00, has end_date 2020-02-20T12:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-M3-1CB-2   (subject: $course-M3,   teacher: $professor-paul-flondor,             location: $ec-105)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-18T10:00:00, has end_date 2020-03-18T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-M3-311CB   (subject: $course-M3,                                                 location: $an-213)  isa class, has class_type "seminar",   has group "311CB",  has start_date 2020-02-17T12:00:00, has end_date 2020-02-17T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-MN-1CB-1   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $an-030)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-27T12:00:00, has end_date 2020-02-27T14:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-MN-1CB-2   (subject: $course-MN,   teacher: $professor-dumitru-clementin-cercel, location: $ec-105)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-18T08:00:00, has end_date 2020-02-18T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-MN-312CB   (subject: $course-MN,                                                 location: $eg-403)  isa class, has class_type "laborator", has group "312CB",  has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T08:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-SD-1CB-1   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $an-030)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-20T12:00:00, has end_date 2020-02-20T12:00:00, has recurrence "2 weeks", has last_date 2020-06-16;
+$class-SD-1CB-2   (subject: $course-SD,   teacher: $professor-irina-mocanu,             location: $ec-105)  isa class, has class_type "curs",      has group "1CB",    has start_date 2020-02-18T12:00:00, has end_date 2020-02-18T14:00:00, has recurrence "1 week",  has last_date 2020-06-16;
+$class-SD-312CBa  (subject: $course-SD,                                                 location: $eg-105)  isa class, has class_type "laborator", has group "312CBa", has start_date 2020-02-17T08:00:00, has end_date 2020-02-17T10:00:00, has recurrence "1 week",  has last_date 2020-06-16;
 
 # ----------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
-version: "2.0"
+version: "3.0"
 
 nlu:
-  - intent: university_guide.find_schedule_with_course
+  - intent: university_guide.find_schedule
     examples: |
       - Ajută-mă să găsesc sala unde se ține [Programare Orientata pe Obiecte](course)!
       - Arată-mi sala în care se desfășoară [Elemente de Electronica Analogica](course)!
@@ -18,29 +18,37 @@ nlu:
       - Știi unde se desfășoară [Proiectare Logica](course)?
       - Știi unde se va ține [Algoritmi Paraleli si Distribuiti](course)?
       - Unde se ține [Metode Numerice](course)?
+      - Unde se ține [laboratorul](class_type) pentru grupa [311CC](group)?
+      - Unde se ține [cursul](class_type) pentru seria [CB](group)?
+      - Zi-mi te rog unde are loc [curs](class_type) pentru seria [CA](group)
+      - Vreau să știu unde se desfășoară [seminarul](class_type) grupei [222AC](group)
+      - Unde se ține [cursul](class_type) de [Electronica Digitala](course) pentru seria [CC](group)?
+      - Unde se ține [seminarul](class_type) de [Teoria Sistemelor](course) pentru grupa [315CB](group)?
+      - Unde se ține [seminar](class_type) de [Engleza](course) pentru grupa [321CC](group)?
+      - Aș vrea să știu unde e [seminarul](class_type) de [Mate](course) pentru grupa [142BB](group)
+      - Zi-mi unde va fi [cursul](class_type) seriei [S1](group) de [analiză matematică](course)
 
-  - intent: university_guide.find_schedule_with_class_and_class_type
+  - intent: university_guide.find_schedule_fill_slots
     examples: |
-      - Unde se ține [laboratorul](class_type) pentru grupa [311CC](group_name)?
-      - Unde se ține [cursul](class_type) pentru seria [CB](group_name)?
-      - Zi-mi te rog unde are loc [curs](class_type) pentru seria [CA](class_name)
-      - Vreau să știu unde se desfășoară [seminarul](class_type) grupei [222AC](class_name)
-
-  - intent: university_guide.find_schedule_with_course_and_class_and_class_type
-    examples: |
-      - Unde se ține [cursul](class_type) de [Electronica Digitala](course) pentru seria [CC](group_name)?
-      - Unde se ține [seminarul](class_type) de [Teoria Sistemelor](course) pentru grupa [315CB](group_name)?
-      - Unde se ține [seminar](class_type) de [Engleza](course) pentru grupa [321CC](group_name)?
-      - Aș vrea să știu unde e [seminarul](class_type) de [Mate](course) pentru grupa [142BB](group_name)
-      - Zi-mi unde va fi [cursul](class_type) seriei [S1](group_name) de [analiză matematică](course)
-
-  - intent: university_guide.fill_group_name
-    examples: |
-      - [312CB](group_name)
-      - [CC](group_name)
-
-  - intent: university_guide.fill_class_type
-    examples: |
+      - [Proiectare Logică](course)
+      - materia de [Fizică](course)
+      - mă interesa materia [Calculatoare Numerice 1](course)
       - [curs](class_type)
-      - [laborator](class_type)
       - [seminar](class_type)
+      - [laborator](class_type)
+      - [laboratorul](class_type) de la [Proiectare cu Microprocesoare](course)
+      - [cursul](class_type) de [Programare Orientata pe Obiecte](course)
+      - [seminarul](class_type) de la [Chimie aplicată](course)
+      - [Semnale și sisteme](course), seria [AB](group)
+      - [Metode Numerice](course) de la seria [CA](group)
+      - grupa [331CB](group) materia [Sisteme de operare](course)
+      - [seminar](class_type) de [Algebră și Geometrie](course)
+      - [3CC](group)
+      - in grupa [333CC](group)
+      - grupa [512AA](group)
+      - sunt în grupa [232](group)
+      - sunt de la seria [AC](group)
+      - de la [412C1](group)
+      - seria [CTI](group)
+      - eu fac parte din grupa [311CD](group)
+      - pentru seria [CB](group)

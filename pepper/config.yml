@@ -1,3 +1,5 @@
+recipe: default.v1
+
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: ro
@@ -25,10 +27,12 @@ pipeline:
     analyzer: char_wb
     min_ngram: 2
     max_ngram: 5
+  - name: RegexEntityExtractor
   # Domain Classifier for detecting the microworld
   - name: components.domain_classifier.DomainClassifier
-    epochs: 300
+    epochs: 200
     entity_recognition: False
+    number_of_transformer_layers: 3
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier
     epochs: 300
@@ -39,6 +43,7 @@ pipeline:
         epochs: 300
       mem_assistant:
         epochs: 300
+        number_of_transformer_layers: 3
   - name: components.syntactic_parser.SyntacticParser
   - name: EntitySynonymMapper
   - name: ResponseSelector

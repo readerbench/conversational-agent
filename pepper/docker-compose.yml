@@ -4,7 +4,9 @@ services:
 
   # Conversational agent server
   rasa-server:
-    image: pepper-rasa
+    build:
+      context: .
+      dockerfile: rasa-agent.dockerfile
     environment:
       RASA_ACTIONS_API_HOST: rasa-actions
       RASA_ACTIONS_API_PORT: 5003
@@ -16,7 +18,9 @@ services:
 
   # RASA actions HTTP server
   rasa-actions:
-    image: registry.gitlab.com/gabrielboroghina/pepper-conv-agent/rasa-actions
+    build:
+      context: .
+      dockerfile: ./actions/rasa-actions.dockerfile
     environment:
       GRAPHDB_API_HOST: graphdb
     command: "rasa run actions -p 5003"

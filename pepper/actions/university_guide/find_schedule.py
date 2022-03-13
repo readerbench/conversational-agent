@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta
-from difflib import SequenceMatcher
+from difflib import SequenceMatcher, get_close_matches
 import logging
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import AllSlotsReset
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.utils import get_entity_or_slot
@@ -12,25 +12,38 @@ from .knowledge_base_bridge import get_activities_schedule
 
 logger = logging.getLogger(__name__)
 
+ACTIVITY_TYPES = {
+    "curs": "course",
+    "seminar": "seminar",
+    "lab": "lab",
+    "laborator": "lab",
+    "proiect": "p",
+    "p": "p"
+}
 
-def find_event(knowledge_base, course, group_name, class_type):
+
+def find_event(knowledge_base, course, group, class_type):
     best_event_ratio = 0.0
     best_event = None
+
+    act_type = get_close_matches(class_type, ACTIVITY_TYPES.keys(), n=1, cutoff=0)
+    kb_act_type = ACTIVITY_TYPES[str(act_type[0])] \
+        if len(act_type) > 0 and act_type[0] in ACTIVITY_TYPES.keys() \
+        else None
+
+    logger.debug(f"KB-specific class_type: {kb_act_type}")
 
     for e in knowledge_base:
         a = max(SequenceMatcher(None, e['name'].lower(), course.lower()).ratio(),
                 SequenceMatcher(None, e['id'].lower(), course.lower()).ratio())
-        b = SequenceMatcher(None, e['group'].lower(), group_name.lower()).ratio()
-        c = SequenceMatcher(None, e['type'].lower(), class_type.lower()).ratio()
+        b = SequenceMatcher(None, e['group'].lower(), group.lower()).ratio()
+        c = SequenceMatcher(None, e['type'].lower(), kb_act_type).ratio()
         event_ratio = a * b * c
         if best_event_ratio < event_ratio:
             best_event_ratio = event_ratio
             best_event = e
 
-    if best_event_ratio > 0.5:
-        return best_event
-
-    return None
+    return best_event if best_event_ratio > 0.5 else None
 
 
 def parse_natural_delta(recurrence):
@@ -84,54 +97,32 @@ class ActionFindSchedule(Action):
 
         # Extract the required slots from the dialog tracker
         course = get_entity_or_slot(tracker, 'course')
-        group_name = get_entity_or_slot(tracker, 'group_name')
+        group = get_entity_or_slot(tracker, 'group')
         class_type = get_entity_or_slot(tracker, 'class_type')
 
-        logger.debug(f'Extracted course: {course} group: {group_name} class_type: {class_type}')
+        logger.debug(f'Extracted form fields - course: {course} | group: {group} | class_type: {class_type}')
         event = None
-        if course and group_name and class_type:
-            event = find_event(self.classes, course, group_name, class_type)
+        if course and group and class_type:
+            event = find_event(self.classes, course, group, class_type)
         logger.debug(f"event = {str(event)}")
 
         if not event:
-            events = []
+            dispatcher.utter_message(response="utter_no_info", entity="activitatea")
+            return [AllSlotsReset()]
 
-            if course:
-                events.append(SlotSet('course', course))
-            if group_name:
-                events.append(SlotSet('group_name', group_name))
-            if class_type:
-                events.append(SlotSet('class_type', class_type))
+        # TODO extract timeSlot from KB
+        # event_time = event['start_date']
+        # now_time = datetime.now()
+        # delta = parse_natural_delta(event['recurrence'])
 
-            if not course:
-                dispatcher.utter_message(template="utter_ask_course")
-                return events
-
-            if not group_name:
-                dispatcher.utter_message(template="utter_ask_group_name")
-                return events
-
-            if not class_type:
-                dispatcher.utter_message(template="utter_ask_class_type")
-                return events
-
-            dispatcher.utter_message(template="utter_no_info", entity="activitatea")
-            return events
-
-        # TODO
-        event_time = event['start_date']
-        now_time = datetime.now()
-        delta = parse_natural_delta(event['recurrence'])
-
-        while event_time < now_time:
-            event_time = event_time + delta
+        # while event_time < now_time:
+        #     event_time = event_time + delta
 
         dispatcher.utter_message(
-            template="utter_schedule",
+            response="utter_activity_place",
             course=course,
-            group_name=group_name,
+            group=group,
             class_type=class_type,
             room=event['room'],
-            time=to_natural_time(event_time),
         )
-        return []
+        return [AllSlotsReset()]

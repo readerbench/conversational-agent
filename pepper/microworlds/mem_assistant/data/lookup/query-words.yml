@@ -1,0 +1,130 @@
+version: "3.0"
+
+nlu:
+  - lookup: query-word-loc
+    examples: |
+      - unde
+      - de unde
+      - până unde
+      - pe unde
+      - încotro
+      - în ce direcție
+      - în ce sens
+
+  - lookup: query-word-time
+    examples: |
+      - când
+      - de când
+      - până când
+      - cât timp
+      - de cât timp
+      - peste cât timp
+      - acum cât timp
+      - la cât timp
+      - în cât timp
+
+  - lookup: query-word-spec
+    examples: |
+      - ce
+      - pe ce
+      - de ce
+      - la ce
+      - din ce
+      - în ce
+      - sub ce
+      - peste ce
+      - lângă ce
+      - câtre ce
+      - spre ce
+      - dinspre ce
+      - pentru ce
+      - despre ce
+      - de la ce
+      - pe la ce
+      - până la ce
+      - ce fel de
+      - care
+      - pe care
+      - de care
+      - la care
+      - în care
+      - din care
+      - sub care
+      - peste care
+      - lângă care
+      - câtre care
+      - spre care
+      - dinspre care
+      - pentru care
+      - despre care
+      - de la care
+      - pe la care
+      - până la care
+
+  - lookup: query-word-val
+    examples: |
+      - care e
+      - care este
+      - care era
+      - care erau
+      - care a fost
+      - care sunt
+
+  - lookup: query-word-subj
+    examples: |
+      - cine
+      - pe cine
+      - de cine
+      - la cine
+      - din cine
+      - pentru cine
+      - despre cine
+      - câtre cine
+      - spre cine
+      - dinspre cine
+      - de la cine
+      - pe la cine
+      - pe lângă cine
+      - lângă cine
+      - sub cine
+      - de către cine
+      - până la cine
+
+  - lookup: query-word-own
+    examples: |
+      - cui
+      - al cui
+      - a cui
+      - ai cui
+      - ale cui
+      - cărui
+      - cărei
+      - căror
+      - căruia
+      - căreia
+      - cărora
+      - a cărui
+      - al cărui
+      - ai cărui
+      - ale cărui
+      - a cărei
+      - al cărei
+      - ai cărei
+      - ale cărei
+      - a cărora
+      - ai cărora
+      - ale cărora
+
+  - lookup: query-word-numeral
+    examples: |
+      - cât
+      - câtă
+      - câți
+      - câte
+      - câtor
+      - câtora
+      - la câți
+      - al câtelea
+      - a câta
+      - ai câtelea
+      - ale câtelea

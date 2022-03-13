@@ -1,30 +1,6 @@
-version: "2.0"
+version: "3.0"
 
 nlu:
-  - intent: university_guide.find_schedule_with_course
-    examples: |
-      - Zi-mi unde se ține [Analiza Algoritmilor](course)!
-      - Spune-mi unde are loc [Calculatoare Numerice](course) te rog
-      - Știi unde va fi [fizica](course)?
-      - Aș vrea să aflu unde o să fie predată [teoria sistemelor](course)
-      - în ce sală va avea loc [semnale și sisteme](course)?
-
-  - intent: university_guide.find_schedule_with_class_and_class_type
-    examples: |
-      - Unde se ține [seminarul](class_type) de la grupa 313CC?
-      - Poți să îmi spui unde are loc [laboratorul](class_type) pentru seria [CA](group_name)?
-      - Spune-mi te rog unde va avea loc [cursul](class_type) seriei [AA](group_name)
-      - Arată-mi unde se desfășoară [laborator](class_type) pentru grupa [12](group_name)
-      - Aș vrea să aflu unde va fi [seminarul](class_type) de la grupa [123A](group_name)
-
-  - intent: university_guide.find_schedule_with_course_and_class_and_class_type
-    examples: |
-      - Unde se ține [curs](class_type) de [Programare Avansată](course) în Java pentru seria [AC](group_name)?
-      - Aș vrea să îmi zici unde are loc [laboratorul](class_type) de [programare orientată pe obiecte](course) al grupei [333CD](group_name)
-      - Vreau să aflu unde o să fie [seminarul](class_type) de [fizică](course) de la grupa [31C](group_name)
-      - Poți să îmi spui unde se ține [cursul](class_type) de la seria [CA](group_name) de [mecanică](course)?
-      - Unde o să fie predat laboratorul de la grupa [15](group_name) de [structuri de date](course)?
-
   - intent: university_guide.find_professor
     examples: |
       - Spune-mi te rog unde are biroul [Ciprian Truică](professor)
@@ -41,3 +17,30 @@ nlu:
       - Mă poți ajuta să ajung la sala [EG 203](room)?
       - pe unde pot merge către sala [PR 306](room)
       - caut sala [EC104](room), știi cumva unde este?
+
+  - intent: university_guide.find_schedule
+    examples: |
+      - Zi-mi unde se ține [Analiza Algoritmilor](course)!
+      - Spune-mi unde are loc [Calculatoare Numerice](course) te rog
+      - Știi unde va fi [fizica](course)?
+      - Aș vrea să aflu unde o să fie predată [teoria sistemelor](course)
+      - în ce sală va avea loc [semnale și sisteme](course)?
+      - Unde se ține [seminarul](class_type) de la grupa 313CC?
+      - Poți să îmi spui unde are loc [laboratorul](class_type) pentru seria [CA](group)?
+      - Spune-mi te rog unde va avea loc [cursul](class_type) seriei [AA](group)
+      - Arată-mi unde se desfășoară [laborator](class_type) pentru grupa [12](group)
+      - Aș vrea să aflu unde va fi [seminarul](class_type) de la grupa [123A](group)
+      - Unde se ține [curs](class_type) de [Programare Avansată în Java](course) pentru seria [AC](group)?
+      - Aș vrea să îmi zici unde are loc [laboratorul](class_type) de [programare orientată pe obiecte](course) al grupei [333CD](group)
+      - Vreau să aflu unde o să fie [seminarul](class_type) de [fizică](course) de la grupa [31C](group)
+      - Poți să îmi spui unde se ține [cursul](class_type) de la seria [CA](group) de [mecanică](course)?
+      - Unde o să fie predat laboratorul de la grupa [15](group) de [structuri de date](course)?
+
+  - intent: university_guide.find_schedule_fill_slots
+    examples: |
+      - sunt de la grupa [333CD](group)
+      - pentru seria [CA](group)
+      - [511AC](group)
+      - [seminarul](course_type)
+      - [cursul](class_type) de [Proiectare logică](course)
+      - la materia de [Arhitectura sistemelor de calcul](course)

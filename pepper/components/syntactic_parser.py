@@ -1,7 +1,9 @@
 from typing import Any, Optional, Text, Dict, List, Type
 
-from rasa.nlu.components import Component
-from rasa.nlu.config import RasaNLUModelConfig
+from rasa.engine.graph import GraphComponent, ExecutionContext
+from rasa.engine.recipes.default_recipe import DefaultV1Recipe
+from rasa.engine.storage.resource import Resource
+from rasa.engine.storage.storage import ModelStorage
 from rasa.shared.nlu.training_data.message import Message
 from rasa.shared.nlu.training_data.training_data import TrainingData
 from rasa.shared.nlu.constants import (
@@ -17,28 +19,53 @@ from spacy.lang.ro.tag_map import TAG_MAP
 SEMANTIC_ROLES = "semantic_roles"
 
 
-class SyntacticParser(Component):
+@DefaultV1Recipe.register(
+    DefaultV1Recipe.ComponentType.MESSAGE_FEATURIZER, is_trainable=False
+)
+class SyntacticParser(GraphComponent):
     """ Component that identifies syntactic entities of the phrase by their syntactic question. """
 
-    @classmethod
-    def required_components(cls) -> List[Type[Component]]:
-        """ Specify which components need to be present in the pipeline. """
-
-        return []
-
     name = "SyntacticParser"
-
-    # Defines the default configuration parameters of a component
-    # these values can be overwritten in the pipeline configuration
-    # of the model. The component should choose sensible defaults
-    # and should be able to create reasonable results with the defaults.
-    defaults = {}
 
     # Defines what language(s) this component can handle.
     # This attribute is designed for instance method: `can_handle_language`.
     # Default value is None which means it can handle all languages.
     # This is an important feature for backwards compatibility of components.
     language_list = ['ro']
+
+    def __init__(
+            self,
+            config: Dict[Text, Any],
+            model_storage: ModelStorage,
+            resource: Resource,
+            execution_context: ExecutionContext
+    ) -> None:
+        self.component_config = config
+        self._model_storage = model_storage
+        self._resource = resource
+        self._execution_context = execution_context
+
+        # Initialize spaCy model used for syntactic-semantic parsing
+        self.nlp_spacy = spacy.load('./models/spacy-syntactic')
+
+        # Initialize the lemmatizer
+        self.lemmas = self.__load_lemmas()
+
+    @classmethod
+    def create(
+            cls,
+            config: Dict[Text, Any],
+            model_storage: ModelStorage,
+            resource: Resource,
+            execution_context: ExecutionContext
+    ) -> GraphComponent:
+        return cls(config, model_storage, resource, execution_context)
+
+    @classmethod
+    def required_components(cls) -> List[Type]:
+        """ Specify which components need to be present in the pipeline. """
+
+        return []
 
     @staticmethod
     def __load_lemmas():
@@ -61,21 +88,7 @@ class SyntacticParser(Component):
             symbols.PRON: pron_lemmas,
         }
 
-    def __init__(self, component_config: Optional[Dict[Text, Any]] = None) -> None:
-        super().__init__(component_config)
-
-        # Initialize spaCy model used for syntactic-semantic parsing
-        self.nlp_spacy = spacy.load('./models/spacy-syntactic')
-
-        # Initialize the lemmatizer
-        self.lemmas = SyntacticParser.__load_lemmas()
-
-    def train(
-            self,
-            training_data: TrainingData,
-            config: Optional[RasaNLUModelConfig] = None,
-            **kwargs: Any,
-    ) -> None:
+    def train(self, training_data: TrainingData) -> None:
         """Train this component.
 
         This is the components chance to train itself provided with the training data. The component can rely on
@@ -83,6 +96,13 @@ class SyntacticParser(Component):
         of ANY component and on any context attributes created by a call to :meth:`components.Component.train`
         of components previous to this one."""
         pass
+
+    def process_training_data(self, training_data: TrainingData) -> TrainingData:
+        # TODO: Implement this if your component augments the training data with
+        #       tokens or message features which are used by other components
+        #       during training.
+
+        return training_data
 
     @staticmethod
     def __part_of_speech_from_tag(tag):
@@ -113,7 +133,7 @@ class SyntacticParser(Component):
         """
 
         tag = token.tag_.split('__')[0]  # Extract the compact tag
-        pos = SyntacticParser.__part_of_speech_from_tag(tag)
+        pos = self.__part_of_speech_from_tag(tag)
         word = token.text
 
         # POS = proper noun
@@ -200,7 +220,7 @@ class SyntacticParser(Component):
 
         return specifiers
 
-    def process(self, message: Message, **kwargs: Any) -> None:
+    def process(self, messages: List[Message]) -> List[Message]:
         """Process an incoming message.
 
         This is the components chance to process an incoming message. The component can rely on any context
@@ -208,52 +228,55 @@ class SyntacticParser(Component):
         of ANY component and on any context attributes created by a call to :meth:`components.Component.process`
         of components previous to this one."""
 
-        # Parse the phrase
-        text = message.get(TEXT)
-        if not text:
-            return
-        doc = self.nlp_spacy(text.lower())
+        for message in messages:
+            # Parse the phrase
+            text = message.get(TEXT)
+            if not text:
+                continue
+            doc = self.nlp_spacy(text.lower())
 
-        semantic_roles = []
-        inferred_subj = None
+            semantic_roles = []
+            inferred_subj = None
 
-        for token in doc:
-            # Identify principal components of the sentence
-            if token.dep_ not in ['-'] and token.head.dep_ == 'ROOT':
-                ext_value, prep = self.__get_dependency_span(doc, token, True)
-                semantic_roles.append({
-                    "question": token.dep_,
-                    "determiner": self.__get_dependency_span(doc, token.head)[0],
-                    "pre": prep,
-                    "value": token.text,
-                    "lemma": self.__lemmatize(token),
-                    "ext_value": ext_value,
-                    "specifiers": self.__get_specifiers(doc, token)
-                })
+            for token in doc:
+                # Identify principal components of the sentence
+                if token.dep_ not in ['-'] and token.head.dep_ == 'ROOT':
+                    ext_value, prep = self.__get_dependency_span(doc, token, True)
+                    semantic_roles.append({
+                        "question": token.dep_,
+                        "determiner": self.__get_dependency_span(doc, token.head)[0],
+                        "pre": prep,
+                        "value": token.text,
+                        "lemma": self.__lemmatize(token),
+                        "ext_value": ext_value,
+                        "specifiers": self.__get_specifiers(doc, token)
+                    })
 
-            # Infer the subject (me) if the action is at the 1st person, singular
-            if token.dep_ == 'ROOT' and (
-                    (TAG_MAP[token.tag_.split('__')[0]].get('Person', '') == '1' and
-                     TAG_MAP[token.tag_.split('__')[0]].get('Number', '') == 'Sing')
-                    or
-                    any(t.text == 'am' and t.dep_ == '-' and t.head.dep_ == 'ROOT' for t in doc)
-            ):
-                inferred_subj = {
-                    "question": "cine",
-                    "determiner": self.__get_dependency_span(doc, token)[0],
-                    "value": "eu",
-                    "lemma": "eu",
-                    "ext_value": "eu",
-                    "specifiers": []
-                }
+                # Infer the subject (me) if the action is at the 1st person, singular
+                if token.dep_ == 'ROOT' and (
+                        (TAG_MAP[token.tag_.split('__')[0]].get('Person', '') == '1' and
+                         TAG_MAP[token.tag_.split('__')[0]].get('Number', '') == 'Sing')
+                        or
+                        any(t.text == 'am' and t.dep_ == '-' and t.head.dep_ == 'ROOT' for t in doc)
+                ):
+                    inferred_subj = {
+                        "question": "cine",
+                        "determiner": self.__get_dependency_span(doc, token)[0],
+                        "value": "eu",
+                        "lemma": "eu",
+                        "ext_value": "eu",
+                        "specifiers": []
+                    }
 
-        if inferred_subj and not any(ent['question'] == 'cine' for ent in semantic_roles):
-            semantic_roles.append(inferred_subj)
+            if inferred_subj and not any(ent['question'] == 'cine' for ent in semantic_roles):
+                semantic_roles.append(inferred_subj)
 
-        # Add extracted entities to the message
-        message.set(SEMANTIC_ROLES, semantic_roles, add_to_output=True)
+            # Add extracted entities to the message
+            message.set(SEMANTIC_ROLES, semantic_roles, add_to_output=True)
 
-    def persist(self, file_name: Text, model_dir: Text) -> Optional[Dict[Text, Any]]:
+        return messages
+
+    def persist(self) -> None:
         """Persist this component to disk for future loading."""
 
         pass

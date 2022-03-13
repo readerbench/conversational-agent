@@ -1,0 +1,14 @@
+version: "3.0"
+
+stories:
+  - story: store following attribute
+    steps:
+      - user: |
+          numarul de telefon al mariei [este](a_fi) asta
+        intent: mem_assistant.store_following_attr
+      - action: action_keep_raw_attr_entity
+      - action: raw_data_store_form  # run the form
+      - active_loop: raw_data_store_form  # this form is active
+      - active_loop: null
+      - action: action_raw_data_store  # action to take after the form is complete
+      - action: utter_stored

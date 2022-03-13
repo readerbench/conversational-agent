@@ -2,18 +2,16 @@
 Custom actions to be performed in response to specific intents.
 """
 
-from typing import Any, Text, Dict, List, Union
+from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from rasa_sdk.forms import FormAction
 import re
 
 from actions.mem_assistant.kb_mem_assistant import DbBridge
 from actions.mem_assistant.types import MemAssistInfoType
 
 db_bridge = DbBridge()
-entity_extraction_failure_msg = "Nu am putut extrage entitățile"
 
 SEMANTIC_ROLES = "semantic_roles"
 
@@ -47,7 +45,7 @@ class ActionStoreAttribute(Action):
             if not success:
                 dispatcher.utter_message(template="utter_error_storing_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
 
         return []
 
@@ -80,7 +78,7 @@ class ActionGetAttribute(Action):
             else:
                 dispatcher.utter_message(template="utter_error_getting_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
         return []
 
 
@@ -112,7 +110,7 @@ class ActionStoreLocation(Action):
             if not success:
                 dispatcher.utter_message(template="utter_error_storing_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
         return []
 
 
@@ -142,7 +140,7 @@ class ActionGetLocation(Action):
             else:
                 dispatcher.utter_message(template="utter_error_getting_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
         return []
 
 
@@ -231,10 +229,10 @@ class ActionGetTime(Action):
             else:
                 is_simple_event = False
 
-        # determine the type of timestamp requested
-        info_type = get_time_type(times[0], action)
+        if entity and len(times) > 0:
+            # determine the type of timestamp requested
+            info_type = get_time_type(times[0], action)
 
-        if entity:
             if is_simple_event:
                 result = db_bridge.get_value(entity, type=info_type)
             else:
@@ -245,7 +243,7 @@ class ActionGetTime(Action):
             else:
                 dispatcher.utter_message(template="utter_error_getting_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
         return []
 
 
@@ -290,11 +288,13 @@ class ActionStoreTime(Action):
             if not success:
                 dispatcher.utter_message(template="utter_error_storing_data")
         else:
-            dispatcher.utter_message(entity_extraction_failure_msg)
+            dispatcher.utter_message(template="utter_error_semantic_entity_extraction")
         return []
 
 
 class ActionKeepRawAttrEntity(Action):
+    """ Keep in mind the entity for which we will have to store its value after the user enters it. """
+
     def __init__(self):
         super().__init__()
 
@@ -313,38 +313,13 @@ class ActionKeepRawAttrEntity(Action):
         return [SlotSet("raw_attr_entity", entity)]
 
 
-class RawDataStoreForm(FormAction):
-    """Example of a custom form action"""
+class ActionRawDataStore(Action):
+    """ Link the attribute value to the entity it defines in the knowledge base. """
 
     def name(self):
-        """Unique identifier of the form"""
-        return "raw_data_store_form"
+        return "action_raw_data_store"
 
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        """A list of required slots that the form has to fill"""
-
-        return ["raw_attr_val"]
-
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
-
-        return {
-            "raw_attr_val": self.from_text(),  # the raw value is actually the whole text entered by the user
-        }
-
-    def submit(
-            self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any],
-    ) -> List[Dict]:
-        """Define what the form has to do after all required slots are filled"""
-
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         raw_attr_entity = tracker.get_slot("raw_attr_entity")
         raw_attr_val = tracker.get_slot("raw_attr_val")
         db_bridge.set_value(raw_attr_entity, raw_attr_val, type=MemAssistInfoType.VAL)
