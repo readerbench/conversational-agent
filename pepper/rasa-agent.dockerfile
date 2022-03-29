@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 
-RUN pip3 install rasa==2.0.3
-RUN pip3 install spacy==2.2.3
+RUN pip3 install rasa~=3.0.9
+RUN pip3 install spacy~=2.3.7
 
 WORKDIR /opt/pepper/
 
