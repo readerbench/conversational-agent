@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<label for="phrase">Phrase</label>
+<br/>
+<textarea id="phrase"
+          autofocus
+          onchange="indexTokens()">
+</textarea>
+
+<table border="1">
+    <tr id="phrase_row">
+    </tr>
+    <tr id="id_row">
+    </tr>
+</table>
+
+<br/>
+<div id="deps_list">
+
+</div>
+
+<br/><br/>
+<label for="deps">Dependencies</label>
+<br/>
+<textarea id="deps">
+</textarea>
+
+<br/>
+<label for="embed">SpaCy dependency parsing</label>
+<iframe id="embed" src="dep-parse.html" height="300" width="100%"></iframe>
+
+<script src="index.js"></script>
+
+</body>
+</html>

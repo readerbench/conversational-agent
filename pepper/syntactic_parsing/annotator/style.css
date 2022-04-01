@@ -1,0 +1,85 @@
+body {
+    padding: 0 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.btn {
+    background-color: bisque;
+    border: none;
+    border-radius: 2px;
+
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: burlywood;
+}
+
+.btn-blue {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 2px;
+
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.btn-sel {
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 2px;
+
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.dep_btn {
+    background-color: seagreen;
+    border: none;
+    color: white;
+
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 2px;
+}
+
+textarea, iframe {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f6f5f5;
+    resize: none;
+}
+
+#phrase {
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+#deps {
+    margin-bottom: 30px;
+    height: 150px;
+}

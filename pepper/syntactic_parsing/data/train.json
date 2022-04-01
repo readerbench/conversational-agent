@@ -1,0 +1,5106 @@
+[
+  [
+    "Mihai este foarte înalt",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "-",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "lunea viitoare o să dăm testul la elemente de informatică mobilă",
+    {
+      "heads": [
+        4,
+        0,
+        4,
+        4,
+        4,
+        4,
+        7,
+        5,
+        9,
+        7,
+        9
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "ceasul fetei de acolo e scump",
+    {
+      "heads": [
+        4,
+        0,
+        3,
+        1,
+        4,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "de azi încep tema de la mate",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        2,
+        5,
+        6,
+        3
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "ROOT",
+        "ce",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "peste o săptămână o să vină Alina pe la mine",
+    {
+      "heads": [
+        2,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        9,
+        5
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "-",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "anul trecut am luat un monitor de acasă",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "de dimineață am mâncat salată de ton",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        6,
+        3
+      ],
+      "deps": [
+        "-",
+        "când",
+        "-",
+        "ROOT",
+        "ce",
+        "-",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "această parte principală de propoziție arată acțiunea",
+    {
+      "heads": [
+        1,
+        5,
+        1,
+        4,
+        1,
+        5,
+        5
+      ],
+      "deps": [
+        "care",
+        "cine",
+        "care",
+        "prep",
+        "care",
+        "ROOT",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "trebuie să iau pastila de hipertensiune seara și dimineața",
+    {
+      "heads": [
+        0,
+        2,
+        2,
+        3,
+        5,
+        3,
+        2,
+        8,
+        2
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "ce",
+        "ce",
+        "prep",
+        "care",
+        "când",
+        "-",
+        "când"
+      ]
+    }
+  ],
+  [
+    "o să trebuiască să merg la serviciu începând de luna viitoare",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        6,
+        4,
+        9,
+        9,
+        4,
+        9
+      ],
+      "deps": [
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "prep",
+        "unde",
+        "-",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "am pus joia trecută ochelarii mei de soare în sertarul meu din camera mea",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        7,
+        4,
+        9,
+        1,
+        9,
+        12,
+        9,
+        12
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "când",
+        "care",
+        "ce",
+        "al cui",
+        "prep",
+        "care",
+        "prep",
+        "unde",
+        "al cui",
+        "prep",
+        "care",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "telefonul alexandrei este 074123456",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "numărul de la interfon al lui iulian apare jos la intrarea în scară",
+    {
+      "heads": [
+        7,
+        2,
+        3,
+        0,
+        6,
+        6,
+        0,
+        7,
+        7,
+        10,
+        7,
+        12,
+        10
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "-",
+        "-",
+        "al cui",
+        "ROOT",
+        "unde",
+        "prep",
+        "unde",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "mâine voi rezolva problema cu furtunul stricat",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        3,
+        5
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "ultima zi de lucru a mea e peste două săptămâni",
+    {
+      "heads": [
+        1,
+        6,
+        3,
+        1,
+        5,
+        1,
+        6,
+        9,
+        9,
+        6
+      ],
+      "deps": [
+        "care",
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "al cui",
+        "ROOT",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "am de făcut o temă grea până vineri",
+    {
+      "heads": [
+        0,
+        2,
+        0,
+        4,
+        2,
+        4,
+        7,
+        2
+      ],
+      "deps": [
+        "ROOT",
+        "prep",
+        "ce",
+        "-",
+        "ce",
+        "ce fel de",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "în fiecare zi fac antrenament sportiv",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "deps": [
+        "prep",
+        "care",
+        "cât de des",
+        "ROOT",
+        "ce",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "am de terminat proiectul la programare până în mai",
+    {
+      "heads": [
+        0,
+        2,
+        0,
+        2,
+        5,
+        3,
+        8,
+        8,
+        2
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "ce",
+        "ce",
+        "prep",
+        "care",
+        "prep",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "voi avea de făcut rapoartele pentru ultima lună până pe 23 iunie 2021",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        7,
+        7,
+        4,
+        10,
+        10,
+        3,
+        10,
+        11
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "prep",
+        "ce",
+        "ce",
+        "-",
+        "care",
+        "care",
+        "prep",
+        "prep",
+        "când",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "numărul de la interfon al verișoarei mele Iulia este 24",
+    {
+      "heads": [
+        8,
+        2,
+        3,
+        0,
+        5,
+        0,
+        5,
+        5,
+        8,
+        8
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "-",
+        "al cui",
+        "al cui",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "laborantul meu de la EIM e Dan Bina",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        0,
+        5,
+        5,
+        6
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "care este",
+        "care"
+      ]
+    }
+  ],
+  [
+    "zilele ăstea am făcut câte 30 de flotări",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        7,
+        7,
+        3
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "-",
+        "cât",
+        "prep",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "i-am dat 10 lei lui george",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3
+      ],
+      "deps": [
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "cât",
+        "ce",
+        "-",
+        "cui"
+      ]
+    }
+  ],
+  [
+    "eu mi-am schimbat telefonul în ianuarie anul trecut",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        4,
+        7,
+        8
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "când",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "acela și-a făcut tema acum 2 zile",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        8,
+        8,
+        5
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "am terminat de spălat vasele acum 30 de minute",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        8,
+        8,
+        8,
+        1
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "ce",
+        "prep",
+        "cât",
+        "prep",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "acum 3 ore aveam 60 de kilograme",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        6,
+        6,
+        3
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "ROOT",
+        "cât",
+        "prep",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "ultima dată m-am tuns acum 2 luni",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        2,
+        5,
+        5,
+        8,
+        8,
+        5
+      ],
+      "deps": [
+        "care",
+        "când",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "afară e foarte frig de azi de la prânz",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        1,
+        7,
+        8,
+        1
+      ],
+      "deps": [
+        "unde",
+        "ROOT",
+        "-",
+        "cum este",
+        "prep",
+        "când",
+        "-",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "documentarul va fi dat pe Discovery de sâmbăta viitoare",
+    {
+      "heads": [
+        3,
+        3,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3,
+        7
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "proiectul la franceză trebuie predat până la sfârșitul sesiunii",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        6,
+        7,
+        4,
+        7
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "-",
+        "prep",
+        "când",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "după curs am ajutat-o pe profesoara de chimie la un experiment complicat",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3,
+        9,
+        7,
+        12,
+        12,
+        3,
+        12
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "-",
+        "ROOT",
+        "-",
+        "pe cine",
+        "prep",
+        "pe cine",
+        "prep",
+        "care",
+        "prep",
+        "-",
+        "la ce",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "adresa de email a lui george ionescu e george@gmail.com",
+    {
+      "heads": [
+        7,
+        2,
+        0,
+        5,
+        5,
+        0,
+        5,
+        7,
+        7
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "-",
+        "al cui",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "trebuie să fac tema până mâine",
+    {
+      "heads": [
+        0,
+        2,
+        0,
+        2,
+        5,
+        2
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "ce",
+        "ce",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "în timpul prezentării s-a auzit un zgomot acolo",
+    {
+      "heads": [
+        1,
+        6,
+        1,
+        6,
+        3,
+        6,
+        6,
+        8,
+        6,
+        6
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "al cui",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "aici nu a mai venit un urs de mult timp",
+    {
+      "heads": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        9,
+        9,
+        4
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "după două săptămâni o să plec de aici",
+    {
+      "heads": [
+        5,
+        2,
+        0,
+        5,
+        5,
+        5,
+        7,
+        5
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "acasă nu mai sunt pungi de 2 ore",
+    {
+      "heads": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        7,
+        7,
+        3
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "la Slatina nu a mai plouat de 3 zile",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        8,
+        5
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "-",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "Dan Ion a ajuns la Craiova în 3 ore și 20 de minute",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        8,
+        8,
+        3,
+        12,
+        12,
+        12,
+        8
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "cât",
+        "prep",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "capsatorul cel mare se află pe masa din încăperea de lângă baie",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        6,
+        4,
+        8,
+        6,
+        10,
+        11,
+        8
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "am vizitat-o pe Irina de ziua lui mihai",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        1,
+        7,
+        1,
+        9,
+        7
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "-",
+        "pe cine",
+        "prep",
+        "pe cine",
+        "prep",
+        "când",
+        "-",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "de obicei merg la alergat în fiecare săptămână pe malul lacului morii",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        4,
+        2,
+        7,
+        7,
+        2,
+        9,
+        2,
+        9,
+        10
+      ],
+      "deps": [
+        "prep",
+        "cât de des",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "cât de des",
+        "prep",
+        "unde",
+        "al cui",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "trebuie să îmi pun picături în ochi de 3 ori pe zi",
+    {
+      "heads": [
+        0,
+        3,
+        3,
+        0,
+        3,
+        6,
+        3,
+        9,
+        9,
+        3,
+        11,
+        9
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "cui",
+        "ce",
+        "ce",
+        "prep",
+        "unde",
+        "prep",
+        "cât",
+        "cât de des",
+        "prep",
+        "la cât timp"
+      ]
+    }
+  ],
+  [
+    "ea iese afară de 10 ori pe lună",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        5,
+        5,
+        1,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "unde",
+        "prep",
+        "cât",
+        "cât de des",
+        "prep",
+        "la cât timp"
+      ]
+    }
+  ],
+  [
+    "în timpul anului universitar ajung acasă cam o dată la două săptămâni",
+    {
+      "heads": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        4,
+        8,
+        8,
+        4,
+        11,
+        11,
+        8
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "al cui",
+        "care",
+        "ROOT",
+        "unde",
+        "-",
+        "cât",
+        "cât de des",
+        "prep",
+        "cât",
+        "la cât timp"
+      ]
+    }
+  ],
+  [
+    "la mine s-a oprit apa caldă de câteva ore",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        2,
+        5,
+        5,
+        5,
+        6,
+        10,
+        10,
+        5
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "care",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "la facultate există multe calculatoare cu procesoare de generație nouă",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        4,
+        2,
+        6,
+        4,
+        8,
+        6,
+        8
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "ROOT",
+        "cât",
+        "ce",
+        "prep",
+        "ce fel de",
+        "prep",
+        "ce fel de",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "o dată pe lună îi fac cartofi prăjiți alexandrei",
+    {
+      "heads": [
+        1,
+        5,
+        3,
+        1,
+        5,
+        5,
+        5,
+        6,
+        5
+      ],
+      "deps": [
+        "cât",
+        "cât de des",
+        "prep",
+        "la cât timp",
+        "cui",
+        "ROOT",
+        "ce",
+        "ce fel de",
+        "cui"
+      ]
+    }
+  ],
+  [
+    "el are o mașină audi de weekendul trecut",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        6,
+        1,
+        6
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "-",
+        "ce",
+        "ce fel de",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "câinele meu a fost afară toată ziua de ieri",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        6,
+        4,
+        8,
+        6
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "ROOT",
+        "unde",
+        "-",
+        "cât timp",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "sala laboratorului de ML este EG105",
+    {
+      "heads": [
+        4,
+        0,
+        3,
+        1,
+        4,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "dimensiunile portbagajului meu sunt acestea",
+    {
+      "heads": [
+        3,
+        0,
+        1,
+        3,
+        3
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "al cui",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "șurubelnița dreaptă e în dulapul din camera mea",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        4,
+        2,
+        6,
+        4,
+        6
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "sezonul de pescuit se finalizează pe 2 iunie",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        6,
+        4,
+        6
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "mi-am făcut pașaportul acum 3 săptămâni",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        7,
+        7,
+        3
+      ],
+      "deps": [
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "concursul va fi pe 12 ianuarie",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        4
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "permisul meu de conducere e în torpedoul de la mașină",
+    {
+      "heads": [
+        4,
+        0,
+        3,
+        0,
+        4,
+        6,
+        4,
+        8,
+        9,
+        6
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "prep",
+        "unde",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "eu stau la adresa strada Ecaterina Teodoroiu numărul 17",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        4,
+        5,
+        3,
+        7
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "care",
+        "care",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "adresa elenei este strada zorilor numărul 9",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "care este",
+        "care",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "Maria Popescu locuiește pe Bulevardul Timișoara numărul 5",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        4,
+        2,
+        4,
+        4,
+        6
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cheile mele de la casă sunt ușoare",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        0,
+        5,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "Darius și-a schimbat domiciliul iarna trecută",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        4,
+        6
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "prezentarea proiectului durează 45 de minute",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        5,
+        5,
+        2
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "cât",
+        "prep",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "Jack a fost la biserică duminică",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        2
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "când"
+      ]
+    }
+  ],
+  [
+    "poimâine merg la mall",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "deps": [
+        "când",
+        "ROOT",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "peste 2 ani o să termin masterul",
+    {
+      "heads": [
+        2,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "-",
+        "ROOT",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "mi-am făcut analize primăvara trecută",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "deps": [
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "restricțiile de circulație se încheie la vară",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        6,
+        4
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "garanția de la frigider se termină marțea viitoare",
+    {
+      "heads": [
+        5,
+        2,
+        3,
+        0,
+        5,
+        5,
+        5,
+        6
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "iarna trecută a nins afară",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "la iarnă o să învăț să schiez",
+    {
+      "heads": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "întâlnirea cu managerul este peste o jumătate de oră",
+    {
+      "heads": [
+        3,
+        2,
+        0,
+        3,
+        6,
+        6,
+        3,
+        8,
+        6
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "ROOT",
+        "prep",
+        "cât",
+        "cât timp",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "pălăria Adinei este frumoasă",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "săptămâna mea de vacanță de vară este luna viitoare",
+    {
+      "heads": [
+        6,
+        0,
+        3,
+        0,
+        5,
+        3,
+        6,
+        6,
+        7
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "ROOT",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "acum un an cineva a scris numele acolo",
+    {
+      "heads": [
+        2,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "cine",
+        "-",
+        "ROOT",
+        "ce",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "am lăsat lădița cu cartofi în pivniță",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        6,
+        1
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "lămpile solare sunt de la bricostore",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        4,
+        5,
+        2
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "ROOT",
+        "-",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "am lăsat suportul de brad la țară în garaj",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        6,
+        1,
+        8,
+        1
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "prep",
+        "unde",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "până unde a alergat aseară marius",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "-",
+        "ROOT",
+        "când",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "anul nașterii lui Ștefan cel Mare a fost 1433",
+    {
+      "heads": [
+        7,
+        0,
+        3,
+        1,
+        5,
+        3,
+        7,
+        7,
+        7
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "al cui",
+        "-",
+        "care",
+        "-",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "suprafața apartamentului de la București este de 58mp",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        1,
+        5,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "prep",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "Viorel e născut pe 16 mai 1998",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        4,
+        5
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "ce",
+        "prep",
+        "când",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "pe 3 iulie se termină sesiunea de licență",
+    {
+      "heads": [
+        1,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        5
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "ziua Daianei este în august",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        4,
+        2
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "din octombrie apare un nou film la cinema",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        5,
+        5,
+        2,
+        7,
+        2
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "ROOT",
+        "-",
+        "ce fel de",
+        "ce",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "noile autobuze au apărut în decembrie",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        5,
+        3
+      ],
+      "deps": [
+        "care",
+        "cine",
+        "-",
+        "ROOT",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "coletul cu jacheta va ajunge miercuri",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        4
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "când"
+      ]
+    }
+  ],
+  [
+    "testul de curs la rețele neurale a fost joi",
+    {
+      "heads": [
+        7,
+        2,
+        0,
+        4,
+        0,
+        4,
+        7,
+        7,
+        7
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "ce fel de",
+        "-",
+        "ROOT",
+        "când"
+      ]
+    }
+  ],
+  [
+    "vineri încep promoțiile de black friday",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        4
+      ],
+      "deps": [
+        "când",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "am terminat proiecul la programare web alaltăieri",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        4,
+        1
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "ce fel de",
+        "când"
+      ]
+    }
+  ],
+  [
+    "sesiunea din browser a expirat acum 10 secunde",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        7,
+        7,
+        4
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "cât",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "peste 2 ani termină Nicoleta masterul",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "ROOT",
+        "cine",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "prețul canapelei a fost de 1300 de lei",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "ROOT",
+        "prep",
+        "care este",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "vacanța de vară începe pe 30 iunie",
+    {
+      "heads": [
+        3,
+        2,
+        0,
+        3,
+        5,
+        3,
+        5
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "ROOT",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "victor stă pe aleea romancierilor numărul 12",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        3,
+        5
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "pliculețele de praf de copt sunt în cutiuța din primul sertar",
+    {
+      "heads": [
+        5,
+        2,
+        0,
+        4,
+        2,
+        5,
+        7,
+        5,
+        10,
+        10,
+        7
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "am așezat etuiul de la ochelari peste teancul de reviste din hol",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        5,
+        2,
+        7,
+        1,
+        9,
+        7,
+        11,
+        7
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "ce",
+        "-",
+        "prep",
+        "care",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "prețul ceasului meu Atlantic a fost 500 de lei",
+    {
+      "heads": [
+        5,
+        0,
+        1,
+        1,
+        5,
+        5,
+        5,
+        8,
+        6
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "al cui",
+        "care",
+        "-",
+        "ROOT",
+        "care este",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "numele profesoarei mele de biologie din liceu este Mariana Mihai",
+    {
+      "heads": [
+        7,
+        0,
+        1,
+        4,
+        1,
+        6,
+        1,
+        7,
+        7,
+        8
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "al cui",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "ROOT",
+        "care este",
+        "care"
+      ]
+    }
+  ],
+  [
+    "modelul tastaturii mele este logitech mx keys",
+    {
+      "heads": [
+        3,
+        0,
+        1,
+        3,
+        3,
+        4,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "al cui",
+        "ROOT",
+        "care este",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "peste 123 de secunde trecem în noul an",
+    {
+      "heads": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        7,
+        7,
+        4
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "prep",
+        "cât timp",
+        "ROOT",
+        "prep",
+        "care",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "la primăvară e gata blocul",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "ROOT",
+        "cum este",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "mâine ajunge Alex la întorsura Buzăului",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        1,
+        4
+      ],
+      "deps": [
+        "când",
+        "ROOT",
+        "cine",
+        "prep",
+        "unde",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "ieri s-a terminat perioada de pregătire a elevilor",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        5,
+        9,
+        5
+      ],
+      "deps": [
+        "când",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "am găsit rezolvarea problemei",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "ce",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "trebuie să mă tund până pe 1 iunie",
+    {
+      "heads": [
+        0,
+        3,
+        3,
+        0,
+        5,
+        6,
+        3,
+        6
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "pe cine",
+        "ce",
+        "-",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "miercurea viitoare începe concursul de programare",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        2,
+        5,
+        3
+      ],
+      "deps": [
+        "când",
+        "care",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "săptămâna trecută am udat pomul meu de afară",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        4,
+        7,
+        4
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "ce",
+        "al cui",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "azi începe vacanța noastră",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "deps": [
+        "când",
+        "ROOT",
+        "cine",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "ziua de naștere a lui alex este pe 5 mai",
+    {
+      "heads": [
+        6,
+        2,
+        0,
+        5,
+        5,
+        0,
+        6,
+        8,
+        6,
+        8
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "-",
+        "al cui",
+        "ROOT",
+        "prep",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "eu locuiesc pe bulevardul Timișoara",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "prep",
+        "unde",
+        "care"
+      ]
+    }
+  ],
+  [
+    "eu merg spre casă azi",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "prep",
+        "unde",
+        "când"
+      ]
+    }
+  ],
+  [
+    "cărțile de matematică ale mariei sunt sub pat",
+    {
+      "heads": [
+        5,
+        2,
+        0,
+        4,
+        0,
+        5,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "al cui",
+        "ROOT",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "ieri am fost în București",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "am fost la sală ieri seara",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        4
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cursul se ține în sala EC105 de la parter din facultatea noastră",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        4,
+        7,
+        8,
+        4,
+        10,
+        4,
+        10
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "-",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "Maria stă la apartamentul 23 pe strada principală",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        6,
+        1,
+        6
+      ],
+      "deps": [
+        "cine",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "prep",
+        "unde",
+        "care"
+      ]
+    }
+  ],
+  [
+    "floarea din bucătărie se află pe pervaz sub geam",
+    {
+      "heads": [
+        4,
+        2,
+        0,
+        4,
+        4,
+        6,
+        4,
+        8,
+        4
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "cardul de memorie al telefonului e în cutia albastră din sertarul lui Adrian Enache",
+    {
+      "heads": [
+        5,
+        2,
+        0,
+        4,
+        0,
+        5,
+        7,
+        5,
+        7,
+        10,
+        7,
+        12,
+        10,
+        12
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "care",
+        "ROOT",
+        "prep",
+        "unde",
+        "care",
+        "prep",
+        "care",
+        "-",
+        "al cui",
+        "care"
+      ]
+    }
+  ],
+  [
+    "dioptriile mele de la ochelari erau ultima dată acestea",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        0,
+        5,
+        7,
+        5,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "care",
+        "când",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "sala laboratorului de PP este EG321",
+    {
+      "heads": [
+        4,
+        0,
+        3,
+        1,
+        4,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "până sâmbătă a fost interzis accesul",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "-",
+        "ROOT",
+        "cum este",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "numărul blocului fratelui Mihaelei este 10",
+    {
+      "heads": [
+        4,
+        0,
+        1,
+        2,
+        4,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "al cui",
+        "al cui",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "codul PIN de la cardul meu de sănătate este 0000",
+    {
+      "heads": [
+        8,
+        0,
+        3,
+        4,
+        0,
+        4,
+        7,
+        4,
+        8,
+        8
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "-",
+        "prep",
+        "care",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "viteza trenurilor din România este foarte mică",
+    {
+      "heads": [
+        4,
+        0,
+        3,
+        1,
+        4,
+        6,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ROOT",
+        "-",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "numărul de telefon al lui Dan Miron este 4312321",
+    {
+      "heads": [
+        7,
+        2,
+        0,
+        5,
+        5,
+        0,
+        5,
+        7,
+        7
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "-",
+        "al cui",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "seria mea de la buletin este GG2020",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        0,
+        5,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "secvența de mutări pentru câștigarea jocului este ab43bdnfdsa90",
+    {
+      "heads": [
+        6,
+        2,
+        0,
+        4,
+        0,
+        4,
+        6,
+        6
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "al cui",
+        "ROOT",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "prețul canapelei a fost 1300 de lei",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        6,
+        4
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "ROOT",
+        "care este",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "trebuie să deschid poarta casei în 30 de secunde",
+    {
+      "heads": [
+        0,
+        2,
+        0,
+        2,
+        3,
+        8,
+        8,
+        8,
+        2
+      ],
+      "deps": [
+        "ROOT",
+        "-",
+        "ce",
+        "ce",
+        "al cui",
+        "prep",
+        "cât",
+        "prep",
+        "cât timp"
+      ]
+    }
+  ],
+  [
+    "suprafața apartamentului de la Ploiești este de 60mp",
+    {
+      "heads": [
+        5,
+        0,
+        3,
+        4,
+        1,
+        5,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "prep",
+        "care este"
+      ]
+    }
+  ],
+  [
+    "lunea trecută a sosit mobilă pentru noua terasă",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        7,
+        7,
+        4
+      ],
+      "deps": [
+        "când",
+        "care",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "în care săptămână e examenul de învățare automată",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        6,
+        4,
+        6
+      ],
+      "deps": [
+        "prep",
+        "care",
+        "când",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "unde am lăsat șosetele norocoase de la colegul meu",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        6,
+        7,
+        3,
+        7
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "care",
+        "-",
+        "prep",
+        "care",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "Bianca Zăvelcă o să se ducă la facultate la anul",
+    {
+      "heads": [
+        5,
+        0,
+        5,
+        5,
+        5,
+        5,
+        7,
+        5,
+        9,
+        5
+      ],
+      "deps": [
+        "cine",
+        "care",
+        "-",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "unde",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "Oana și-a luat geacă de iarnă marți",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        5,
+        4
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "ce fel de",
+        "când"
+      ]
+    }
+  ],
+  [
+    "am primit o scrisoare de recomandare de la un profesor din facultatea mea",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        3,
+        7,
+        9,
+        9,
+        1,
+        11,
+        9,
+        11
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "-",
+        "ce fel de",
+        "-",
+        "prep",
+        "-",
+        "unde",
+        "prep",
+        "ce fel de",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "vinerea trecută s-a rupt un șurub de prindere de la gard",
+    {
+      "heads": [
+        5,
+        0,
+        5,
+        2,
+        5,
+        5,
+        7,
+        5,
+        9,
+        7,
+        11,
+        12,
+        7
+      ],
+      "deps": [
+        "când",
+        "care",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "cine",
+        "prep",
+        "ce fel de",
+        "-",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "în vaza de la geam sunt 35 de trandafiri de la o florărie cunoscută",
+    {
+      "heads": [
+        1,
+        5,
+        3,
+        4,
+        1,
+        5,
+        8,
+        8,
+        5,
+        10,
+        12,
+        12,
+        8,
+        12
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "-",
+        "prep",
+        "care",
+        "ROOT",
+        "cât",
+        "prep",
+        "ce",
+        "-",
+        "prep",
+        "-",
+        "ce fel de",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "primăvara viitoare încep lucrările de la noua autostradă",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        2,
+        5,
+        7,
+        7,
+        3
+      ],
+      "deps": [
+        "când",
+        "care",
+        "ROOT",
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "care"
+      ]
+    }
+  ],
+  [
+    "peste 3 ani se va închide o fabrică de pâine",
+    {
+      "heads": [
+        2,
+        2,
+        5,
+        5,
+        5,
+        5,
+        7,
+        5,
+        9,
+        7
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "-",
+        "ROOT",
+        "-",
+        "cine",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "pe Maria am văzut-o la magazinul de articole de pescuit joia trecută",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3,
+        9,
+        7,
+        11,
+        9,
+        3,
+        12
+      ],
+      "deps": [
+        "prep",
+        "pe cine",
+        "-",
+        "ROOT",
+        "-",
+        "pe cine",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cartea cu desene de colorat este plină",
+    {
+      "heads": [
+        5,
+        2,
+        0,
+        4,
+        2,
+        5,
+        5
+      ],
+      "deps": [
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "ROOT",
+        "cum este"
+      ]
+    }
+  ],
+  [
+    "l-am pus pe Doru la cârma avionului",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        7,
+        3,
+        7
+      ],
+      "deps": [
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "pe cine",
+        "prep",
+        "unde",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "cărămida l-a lovit pe zidar la piciorul stâng",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        6,
+        4,
+        8,
+        4,
+        8
+      ],
+      "deps": [
+        "cine",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "pe cine",
+        "prep",
+        "unde",
+        "care"
+      ]
+    }
+  ],
+  [
+    "pe mine m-a prins ploaia în parcare sâmbătă",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        2,
+        5,
+        5,
+        5,
+        8,
+        5,
+        5
+      ],
+      "deps": [
+        "prep",
+        "pe cine",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "unde",
+        "când"
+      ]
+    }
+  ],
+  [
+    "un purice l-a mușcat pe Grivei azi noapte",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        2,
+        5,
+        5,
+        7,
+        5,
+        5,
+        8
+      ],
+      "deps": [
+        "-",
+        "cine",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "pe cine",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "l-am certat pe colegul meu de cămin alaltăseară",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        5,
+        3,
+        5,
+        8,
+        5,
+        3
+      ],
+      "deps": [
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "prep",
+        "pe cine",
+        "al cui",
+        "prep",
+        "care",
+        "când"
+      ]
+    }
+  ],
+  [
+    "i-am lăsat Elenei 500 de euro sub un dosar din raft",
+    {
+      "heads": [
+        3,
+        0,
+        3,
+        3,
+        3,
+        7,
+        7,
+        3,
+        10,
+        10,
+        3,
+        12,
+        10
+      ],
+      "deps": [
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "cui",
+        "cât",
+        "prep",
+        "ce",
+        "prep",
+        "-",
+        "unde",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "andi i-a luat corinei o mașină scumpă din italia",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        4,
+        7,
+        10,
+        7
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "cui",
+        "-",
+        "ce",
+        "ce fel de",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "banca i-a dat prietenului meu 20 de mii de lei",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        5,
+        9,
+        9,
+        4,
+        11,
+        9
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "cui",
+        "al cui",
+        "cât",
+        "prep",
+        "ce",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "de miercurea viitoare se deschide un cinematograf din oraș",
+    {
+      "heads": [
+        1,
+        4,
+        1,
+        4,
+        4,
+        6,
+        4,
+        8,
+        6
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "care",
+        "ROOT",
+        "ROOT",
+        "-",
+        "cine",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "am cunoscut-o pe Ileana la conferința de algoritmi de optimizare de la Toronto",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        1,
+        7,
+        1,
+        9,
+        7,
+        11,
+        9,
+        13,
+        14,
+        7
+      ],
+      "deps": [
+        "-",
+        "ROOT",
+        "-",
+        "pe cine",
+        "prep",
+        "pe cine",
+        "prep",
+        "unde",
+        "prep",
+        "care",
+        "prep",
+        "ce fel de",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "de paște o să se întoarcă marin la un post de televiziune",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        9,
+        9,
+        5,
+        11,
+        9
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "-",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "-",
+        "unde",
+        "prep",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "unde se află biletul de avion",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        3
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "de unde am cumpărat monitorul elenei",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "unde am lăsat husa de la telefon",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        6,
+        3
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cât timp a durat examenul de inteligență artificială",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        6,
+        4,
+        6
+      ],
+      "deps": [
+        "cât",
+        "cât timp",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "când va începe colocviul de luni",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        3
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "până când o să țină înscrierea la facultatea de automatică",
+    {
+      "heads": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        7,
+        5,
+        9,
+        7
+      ],
+      "deps": [
+        "prep",
+        "când",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "de câți ani am geaca albastră",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "ROOT",
+        "ce",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care telefon are ecran mare",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ],
+      "deps": [
+        "care",
+        "cine",
+        "ROOT",
+        "ce",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "care aparate sunt folosite la oftalmolog",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        5,
+        3
+      ],
+      "deps": [
+        "care",
+        "cine",
+        "-",
+        "ROOT",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "câți kilometri am alergat aseară pe afară",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        6,
+        3
+      ],
+      "deps": [
+        "cât",
+        "ce",
+        "-",
+        "ROOT",
+        "când",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "câte zile mai sunt până la weekend",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        5,
+        6,
+        3
+      ],
+      "deps": [
+        "cât",
+        "cât timp",
+        "-",
+        "ROOT",
+        "-",
+        "prep",
+        "când"
+      ]
+    }
+  ],
+  [
+    "când va fi sesiunea",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "când trebuie să merg la control oftalmologic",
+    {
+      "heads": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        3,
+        5
+      ],
+      "deps": [
+        "când",
+        "ROOT",
+        "-",
+        "ce",
+        "prep",
+        "unde",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "când vor fi alegerile locale din 2020",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        6,
+        4
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "cine",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cine a venit ieri la cursul de astronomie",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        2,
+        7,
+        5
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "când",
+        "prep",
+        "unde",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care e dobânda de la creditul pentru casă",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        5,
+        2,
+        7,
+        5
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care e înălțimea jaluzelelor de la bucătărie",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        6,
+        3
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care este numele de utilizator de github al laborantului de EIM",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        6,
+        4,
+        8,
+        2,
+        10,
+        8
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "-",
+        "al cui",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care este telefonul de la frizerie",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        5,
+        2
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "când am avut ultimul examen anul trecut",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        5
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "care",
+        "ce",
+        "când",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cine a câștigat locul 1 la olimpiada națională de matematică din 2016",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        6,
+        2,
+        6,
+        9,
+        6,
+        11,
+        6
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "ce",
+        "care",
+        "prep",
+        "unde",
+        "care",
+        "prep",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cine m-a tuns ultima dată",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        6,
+        4
+      ],
+      "deps": [
+        "cine",
+        "pe cine",
+        "-",
+        "-",
+        "ROOT",
+        "care",
+        "când"
+      ]
+    }
+  ],
+  [
+    "de la cine a cumpărat mihaela cireșele",
+    {
+      "heads": [
+        1,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "deps": [
+        "-",
+        "prep",
+        "unde",
+        "-",
+        "ROOT",
+        "cine",
+        "ce"
+      ]
+    }
+  ],
+  [
+    "cât timp durează sezonul de pescuit",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        2,
+        5,
+        3
+      ],
+      "deps": [
+        "cât",
+        "cât timp",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cât timp va ține ploaia diseară",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "cât",
+        "cât timp",
+        "-",
+        "ROOT",
+        "cine",
+        "când"
+      ]
+    }
+  ],
+  [
+    "când am fost plecat în Germania",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        2
+      ],
+      "deps": [
+        "când",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "de cât timp era însurat ghiță",
+    {
+      "heads": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "ROOT",
+        "cum este",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "cine mi-a reparat bateria de la chiuveta de la baie",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        7,
+        8,
+        5,
+        10,
+        11,
+        8
+      ],
+      "deps": [
+        "cine",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "-",
+        "prep",
+        "care",
+        "-",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care era valoarea maximă a presiunii admise",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        2,
+        5
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "care",
+        "-",
+        "al cui",
+        "care"
+      ]
+    }
+  ],
+  [
+    "care sunt dimensiunile portbagajului de la mașina lui Alin",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        6,
+        3,
+        8,
+        6
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "al cui",
+        "-",
+        "prep",
+        "care",
+        "-",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "unde am pus ciocolata denisei",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "care e temperatura de fierbere a apei",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        6,
+        2
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "prep",
+        "care",
+        "-",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "sandalele alexandrei sunt de la magazinul colegului lui Mircea",
+    {
+      "heads": [
+        2,
+        0,
+        2,
+        4,
+        5,
+        2,
+        5,
+        8,
+        6
+      ],
+      "deps": [
+        "cine",
+        "al cui",
+        "ROOT",
+        "-",
+        "prep",
+        "unde",
+        "al cui",
+        "-",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "de unde am cumpărat capacele roților mașinii",
+    {
+      "heads": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        4,
+        5
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "al cui",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "care sunt cele mai bune întrerupătoare",
+    {
+      "heads": [
+        1,
+        1,
+        4,
+        4,
+        5,
+        1
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "-",
+        "-",
+        "ce fel de",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "unde am pus caietul de matematică 1",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        5,
+        3,
+        5
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "prep",
+        "care",
+        "ce fel de"
+      ]
+    }
+  ],
+  [
+    "de unde mi-am luat cravata cea grena",
+    {
+      "heads": [
+        1,
+        5,
+        5,
+        2,
+        5,
+        5,
+        5,
+        8,
+        6
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "ce",
+        "-",
+        "care"
+      ]
+    }
+  ],
+  [
+    "pentru cât timp o să fie plecat Mihai",
+    {
+      "heads": [
+        2,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "-",
+        "ROOT",
+        "cum este",
+        "cine"
+      ]
+    }
+  ],
+  [
+    "care sunt ministerele cu probleme",
+    {
+      "heads": [
+        1,
+        1,
+        1,
+        4,
+        2
+      ],
+      "deps": [
+        "care este",
+        "ROOT",
+        "cine",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "cine a văzut un arici mic în curte aseară",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        4,
+        7,
+        2,
+        2
+      ],
+      "deps": [
+        "cine",
+        "-",
+        "ROOT",
+        "-",
+        "ce",
+        "ce fel de",
+        "prep",
+        "unde",
+        "când"
+      ]
+    }
+  ],
+  [
+    "despre ce task au vorbit colegii ieri la ședință",
+    {
+      "heads": [
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        4
+      ],
+      "deps": [
+        "prep",
+        "care",
+        "comp ind",
+        "-",
+        "ROOT",
+        "cine",
+        "când",
+        "prep",
+        "unde"
+      ]
+    }
+  ],
+  [
+    "unde și-a pus Evelina geamantanul cu haine",
+    {
+      "heads": [
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        4,
+        8,
+        6
+      ],
+      "deps": [
+        "unde",
+        "cui",
+        "-",
+        "-",
+        "ROOT",
+        "cine",
+        "ce",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "peste câte ore se termină programul de la mașina de spălat",
+    {
+      "heads": [
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        7,
+        8,
+        5,
+        10,
+        8
+      ],
+      "deps": [
+        "prep",
+        "cât",
+        "cât timp",
+        "-",
+        "ROOT",
+        "cine",
+        "-",
+        "prep",
+        "care",
+        "prep",
+        "care"
+      ]
+    }
+  ],
+  [
+    "unde am lăsat pernuța maro de pe scaunul din colțul camerei",
+    {
+      "heads": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        6,
+        7,
+        3,
+        9,
+        7,
+        9
+      ],
+      "deps": [
+        "unde",
+        "-",
+        "ROOT",
+        "ce",
+        "care",
+        "-",
+        "prep",
+        "care",
+        "prep",
+        "care",
+        "al cui"
+      ]
+    }
+  ],
+  [
+    "de unde vine primarul comunei cu nume complicat",
+    {
+      "heads": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        6,
+        4,
+        6
+      ],
+      "deps": [
+        "prep",
+        "unde",
+        "ROOT",
+        "cine",
+        "al cui",
+        "prep",
+        "care",
+        "ce fel de"
+      ]
+    }
+  ]
+]
