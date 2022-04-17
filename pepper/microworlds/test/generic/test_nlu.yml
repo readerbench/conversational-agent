@@ -26,11 +26,11 @@ nlu:
     examples: |
       - Cum poti sa ma ajuti
       - ce te pot intreba
-      - ajutor
+      - vreau ajutor
       - mă poți ajuta cu ceva?
       - la ce te pricepi
       - care sunt lucrurile pe care știi să le faci?
-      - ce știi?
+      - ce știi tu?
 
   - intent: generic.interaction_examples
     examples: |

@@ -69,7 +69,14 @@ nlu:
       - Spune-mi ce te pot întreba
       - Ce informații pot afla?
       - Help
+      - Ajutor
       - Care sunt tipurile de întrebări la care răspunzi?
+      - Care este rolul tău?
+      - care sunt abilitățile tale?
+      - capabilități
+      - abilități
+      - ce cunoștințe ai
+      - am nevoie de ajutor
 
   - intent: generic.interaction_examples
     examples: |
@@ -77,6 +84,7 @@ nlu:
       - Dă-mi exemplu de ce te pot întreba
       - vreau exemple
       - care sunt exemplele?
+      - exemple de replici
 
   - intent: generic.find_transport
     examples: |

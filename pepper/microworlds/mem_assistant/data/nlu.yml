@@ -11,6 +11,9 @@ nlu:
       - Ține minte
       - Memo
       - reține
+      - aș dori să stochez ceva
+      - aș vrea să ții ceva în memorie
+      - reține ce îți zic
 
   - intent: mem_assistant.store_location
     examples: |
@@ -98,9 +101,8 @@ nlu:
       - Adresa [Elenei](owner) [este](a_fi) strada Zorilor numărul 9
       - Numărul de telefon al lui [Dan](person) [e](a_fi) 123456789
       - numărul blocului fratelui Mihaelei [e](a_fi) 10
-      - anul nașterii lui [Ștefan](person) cel Mare [a fost](a_fi) 1433
+      - anul nașterii lui Ștefan cel Mare [a fost](a_fi) 1433
       - numele meu [este](a_fi) Gabriel
-      - cheile mele de la casă sunt ușoare
       - adresa de la serviciu este Bulevardul Unirii nr. 0
       - numele asistentului de programare paralelă [e](a_fi) Paul Walker
       - suprafața apartamentului de la București [este](a_fi) de 58mp
@@ -112,6 +114,9 @@ nlu:
       - codul PIN de la cardul meu de sănătate este 0000
       - placa mea video este NVidia GeForce GTX950m
       - telefonul Karinei este 243243
+      - limbajul de programare folosit de Thales este C++
+      - tensiunea nominală de alimentare a pompei este 120V
+      - data de expirare a suplimentelor alimentare din cămară este 30-05-2023
 
   - intent: mem_assistant.get_attr
     examples: |
@@ -137,6 +142,9 @@ nlu:
       - care e dobânda de la creditul pentru casă?
       - care sunt ministerele cu probleme
       - care este tipografia centrală
+      - spune-mi care este seria mea de la buletin
+      - vreau să știu care e numele de familie al lui Sebi
+      - aș vrea să îmi zici te rog care e termenul limită al temei de la algebră
 
   - intent: mem_assistant.get_specifier
     examples: |
@@ -153,7 +161,7 @@ nlu:
       - la [care salon](query_word_spec) este internat bunicul lui
       - la [care cod](query_word_spec) poștal a fost trimis pachetul
       - la [care hotel](query_word_spec) s-au cazat Mihai și Alex ieri
-      - [ce fel de imprimantă](query_word_spec)  am acasă
+      - [ce fel de imprimantă](query_word_spec) am acasă
       - [ce fel de baterie](query_word_spec) folosește ceasul de mână
       - [ce fel de procesor](query_word_spec) are telefonul meu
       - în [care](query_word_spec) dulap am pus dosarul
