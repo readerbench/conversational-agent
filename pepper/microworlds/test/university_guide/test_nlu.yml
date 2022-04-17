@@ -41,6 +41,6 @@ nlu:
       - sunt de la grupa [333CD](group)
       - pentru seria [CA](group)
       - [511AC](group)
-      - [seminarul](course_type)
+      - [seminarul](class_type)
       - [cursul](class_type) de [Proiectare logică](course)
       - la materia de [Arhitectura sistemelor de calcul](course)

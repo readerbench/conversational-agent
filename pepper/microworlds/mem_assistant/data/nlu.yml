@@ -98,7 +98,7 @@ nlu:
   - intent: mem_assistant.store_attr
     examples: |
       - Mailul lui [Alex](person) Marin [este](a_fi) alex@marin.com
-      - Adresa [Elenei](owner) [este](a_fi) strada Zorilor numărul 9
+      - Adresa Elenei [este](a_fi) strada Zorilor numărul 9
       - Numărul de telefon al lui [Dan](person) [e](a_fi) 123456789
       - numărul blocului fratelui Mihaelei [e](a_fi) 10
       - anul nașterii lui Ștefan cel Mare [a fost](a_fi) 1433
@@ -121,8 +121,8 @@ nlu:
   - intent: mem_assistant.get_attr
     examples: |
       - [Care](query_word_which) [e](a_fi) mailul lui [Mihai](person)?
-      - [care](query_word_which) [este](a_fi) numele de utilizator de github [al laborantului de EIM](owner)
-      - poți să-mi spui [care](query_word_which) era prețul [abonamentului la sală](owner)
+      - [care](query_word_which) [este](a_fi) numele de utilizator de github al laborantului de EIM
+      - poți să-mi spui [care](query_word_which) era prețul abonamentului la sală
       - zi-mi [care](query_word_which) a fost câștigătorul concursului Eestec Olympics de anul trecut
       - [care](query_word_which) [era](a_fi) denumirea bazei de date de la proiect?
       - [care](query_word_which) [sunt](a_fi) tipurile de rețele neurale

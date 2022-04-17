@@ -38,7 +38,6 @@ entities:
   - attribute
   - action
   - person
-  - owner
   - query_word
   - query_word_loc
   - query_word_time

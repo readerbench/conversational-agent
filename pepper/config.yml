@@ -27,12 +27,17 @@ pipeline:
     analyzer: char_wb
     min_ngram: 2
     max_ngram: 5
+  - name: components.syntactic_parser.SyntacticParser
   - name: RegexEntityExtractor
   # Domain Classifier for detecting the microworld
   - name: components.domain_classifier.DomainClassifier
-    epochs: 200
+    epochs: 300
     entity_recognition: False
     number_of_transformer_layers: 3
+  - name: components.syntactic_featurizer.SyntacticFeaturizer
+    "features": [
+      [ "syntactic_dep" ],
+    ]
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier
     microworlds:
@@ -43,7 +48,6 @@ pipeline:
       mem_assistant:
         epochs: 300
         number_of_transformer_layers: 3
-  - name: components.syntactic_parser.SyntacticParser
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
