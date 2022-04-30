@@ -27,6 +27,7 @@ A separate dataset for testing the NLU pipeline of the RASA agent is defined in 
 
 ```shell
 rasa test nlu --nlu microworlds/test
+rasa train --data microworlds/generic/data microworlds/mem_assistant/data microworlds/university_guide/data --config config.yml && rasa test nlu --nlu microworlds/test --config config.yml
 ```
 
 ## Running the agent

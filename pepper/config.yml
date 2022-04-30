@@ -31,13 +31,14 @@ pipeline:
   - name: RegexEntityExtractor
   # Domain Classifier for detecting the microworld
   - name: components.domain_classifier.DomainClassifier
-    epochs: 300
+    epochs: 200
     entity_recognition: False
     number_of_transformer_layers: 3
-  - name: components.syntactic_featurizer.SyntacticFeaturizer
-    "features": [
-      [ "syntactic_dep" ],
-    ]
+#  - name: components.syntactic_featurizer_sparse.SyntacticFeaturizer
+#    "features": [
+#      [ "syntactic_dep" ],
+#    ]
+  - name: components.syntactic_featurizer_sparse.SyntacticFeaturizer
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier
     microworlds:
