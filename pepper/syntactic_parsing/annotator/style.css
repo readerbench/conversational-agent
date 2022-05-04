@@ -67,6 +67,26 @@ table, th, td {
     border-radius: 2px;
 }
 
+.action-btn {
+    background-color: #832c5b;
+    border: none;
+    color: white;
+
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 2px;
+}
+
+.action-btn:active {
+    background-color: #4b1834;
+}
+
 textarea, iframe {
     width: 100%;
     box-sizing: border-box;

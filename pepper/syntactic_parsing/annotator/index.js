@@ -2,6 +2,9 @@ const phrase = document.getElementById('phrase');
 const phraseRow = document.getElementById('phrase_row');
 const idRow = document.getElementById('id_row');
 const result = document.getElementById('deps');
+const numEx = document.getElementById("num-examples");
+
+const apiUrl = "http://localhost:3333"
 
 const dependencies = [
     "-",
@@ -35,7 +38,7 @@ let pairToken;
 let tokenButtons;
 
 function init() {
-    phrase.innerText = "";
+    phrase.value = "";
     indexTokens();
 
     const depsList = document.getElementById("deps_list");
@@ -48,13 +51,13 @@ function init() {
 function indexTokens() {
     parseRes.heads = [];
     parseRes.deps = [];
-    requestSpacyDepParse();
     tokenButtons = [];
+    requestSpacyDepParse();
 
     // clear table
     phraseRow.innerHTML = idRow.innerHTML = '';
 
-    const tokens = phrase.value.split(/[ ]/);
+    const tokens = phrase.value.split(/[ -]/);
     tokens.forEach((token, i) => {
         phraseRow.innerHTML += `<td align="center"><button id="${i}" onclick="tokenSelected(this.id)" class="btn">${token}</button></td>`;
         idRow.innerHTML += `<td align="center">${i}</td>`;
@@ -63,6 +66,28 @@ function indexTokens() {
     result.value = '"heads": [],\n"deps": [],\n';
 
     interactiveAnnotate(tokens);
+}
+
+async function store() {
+    const response = await fetch(`${apiUrl}/store`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: result.value
+    }).then(response => response.json());
+
+    numEx.innerText = `Number of examples: ${response}`;
+}
+
+async function next() {
+    const response = await fetch(`${apiUrl}/next`, {
+        method: 'GET',
+        headers: {}
+    }).then(response => response.text());
+
+    phrase.value = response;
+    await this.indexTokens();
 }
 
 function tokenSelected(id) {
@@ -102,19 +127,18 @@ function interactiveAnnotate(tokens) {
     tokenButtons[currentToken].className = "btn-sel";
 }
 
-function requestSpacyDepParse() {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            let iframe = document.getElementById('embed');
-            iframe.src = iframe.src;
-        }
-    };
-    xhttp.open("POST", "http://localhost:3333", true);
-    xhttp.setRequestHeader("Access-Control-Allow-Origin", 'http://localhost:3333/');
-    xhttp.setRequestHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, HEAD, OPTIONS");
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(phrase.value);
+async function requestSpacyDepParse() {
+    const response = await fetch(`${apiUrl}/dep`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain',
+            'Accept': "text/html"
+        },
+        body: phrase.value
+    }).then(response => response.text());
+
+    const iframe = document.getElementById('embed');
+    iframe.srcdoc = response;
 }
 
 init();

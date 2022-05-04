@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<button id="store-btn" class="action-btn" onclick="store()">Store</button>
+<button id="next-btn" class="action-btn" onclick="next()">Next</button>
+<p id="num-examples">Number of examples: -</p>
+<br/>
+
 <label for="phrase">Phrase</label>
 <br/>
 <textarea id="phrase"
@@ -35,7 +40,7 @@
 
 <br/>
 <label for="embed">SpaCy dependency parsing</label>
-<iframe id="embed" src="dep-parse.html" height="300" width="100%"></iframe>
+<iframe id="embed" height="500" width="100%"></iframe>
 
 <script src="index.js"></script>
 
