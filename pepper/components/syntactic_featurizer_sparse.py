@@ -226,13 +226,14 @@ class SyntacticFeaturizer(SparseFeaturizer, GraphComponent):
         doc = self.nlp_spacy(text.lower())
         pre_deps = precomputed_deps[text] if text in precomputed_deps else None
         if not pre_deps:
-            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> NO " + text)
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", text)
+            return
 
         word_syntactic_deps = []
         for i, spacy_token in enumerate(doc):
             no_spec_chars = spacy_token.text.translate(str.maketrans('', '', string.punctuation))
-            word_syntactic_deps.append(spacy_token.dep_ if no_spec_chars and spacy_token.dep_ in deps else '-')
-            # word_syntactic_deps.append(pre_deps[i] if pre_deps else '-')
+            # word_syntactic_deps.append(spacy_token.dep_ if no_spec_chars and spacy_token.dep_ in deps else '-')
+            word_syntactic_deps.append(pre_deps[i] if pre_deps else '-')
 
         return word_syntactic_deps
 

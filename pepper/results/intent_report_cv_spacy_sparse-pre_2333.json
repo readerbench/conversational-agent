@@ -1,0 +1,224 @@
+{
+  "mem_assistant.get_subject": {
+    "precision": 0.7058823529411765,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.7741935483870968,
+    "support": 14,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1,
+      "university_guide.find_schedule_fill_slots": 1
+    }
+  },
+  "mem_assistant.store_attr": {
+    "precision": 0.4827586206896552,
+    "recall": 0.45161290322580644,
+    "f1-score": 0.4666666666666667,
+    "support": 31,
+    "confused_with": {
+      "mem_assistant.get_attr": 8,
+      "mem_assistant.store_location": 3
+    }
+  },
+  "generic.agent_abilities": {
+    "precision": 0.85,
+    "recall": 0.7391304347826086,
+    "f1-score": 0.7906976744186046,
+    "support": 23,
+    "confused_with": {
+      "mem_assistant.get_attr": 2,
+      "mem_assistant.get_specifier": 1
+    }
+  },
+  "generic.interaction_examples": {
+    "precision": 1.0,
+    "recall": 0.875,
+    "f1-score": 0.9333333333333333,
+    "support": 8,
+    "confused_with": {
+      "mem_assistant.store_request": 1
+    }
+  },
+  "generic.greet": {
+    "precision": 0.6666666666666666,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.7407407407407408,
+    "support": 12,
+    "confused_with": {
+      "generic.agent_abilities": 1,
+      "generic.goodbye": 1
+    }
+  },
+  "mem_assistant.get_attr": {
+    "precision": 0.5535714285714286,
+    "recall": 0.8378378378378378,
+    "f1-score": 0.6666666666666666,
+    "support": 37,
+    "confused_with": {
+      "mem_assistant.get_specifier": 3,
+      "mem_assistant.store_attr": 2
+    }
+  },
+  "mem_assistant.store_timestamp": {
+    "precision": 0.8494623655913979,
+    "recall": 0.8061224489795918,
+    "f1-score": 0.8272251308900525,
+    "support": 98,
+    "confused_with": {
+      "mem_assistant.get_specifier": 6,
+      "mem_assistant.store_location": 3
+    }
+  },
+  "university_guide.find_schedule_fill_slots": {
+    "precision": 0.9411764705882353,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7111111111111111,
+    "support": 28,
+    "confused_with": {
+      "university_guide.find_schedule": 3,
+      "university_guide.find_room": 2
+    }
+  },
+  "mem_assistant.store_location": {
+    "precision": 0.813953488372093,
+    "recall": 0.625,
+    "f1-score": 0.7070707070707071,
+    "support": 56,
+    "confused_with": {
+      "mem_assistant.store_attr": 7,
+      "mem_assistant.get_attr": 3
+    }
+  },
+  "mem_assistant.get_location": {
+    "precision": 0.8260869565217391,
+    "recall": 0.7307692307692307,
+    "f1-score": 0.7755102040816326,
+    "support": 26,
+    "confused_with": {
+      "university_guide.find_professor": 2,
+      "university_guide.find_schedule": 2
+    }
+  },
+  "mem_assistant.store_following_attr": {
+    "precision": 0.7878787878787878,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.8524590163934426,
+    "support": 28,
+    "confused_with": {
+      "mem_assistant.store_attr": 1,
+      "mem_assistant.get_specifier": 1
+    }
+  },
+  "generic.goodbye": {
+    "precision": 0.6363636363636364,
+    "recall": 0.7777777777777778,
+    "f1-score": 0.7000000000000001,
+    "support": 9,
+    "confused_with": {
+      "generic.affirm": 1,
+      "generic.greet": 1
+    }
+  },
+  "generic.affirm": {
+    "precision": 0.7777777777777778,
+    "recall": 0.7777777777777778,
+    "f1-score": 0.7777777777777778,
+    "support": 9,
+    "confused_with": {
+      "generic.goodbye": 1,
+      "generic.greet": 1
+    }
+  },
+  "mem_assistant.get_timestamp": {
+    "precision": 0.875,
+    "recall": 0.9459459459459459,
+    "f1-score": 0.9090909090909091,
+    "support": 37,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1,
+      "mem_assistant.get_attr": 1
+    }
+  },
+  "university_guide.find_room": {
+    "precision": 0.8148148148148148,
+    "recall": 0.9361702127659575,
+    "f1-score": 0.8712871287128713,
+    "support": 47,
+    "confused_with": {
+      "generic.find_transport": 2,
+      "mem_assistant.get_location": 1
+    }
+  },
+  "generic.find_transport": {
+    "precision": 0.75,
+    "recall": 0.7241379310344828,
+    "f1-score": 0.736842105263158,
+    "support": 29,
+    "confused_with": {
+      "university_guide.find_room": 3,
+      "mem_assistant.store_timestamp": 3
+    }
+  },
+  "mem_assistant.store_request": {
+    "precision": 0.8571428571428571,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.8571428571428571,
+    "support": 14,
+    "confused_with": {
+      "mem_assistant.get_specifier": 1,
+      "generic.find_transport": 1
+    }
+  },
+  "generic.thanks": {
+    "precision": 0.9230769230769231,
+    "recall": 0.75,
+    "f1-score": 0.8275862068965517,
+    "support": 16,
+    "confused_with": {
+      "generic.greet": 2,
+      "generic.agent_abilities": 1
+    }
+  },
+  "mem_assistant.get_specifier": {
+    "precision": 0.6521739130434783,
+    "recall": 0.5882352941176471,
+    "f1-score": 0.6185567010309279,
+    "support": 51,
+    "confused_with": {
+      "mem_assistant.get_attr": 10,
+      "mem_assistant.store_timestamp": 4
+    }
+  },
+  "university_guide.find_professor": {
+    "precision": 0.8095238095238095,
+    "recall": 0.85,
+    "f1-score": 0.8292682926829269,
+    "support": 20,
+    "confused_with": {
+      "mem_assistant.get_location": 1,
+      "university_guide.find_room": 1
+    }
+  },
+  "university_guide.find_schedule": {
+    "precision": 0.8666666666666667,
+    "recall": 0.9512195121951219,
+    "f1-score": 0.9069767441860465,
+    "support": 41,
+    "confused_with": {
+      "mem_assistant.get_subject": 1,
+      "university_guide.find_room": 1
+    }
+  },
+  "accuracy": 0.7728706624605678,
+  "macro avg": {
+    "precision": 0.782856073153864,
+    "recall": 0.7816360168966111,
+    "f1-score": 0.7752477867878134,
+    "support": 634
+  },
+  "weighted avg": {
+    "precision": 0.7831277716166583,
+    "recall": 0.7728706624605678,
+    "f1-score": 0.7711914188392422,
+    "support": 634
+  }
+}

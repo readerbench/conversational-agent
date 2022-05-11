@@ -96,7 +96,8 @@ class SyntacticFeaturizer(DenseFeaturizer, GraphComponent):
         word_syntactic_deps = []
         for i, spacy_token in enumerate(doc):
             no_spec_chars = spacy_token.text.translate(str.maketrans('', '', string.punctuation))
-            word_syntactic_deps.append(spacy_token.dep_ if no_spec_chars and spacy_token.dep_ in deps else '-')
+            # word_syntactic_deps.append(spacy_token.dep_ if no_spec_chars and spacy_token.dep_ in deps else '-')
+            word_syntactic_deps.append(pre_deps[i] if pre_deps else '-')
 
         """Feature vector for a single document / sentence / tokens."""
         a = np.array([deps.index(t) for t in word_syntactic_deps])

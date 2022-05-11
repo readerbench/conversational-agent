@@ -1,0 +1,196 @@
+{
+  "mem_assistant.get_location": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5,
+    "confused_with": {}
+  },
+  "mem_assistant.store_attr": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 6,
+    "confused_with": {
+      "university_guide.find_room": 1,
+      "mem_assistant.store_location": 1
+    }
+  },
+  "generic.general_knowledge": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "university_guide.find_professor": 1
+    }
+  },
+  "mem_assistant.store_following_attr": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "mem_assistant.store_location": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428572,
+    "support": 11,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1,
+      "mem_assistant.store_attr": 1
+    }
+  },
+  "mem_assistant.get_specifier": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10,
+    "confused_with": {
+      "mem_assistant.get_attr": 1
+    }
+  },
+  "university_guide.find_schedule": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1-score": 0.9411764705882353,
+    "support": 8,
+    "confused_with": {}
+  },
+  "mem_assistant.get_attr": {
+    "precision": 0.6666666666666666,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.75,
+    "support": 7,
+    "confused_with": {
+      "mem_assistant.get_specifier": 1
+    }
+  },
+  "university_guide.find_room": {
+    "precision": 0.8181818181818182,
+    "recall": 1.0,
+    "f1-score": 0.9,
+    "support": 9,
+    "confused_with": {}
+  },
+  "mem_assistant.store_request": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "university_guide.find_professor": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 4,
+    "confused_with": {}
+  },
+  "generic.find_transport": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "mem_assistant.get_attr": 1
+    }
+  },
+  "generic.thanks": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1
+    }
+  },
+  "university_guide.find_schedule_fill_slots": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 6,
+    "confused_with": {
+      "university_guide.find_room": 1,
+      "university_guide.find_schedule": 1
+    }
+  },
+  "mem_assistant.store_timestamp": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 20,
+    "confused_with": {
+      "mem_assistant.get_location": 1,
+      "mem_assistant.store_attr": 1
+    }
+  },
+  "generic.goodbye": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 1,
+    "confused_with": {}
+  },
+  "generic.affirm": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "generic.goodbye": 1
+    }
+  },
+  "mem_assistant.get_subject": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "generic.interaction_examples": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "generic.greet": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "generic.agent_abilities": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1-score": 0.7499999999999999,
+    "support": 5,
+    "confused_with": {
+      "generic.greet": 1,
+      "mem_assistant.get_attr": 1
+    }
+  },
+  "mem_assistant.get_timestamp": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "accuracy": 0.8740157480314961,
+  "macro avg": {
+    "precision": 0.8465335169880625,
+    "recall": 0.8367571822117277,
+    "f1-score": 0.8255696769065753,
+    "support": 127
+  },
+  "weighted avg": {
+    "precision": 0.8831344945518174,
+    "recall": 0.8740157480314961,
+    "f1-score": 0.8691729710256806,
+    "support": 127
+  }
+}

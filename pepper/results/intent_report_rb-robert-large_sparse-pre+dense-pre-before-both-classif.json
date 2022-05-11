@@ -1,0 +1,188 @@
+{
+  "mem_assistant.get_location": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1-score": 0.8000000000000002,
+    "support": 10,
+    "confused_with": {
+      "university_guide.find_room": 1,
+      "university_guide.find_schedule": 1
+    }
+  },
+  "mem_assistant.store_attr": {
+    "precision": 0.7692307692307693,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.8333333333333333,
+    "support": 11,
+    "confused_with": {
+      "mem_assistant.store_following_attr": 1
+    }
+  },
+  "university_guide.find_schedule": {
+    "precision": 0.8823529411764706,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.8823529411764706,
+    "support": 17,
+    "confused_with": {
+      "university_guide.find_schedule_fill_slots": 1,
+      "mem_assistant.get_location": 1
+    }
+  },
+  "mem_assistant.store_request": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "generic.agent_abilities": 1
+    }
+  },
+  "generic.goodbye": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1
+    }
+  },
+  "generic.agent_abilities": {
+    "precision": 0.8571428571428571,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.8571428571428571,
+    "support": 7,
+    "confused_with": {
+      "generic.find_transport": 1
+    }
+  },
+  "mem_assistant.store_location": {
+    "precision": 0.8823529411764706,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8571428571428571,
+    "support": 18,
+    "confused_with": {
+      "mem_assistant.get_subject": 1,
+      "mem_assistant.store_attr": 1
+    }
+  },
+  "mem_assistant.get_attr": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
+    "confused_with": {}
+  },
+  "university_guide.find_schedule_fill_slots": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "university_guide.find_professor": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "university_guide.find_schedule": 1
+    }
+  },
+  "mem_assistant.get_subject": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1-score": 0.8000000000000002,
+    "support": 5,
+    "confused_with": {
+      "mem_assistant.store_timestamp": 1
+    }
+  },
+  "university_guide.find_room": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "generic.find_transport": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "generic.interaction_examples": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "generic.greet": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5,
+    "confused_with": {}
+  },
+  "mem_assistant.store_following_attr": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428572,
+    "support": 11,
+    "confused_with": {
+      "mem_assistant.get_specifier": 1,
+      "mem_assistant.store_attr": 1
+    }
+  },
+  "mem_assistant.store_timestamp": {
+    "precision": 0.9130434782608695,
+    "recall": 0.9545454545454546,
+    "f1-score": 0.9333333333333332,
+    "support": 22,
+    "confused_with": {
+      "mem_assistant.store_attr": 1
+    }
+  },
+  "mem_assistant.get_timestamp": {
+    "precision": 1.0,
+    "recall": 0.8125,
+    "f1-score": 0.896551724137931,
+    "support": 16,
+    "confused_with": {
+      "mem_assistant.store_location": 2,
+      "mem_assistant.get_specifier": 1
+    }
+  },
+  "mem_assistant.get_specifier": {
+    "precision": 0.8666666666666667,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.896551724137931,
+    "support": 14,
+    "confused_with": {
+      "mem_assistant.get_attr": 1
+    }
+  },
+  "generic.thanks": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "generic.greet": 1
+    }
+  },
+  "accuracy": 0.8864864864864865,
+  "macro avg": {
+    "precision": 0.8999314240746467,
+    "recall": 0.8764526037687803,
+    "f1-score": 0.8814825541823514,
+    "support": 185
+  },
+  "weighted avg": {
+    "precision": 0.892628877999722,
+    "recall": 0.8864864864864865,
+    "f1-score": 0.8855320142216696,
+    "support": 185
+  }
+}

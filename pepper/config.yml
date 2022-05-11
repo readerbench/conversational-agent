@@ -15,10 +15,9 @@ pipeline:
     # between these two words
     case_sensitive: False
   - name: SpacyTokenizer
-  - name: SpacyFeaturizer
-    # Specify what pooling operation should be used to calculate the vector of
-    # the complete utterance. Available options: 'mean' and 'max'.
-    "pooling": "mean"
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "readerbench/RoBERT-large"
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -35,7 +34,7 @@ pipeline:
     entity_recognition: False
     number_of_transformer_layers: 3
   - name: components.syntactic_featurizer_sparse.SyntacticFeaturizer
-#  - name: components.syntactic_featurizer_dense.SyntacticFeaturizer
+  - name: components.syntactic_featurizer_dense.SyntacticFeaturizer
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier
     microworlds:
