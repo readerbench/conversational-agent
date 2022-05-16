@@ -1,0 +1,1915 @@
+version: "3.0"
+nlu:
+- intent: generic.general_knowledge
+  examples: |
+    - Ce e un [calculator](entity)?
+- intent: generic.interaction_examples
+  examples: |
+    - arata-mi niște exemple de întrebări
+    - exemple de replici
+- intent: generic.goodbye
+  examples: |
+    - paaa
+- intent: generic.affirm
+  examples: |
+    - ok
+    - yes
+- intent: generic.greet
+  examples: |
+    - bună
+    - hello
+    - Buna
+- intent: mem_assistant.store_request
+  examples: |
+    - aș dori să stochez ceva
+    - Poți să reții ceva, te rog?
+- intent: mem_assistant.get_subject
+  examples: |
+    - cine m-a ajutat la proiectul de la anatomie?
+    - [Cine](query_word_subj) [stă în căminul P16](action)?
+    - zi-mi cine a propus problemele de la concursul InfoOlt 2016
+- intent: generic.thanks
+  examples: |
+    - mersi mult
+    - Mi-ai fost de mare ajutor
+    - Mulțumesc!
+- intent: university_guide.find_professor
+  examples: |
+    - Spune-mi te rog unde se află biroul lui [Mihnea Moisescu](professor)
+    - Unde are biroul [Mihai Dascalu](professor)?
+    - Știi cumva care e biroul profesorului [Ciprian Dobre](professor)?
+    - Care e biroul lui [Marius Leordeanu](professor)
+- intent: generic.agent_abilities
+  examples: |
+    - Ajutor
+    - Ce știi?
+    - care sunt lucrurile pe care știi să le faci?
+    - Help
+    - capabilități
+- intent: mem_assistant.get_location
+  examples: |
+    - până unde au ajuns radiațiile de la Cernobâl
+    - de unde pleacă trenul IR1892
+    - pe unde mi-am pus pantofii negri
+    - unde am pus caietul de matematică 1?
+    - unde locuiește Claudia Ionescu
+- intent: mem_assistant.store_following_attr
+  examples: |
+    - codul meu numeric personal este cel ce urmează
+    - hotelul la care ne-am cazat anul trecut la mare e acesta:
+    - emailul lui Ionuț este acesta
+    - programul de la notarul de la Universitate este acesta:
+    - dimensiunile portbagajului meu de la mașină [sunt](a_fi) acestea
+- intent: university_guide.find_schedule_fill_slots
+  examples: |
+    - de la [412C1](group)
+    - sunt în grupa [232](group)
+    - [cursul](class_type) de [Proiectare logică](course)
+    - sunt de la grupa [333CD](group)
+    - [cursul](class_type) de [Programare Orientata pe Obiecte](course)
+    - [511AC](group)
+- intent: generic.find_transport
+  examples: |
+    - cum pot ajunge rapid la laserul de la Măgurele
+    - cum pot să merg până la parcul tineretului?
+    - ce iau ca să ajung în Băneasa
+    - vreau rutele de transport spre spitalul floreasca
+    - Arata-mi te rog cum merg la Gara de Nord
+    - care sunt rutele să ajung la mausoleu?
+- intent: mem_assistant.store_attr
+  examples: |
+    - sala laboratorului de PP este EG321
+    - telefonul Dianei este 0745789654
+    - suprafața apartamentului de la București [este](a_fi) de 58mp
+    - numele meu [este](a_fi) Gabriel
+    - anul nașterii lui Ștefan cel Mare [a fost](a_fi) 1433
+    - mărimea la tricou a lui Teo este L
+- intent: mem_assistant.get_attr
+  examples: |
+    - poți să-mi spui [care](query_word_which) era prețul abonamentului la sală
+    - [care](query_word_which) [este](a_fi) numele de utilizator de github al laborantului de EIM
+    - care sunt cele mai bune întrerupătoare
+    - [Care](query_word_which) [e](a_fi) mailul lui [Mihai](person)?
+    - care a fost durata domniei lui Cezar
+    - [care](query_word_which) [e](a_fi) adresa colegului meu?
+    - zi-mi care e codul de pe spatele telefonului
+- intent: mem_assistant.get_timestamp
+  examples: |
+    - [De când](query_word_time) [începe vacanța](action)
+    - până când va dura festivalul de muzică folk?
+    - în ce interval o să se ia apa la apartament
+    - [când](query_word_time) vor avea loc alegerile locale din 2020
+    - de cât timp s-a deschis fabrica de mașini din Pitești
+    - când trebuie să merg la control oftalmologic
+    - [cât de des](query_word_time) trebuie să ud florile din fața casei
+    - de cât timp era însurat Ghiță
+- intent: university_guide.find_schedule
+  examples: |
+    - Spune-mi, te rog, în ce sală pot participa la [Cultura si Civilizatie](course)?
+    - În ce loc se ține [Ingineria Calculatoarelor](course)?
+    - Arată-mi unde se desfășoară [laborator](class_type) pentru grupa [12](group)
+    - Poți să îmi spui unde se ține [cursul](class_type) de la seria [CA](group) de [mecanică](course)?
+    - Zi-mi unde va fi [cursul](class_type) seriei [S1](group) de [analiză matematică](course)
+    - în ce sală va avea loc [semnale și sisteme](course)?
+    - Unde va avea loc [Filosofie Cognitivista](course)?
+    - Aș vrea să îmi zici unde are loc [laboratorul](class_type) de [programare orientată pe obiecte](course) al grupei [333CD](group)
+- intent: university_guide.find_room
+  examples: |
+    - Mă poți ajuta să ajung la sala [EG 203](room)?
+    - La ce etaj se află sala [PR 604](room)?
+    - Mă poți ghida către sala [PR 608](room)?
+    - Indică-mi drumul către sala [PR 003](room)!
+    - Ajută-mă să găsesc sala [PR 706](room)!
+    - Cum pot să găsesc sala [PR 204](room)
+    - Unde pot găsi sala [PR 001](room)?
+    - În ce sens se află sala [PR 307](room)?
+    - Îmi poți explica unde se află sala [PR 302](room), te rog?
+- intent: mem_assistant.get_specifier
+  examples: |
+    - [ce examene](query_word_spec) vor fi date în iunie?
+    - care colegi au luat 10 la chimie
+    - la [care cod](query_word_spec) poștal a fost trimis pachetul
+    - de pe [care cont](query_word_spec) am plătit factura de curent acum 3 zile
+    - în care dulap am lăsat plasa?
+    - de la [care prieten](query_word_spec) e cadoul acesta
+    - [ce mail](query_word_spec) am folosit la serviciu
+    - la [ce sală](query_word_spec) se află microscopul electronic
+    - care bomboane sunt de la auchan
+    - care bomboane sunt pentru ziua ei
+- intent: mem_assistant.store_location
+  examples: |
+    - Rodica se întoarce [de la](prep) festivalul Untold
+    - bormașina cu percuție a lui Vlad e [la](prep) Timișoara
+    - cartea de matematică a Mariei este pe biroul meu
+    - am așezat etuiul de la ochelari peste teancul de reviste din hol
+    - am mers cu mașina până la Iași
+    - tastatura mea este [în](prep) depozit
+    - am lăsat lădița cu cartofi [în](prep) pivniță
+    - trandafirii sunt [de la](prep) Nicu
+    - chitara mea este de la Andrei
+    - cadoul este de la colegul meu de apartament
+    - Bob se află [pe](prep) stația spațială
+- intent: mem_assistant.store_timestamp
+  examples: |
+    - până în [noiembrie](time) trebuie să termin task-ul
+    - olimpiada internațională de geografie va începe [răspoimâine](time)
+    - serviciul funcționează de [luni](time) până [vineri](time)
+    - festivalul de muzică ușoară și dans va fi de pe 1 septembrie pe 10 octombrie
+    - noile autobuze au apărut în [decembrie](time)
+    - buletinul îmi expiră peste 3 [ani](time)
+    - de 3 ori pe oră trebuie să verific starea panoului de control
+    - de [ieri](time) s-a făcut cald afară
+    - am mers la bazinul de înot [marți](time)
+    - de la [ora](time) 18 se oprește curentul electric
+    - [toamna](time) viitoare încep masterul
+    - Andra și-a ales rochia de bal după 2 [săptămâni](time)
+    - [aseară](time) am făcut cartofi prăjiți
+    - testul de curs la rețele neurale a fost [joi](time)
+    - peste 3 sferturi de [oră](time) o să ajungă Ina
+    - procesorul Intel i7 rulează o instrucțiune în 0.3 [nanosecunde](time)
+    - [poimâine](time) merg la mall
+    - Maria pleacă în concediu peste 5 [săptămâni](time)
+    - Viorel e născut pe 16 [mai](time) [1998](time)
+    - testul practic de EIM o să fie săptămâna viitoare
+- regex: room
+  examples: |
+    - [a-zA-Z]{2}\s?[0-9]{2,}\s?[a-zA-Z]?
+- lookup: class_type
+  examples: |
+    - curs
+    - cursul
+    - cursului
+    - cursuri
+    - cursurile
+    - cursurilor
+    - seminar
+    - seminarul
+    - seminarului
+    - seminarii
+    - seminariile
+    - seminariilor
+    - laborator
+    - laboratorul
+    - laboratorului
+    - laboratoare
+    - laboratoarele
+    - laboratoarelor
+    - lab
+    - labul
+    - labului
+    - laburi
+    - laburile
+    - laburilor
+- lookup: course
+  examples: |
+    - Achizitii de Date
+    - Algoritmi Paraleli si Distribuiti
+    - Analiza Algoritmilor
+    - Arhitectura Sistemelor de Calcul
+    - Baze de Date 1
+    - Bazele Electrotehnicii
+    - Biochimie
+    - Calculatoare Numerice 1
+    - Calculatoare Numerice 2
+    - Cultura si Civilizatie
+    - Doctrine Politice
+    - Economia Firmei
+    - Economie Generala
+    - Electronica Digitala
+    - Elemente de Electronica Analogica
+    - Elemente de Grafica pe Calculator
+    - Engleza
+    - Filosofia Culturii Tehnice
+    - Filosofie Cognitivista
+    - Fizica
+    - Fizica Moderna Asistata de Calculator
+    - Franceza
+    - Germana
+    - Grafica Inginereasca
+    - Ingineria Calculatoarelor
+    - Ingineria Programelor
+    - Instrumentatie Virtuala
+    - Introducere in Informatica
+    - Istoria Filosofiei
+    - Istoria Religiilor
+    - Limba Straina 1
+    - Limba Straina 2
+    - Limba Straina 3
+    - Limba Straina 4
+    - Limbaje Formale si Automate
+    - Logica
+    - Matematica 1
+    - Matematica 2
+    - Matematica 3
+    - Mecanica
+    - Metode Numerice
+    - Paradigme de Programare
+    - Politologie
+    - Prelucrarea Informatiei
+    - Programare avansată Java
+    - Programare in Limbaj de Asamblare
+    - Programare Orientata pe Obiecte
+    - Proiectare Logica
+    - Proiectarea Algoritmilor
+    - Proiectarea cu Microprocesoare
+    - Protocoale de Comunicatii
+    - Psihoinventica
+    - Retele Locale
+    - Sisteme de Operare
+    - Structuri de Date
+    - Tehnici de Comunicare
+    - Teoria Sistemelor
+    - Utilizarea Sistemelor de Operare
+- lookup: person
+  examples: |
+    - Aaliyah
+    - Abbey
+    - Abby
+    - Abigail
+    - Abrienda
+    - Acacia
+    - Ada
+    - Addie
+    - Adela
+    - Adelie
+    - Adelina
+    - Adelyn
+    - Adina
+    - Adonia
+    - Adria
+    - Adriana
+    - Adrianne
+    - Afina
+    - Afrodita
+    - Agapia
+    - Agata
+    - Agatha
+    - Aglaia
+    - Agnes
+    - Agrata
+    - Agripina
+    - Aimee
+    - Aisha
+    - Aja
+    - Alecia
+    - Alegria
+    - Aleshanee
+    - Alexandra
+    - Alexandrina
+    - Alice
+    - Alicia
+    - Alima
+    - Alina
+    - Alison
+    - Alissa
+    - Alka
+    - Allegria
+    - Allyson
+    - Alma
+    - Althea
+    - Amalia
+    - Amanda
+    - Amara
+    - Amaryllis
+    - Amaya
+    - Amber
+    - Amena
+    - Ami
+    - Amira
+    - Amora
+    - Amy
+    - Ana
+    - Ana-Maria
+    - Anabela
+    - Anabella
+    - Ananda
+    - Anastacia
+    - Anastasia
+    - Anaya
+    - Anca
+    - Anda
+    - Andra
+    - Andreea
+    - Andromeda
+    - Angela
+    - Angelica
+    - Angeni
+    - Ania
+    - Anica
+    - Aniela
+    - Anisoara
+    - Annabel
+    - Annissa
+    - Annmarie
+    - Antanasia
+    - Antoaneta
+    - Antonia
+    - Aphrodite
+    - Aquene
+    - Arabella
+    - Arden
+    - Argentina
+    - Arianthe
+    - Aris
+    - Artemis
+    - Aryan
+    - Asha
+    - Atalanta
+    - Augusta
+    - Augustina
+    - Aura
+    - Aurelia
+    - Aurica
+    - Aurora
+    - Awinita
+    - Aziza
+    - Barbara
+    - Beatrice
+    - Bela
+    - Belinda
+    - Beth
+    - Bethania
+    - Betina
+    - Betsy
+    - Betty
+    - Bhavna
+    - Bianca
+    - Blanca
+    - Bogdana
+    - Bonita
+    - Bonnie
+    - Brandusa
+    - Bridge
+    - Brinda
+    - Britney
+    - Brook
+    - Bushra
+    - Calista
+    - Callia
+    - Camelia
+    - Carina
+    - Carla
+    - Carlia
+    - Carlita
+    - Carmen
+    - Carola
+    - Carolina
+    - Carolyn
+    - Casilda
+    - Cassandra
+    - Cassie
+    - Catalina
+    - Cate
+    - Catherine
+    - Catlin
+    - Cecilia
+    - Cezara
+    - Chabela
+    - Chameli
+    - Chan
+    - Chan-juan
+    - Channon
+    - Chanter
+    - Chapa
+    - Charisma
+    - Charlotte
+    - Chelsea
+    - Chickoa
+    - Ching Lan
+    - Chiquita
+    - Chira
+    - Christa
+    - Christabel
+    - Christina
+    - Christine
+    - Christy
+    - Chu-hua
+    - Chun
+    - Chyou
+    - Cielo
+    - Cinderella
+    - Cindy
+    - Clara
+    - Clare
+    - Clarissa
+    - Claudia
+    - Clementina
+    - Cleopatra
+    - Cocheta
+    - Codruta
+    - Constanta
+    - Consuelo
+    - Coralia
+    - Corina
+    - Corinthia
+    - Cornelia
+    - Cosmina
+    - Courtney
+    - Crenguta
+    - Crina
+    - Cristina
+    - Cristina
+    - Cristiana
+    - Cybele
+    - Cybill
+    - Cynthia
+    - Da-xia
+    - Daciana
+    - Dafina
+    - Daiana
+    - Dalia
+    - Dalila
+    - Dana
+    - Dani
+    - Daniela
+    - Danna
+    - Dao-ming
+    - Daria
+    - Daruka
+    - Debbie
+    - Debra
+    - Dehateh
+    - Delia
+    - Delores
+    - Denisa
+    - Despina
+    - Devon
+    - Diana
+    - Dida
+    - Die
+    - Divya
+    - Dochia
+    - Doina
+    - Dolores
+    - Dooriya
+    - Dora
+    - Doria
+    - Dorina
+    - Dorotea
+    - Dorothea
+    - Draga
+    - Dumbravita
+    - Ecaterina
+    - Eda
+    - Edith
+    - Ekanta
+    - Ela
+    - Elaine
+    - Electra
+    - Eleftheria
+    - Elena
+    - Elisabeta
+    - Elissa
+    - Eliza
+    - Elizabeta
+    - Elvira
+    - Ema
+    - Emerald
+    - Emilia
+    - Emma
+    - Erica
+    - Esmeralda
+    - Esperanza
+    - Eufrasia
+    - Eufrozina
+    - Eugenia
+    - Euridice
+    - Evea
+    - Evelina
+    - Evelyn
+    - Fahima
+    - Faith
+    - Fang Hua
+    - Fathia
+    - Fei Yen
+    - Felicia
+    - Feng
+    - Fergie
+    - Fernanda
+    - Fevronia
+    - Filoftea
+    - Filofteia
+    - Flavia
+    - Floramaria
+    - Florentina
+    - Florina
+    - Frederica
+    - Freira
+    - Frida
+    - Gabriela
+    - Galatea
+    - Gambhiri
+    - Geanina
+    - Genoveva
+    - Georgeta
+    - Georgia
+    - Georgiana
+    - Geta
+    - Gianina
+    - Gilda
+    - Gina
+    - Ginger
+    - Gizeh
+    - Gloria
+    - Glory
+    - Goldie
+    - Gracie
+    - Graciela
+    - Gratiela
+    - Graziela
+    - Greta
+    - Guan-yin
+    - Hadria
+    - Hannah
+    - Harmony
+    - Harsha
+    - Hateya
+    - Havana
+    - Haven
+    - Hazel
+    - Heaven
+    - Heba
+    - Hecuba
+    - Helen
+    - Hiraani
+    - Hong
+    - Hortensia
+    - Hosanna
+    - Hsiu Mei
+    - Hua
+    - Huan-yue
+    - Hui-ying
+    - Iasmina
+    - Ignacia
+    - Ilaria
+    - Ileana
+    - Iliana
+    - Ilinca
+    - Imala
+    - Indigo
+    - Indira
+    - Insula
+    - Ioana
+    - Iolanda
+    - Irene
+    - Irina
+    - Iris
+    - Isabel
+    - Isabela
+    - Isadora
+    - Isaura
+    - Isra
+    - Istas
+    - Iulia
+    - Iustina
+    - Ivona
+    - Ivy
+    - Izabela
+    - Jackie
+    - Jain
+    - Jamila
+    - Jana
+    - Janette
+    - Jaya
+    - Jeanette
+    - Jeni
+    - Jennifer
+    - Jenny
+    - Jessie
+    - Jia Li
+    - Jiao
+    - Jimena
+    - Jingjing
+    - Joanna
+    - Jocasta
+    - Jody
+    - Joita
+    - Josephina
+    - Juana
+    - Judy
+    - Juliana
+    - Juliet
+    - Jyotika
+    - Kabecka
+    - Kalida
+    - Kalinda
+    - Kalista
+    - Kalonice
+    - Kamari
+    - Kami
+    - Karishma
+    - Karma
+    - Kasia
+    - Kassandra
+    - Kate
+    - Katherine
+    - Kavindra
+    - Keiko
+    - Kendra
+    - Kew
+    - Kilenya
+    - Kim
+    - Kirima
+    - Kirra
+    - Kisa
+    - Krishna
+    - Kristy
+    - Kyra
+    - Labonita
+    - Lacramioara
+    - Lahoma
+    - Lajita
+    - Laksha
+    - Lane
+    - Larisa
+    - Latifah
+    - Latika
+    - Laura
+    - Laurentia
+    - Lavinia
+    - Le
+    - Lei
+    - Leila
+    - Leonor
+    - Lesley
+    - Lethia
+    - Leticia
+    - Letitia
+    - Li hua
+    - Li ming
+    - Li-hua
+    - Lian
+    - Lidia
+    - Lien
+    - Lien-hua
+    - Liliana
+    - Lin Lin
+    - Linda
+    - Lindsay
+    - Ling
+    - Lisandra
+    - Lola
+    - Lolita
+    - Lora
+    - Loredana
+    - Lorena
+    - Louanna
+    - Lucia
+    - Luciana
+    - Lucinda
+    - Lucretia
+    - Lucy
+    - Luiza
+    - Luminita
+    - Lydia
+    - Lyndsey
+    - Lysandra
+    - MINTOdora
+    - Mabel
+    - Macha
+    - Madalina
+    - Maddy
+    - Madeline
+    - Magdalen
+    - Magdalena
+    - Maggie
+    - Mahari
+    - Mahdi
+    - Mahima
+    - Makara
+    - Malini
+    - Malvina
+    - Mandara
+    - Manju
+    - Manuela
+    - Mara
+    - Marcela
+    - Marcie
+    - Margaret
+    - Margareta
+    - Margarita
+    - Maria
+    - Mariana
+    - Maribel
+    - Marilena
+    - Marina
+    - Maritza
+    - Mariuca
+    - Massika
+    - Matilda
+    - Maya
+    - Mayra
+    - Meda
+    - Mee
+    - Mei
+    - Mei-Lien
+    - Mei-Xing
+    - Mei-Zhen
+    - Melania
+    - Melba
+    - Melissa
+    - Memphis
+    - Mercedes
+    - Meryl
+    - Mi
+    - Midori
+    - Migina
+    - Mihaela
+    - Mina
+    - Ming
+    - Mingmei
+    - Mioara
+    - Mirabel
+    - Mirabela
+    - Mirela
+    - Miruna
+    - Missa
+    - Mo Li
+    - Monica
+    - Monisha
+    - Monone
+    - Mora
+    - Muna
+    - Nabila
+    - Nadia
+    - Nailah
+    - Nalini
+    - Namid
+    - Nancy
+    - Narcisa
+    - Nasira
+    - Natalia
+    - Natasa
+    - Nayan
+    - Neena
+    - Niabi
+    - Nicky
+    - Nicola
+    - Nicoleta
+    - Niculina
+    - Nina
+    - Ninarika
+    - Ning
+    - Niu
+    - Noelia
+    - Noella
+    - Noor
+    - Novia
+    - Nuria
+    - Oana
+    - Octavia
+    - Odessa
+    - Ofelia
+    - Okena
+    - Olga
+    - Olimpia
+    - Olive
+    - Olivia
+    - Olympia
+    - Omana
+    - Opal
+    - Ophelia
+    - Osanna
+    - Osceola
+    - Otilia
+    - Ozana
+    - Paloma
+    - Pamela
+    - Pandora
+    - Panthea
+    - Paraschiva
+    - Patricia
+    - Patty
+    - Paula
+    - Paulina
+    - Pemota
+    - Penelope
+    - Perla
+    - Petra
+    - Petrina
+    - Petronela
+    - Petronella
+    - Philomena
+    - Phoebe
+    - Ping
+    - Pooja
+    - Priya
+    - Qiao
+    - Qing yuan
+    - Radha
+    - Raluca
+    - Ramona
+    - Ramya
+    - Rania
+    - Rasha
+    - Raven
+    - Rawnie
+    - Rebeca
+    - Rhea
+    - Riana
+    - Rihana
+    - Rini
+    - Riya
+    - Roberta
+    - Rodica
+    - Romanita
+    - Rong
+    - Ronnie
+    - Rosalia
+    - Rosaline
+    - Rosanna
+    - Rowa
+    - Roxana
+    - Ruby
+    - Ruxandra
+    - Sabah
+    - Sabina
+    - Sahkyo
+    - Saidi
+    - Saima
+    - Sakina
+    - Sakura
+    - Sally
+    - Samara
+    - Sanda
+    - Sandra
+    - Sandy
+    - Saniya
+    - Sanjeet
+    - Sanura
+    - Sara
+    - Sarla
+    - Sasha
+    - Scarlett
+    - Selena
+    - Selina
+    - Senorita
+    - Sequoia
+    - Serafima
+    - Serena
+    - Serenity
+    - Shadow
+    - Shakira
+    - Shakti
+    - Shan
+    - Sharvani
+    - Sheba
+    - Sheela
+    - Shesheba
+    - Shui
+    - Shyla
+    - Silvia
+    - Simina
+    - Simona
+    - Simra
+    - Smaranda
+    - Sofia
+    - Soledad
+    - Somatra
+    - Sonia
+    - Sonora
+    - Sophia
+    - Sorana
+    - Sorina
+    - Stacy
+    - Stana
+    - Stefania
+    - Stela
+    - Suki
+    - Sully
+    - Sumitra
+    - Summer
+    - Sundari
+    - Susie
+    - Suzana
+    - Suzy
+    - Svetlana
+    - Syeira
+    - Tabita
+    - Tahigwa
+    - Taipa
+    - Tamara
+    - Tamera
+    - Tania
+    - Tanika
+    - Tao
+    - Tarika
+    - Tasha
+    - Tatiana
+    - Taylor
+    - Tazara
+    - Teodora
+    - Tereza
+    - Tess
+    - Tessa
+    - Thalia
+    - Thea
+    - Thelma
+    - Theodora
+    - Theresa
+    - Tiffany
+    - Tristana
+    - Troya
+    - Trusha
+    - Umaymah
+    - Umika
+    - Urania
+    - Urja
+    - Usaghi
+    - Valentina
+    - Valeria
+    - Vandana
+    - Vanida
+    - Varsha
+    - Vasanta
+    - Vasilica
+    - Veda
+    - Ventura
+    - Venus
+    - Vera
+    - Veronica
+    - Vicky
+    - Victoria
+    - Vinata
+    - Violeta
+    - Viorela
+    - Virginia
+    - Viveka
+    - Viviana
+    - WINTOna
+    - Wan
+    - Wei
+    - Wendy
+    - Wesley
+    - Wing
+    - Wyanet
+    - Wyoming
+    - Xena
+    - Xi-wang
+    - Xiang
+    - Xiao chen
+    - Xiao hong
+    - Xiao-niao
+    - Xiao-xing
+    - Ximena
+    - Xing xing
+    - Xiu juan
+    - Xiulan
+    - Xue fang
+    - Ya
+    - Yao Niang
+    - Yasmine
+    - Yasmina
+    - Yi
+    - Yi min
+    - Yin
+    - Yogi
+    - Yolanda
+    - Yue
+    - Yue yan
+    - Yumi
+    - Yun
+    - Zamfira
+    - Zamora
+    - Zan
+    - Zandra
+    - Zarita
+    - Zasha
+    - Zaviera
+    - Zenaida
+    - Zenith
+    - Zhi
+    - Zhin
+    - Zina
+    - Zoe
+    - Zonta
+    - Abbott
+    - Abdullah
+    - Achilles
+    - Acoose
+    - Acotas
+    - Adam
+    - Adan
+    - Adarsh
+    - Addison
+    - Adelin
+    - Adli
+    - Adonis
+    - Adri
+    - Adrian
+    - Adriano
+    - Agamemnon
+    - Ahmed
+    - Alabama
+    - Alan
+    - Alastair
+    - Albert
+    - Alberto
+    - Alecu
+    - Alejandro
+    - Alex
+    - Alexander
+    - Alexandru
+    - Alin
+    - Allan
+    - Alonzo
+    - Alvaro
+    - Aman
+    - Amare
+    - Amethyst
+    - Amir
+    - Anando
+    - Anderson
+    - Andreas
+    - Andrei
+    - Andy
+    - Angel
+    - Anghel
+    - Anthony
+    - Anton
+    - Antonio
+    - Apollo
+    - Apostol
+    - Arif
+    - Aristos
+    - Aristotle
+    - Arnav
+    - Ashby
+    - Ashwin
+    - Atanasie
+    - Athanasios
+    - Aubrey
+    - Augustin
+    - Aurel
+    - Aurelio
+    - Austin
+    - Avram
+    - Aweinon
+    - Baatarsaikhan
+    - Bailey
+    - Baldovin
+    - Bao
+    - Barbu
+    - Barclay
+    - Baron
+    - Bartolomeu
+    - Basarab
+    - Basil
+    - Bavol
+    - Beckham
+    - Behar
+    - Benjamin
+    - Benone
+    - Benson
+    - Bentley
+    - Berry
+    - Beval
+    - Billy
+    - Blaise
+    - Blake
+    - Bob
+    - Bogdan
+    - Bolivar
+    - Bono
+    - Boris
+    - Brad
+    - Brandon
+    - Brishen
+    - Brocky
+    - Brown
+    - Bryan
+    - Bujor
+    - Burton
+    - Byron
+    - Calin
+    - Calistrat
+    - Camil
+    - Camlo
+    - Carlos
+    - Carmelo
+    - Carol
+    - Carolos
+    - Carter
+    - Case
+    - Casian
+    - Catalin
+    - Cezar
+    - Chal
+    - Chandler
+    - Chang
+    - Charan
+    - Chardon
+    - Charlie
+    - Charlton
+    - Chavez
+    - Cheng
+    - Chesmu
+    - Chester
+    - Chi
+    - Chico
+    - Chik
+    - Christos
+    - Ciprian
+    - Clark
+    - Claudiu
+    - Clement
+    - Clinton
+    - Codrin
+    - Codrut
+    - Colin
+    - Cong
+    - Conrad
+    - Constantin
+    - Coriander
+    - Cornel
+    - Cortez
+    - Cosmin
+    - Costa
+    - Costel
+    - Costin
+    - Craciun
+    - Cristi
+    - Cristian
+    - Cristofer
+    - Cruz
+    - Cyril
+    - Dalton
+    - Damian
+    - Dan
+    - Daniel
+    - Danior
+    - Danny
+    - Dante
+    - Darshan
+    - Darwin
+    - Dash
+    - David
+    - Davis
+    - Dean
+    - Decebal
+    - Demetrius
+    - Denis
+    - Denzel
+    - Deven
+    - Dewei
+    - Dexter
+    - Dharma
+    - Diego
+    - Dimitrie
+    - Dinesh
+    - Dionisie
+    - Dionysius
+    - Donoma
+    - Dorin
+    - Doru
+    - Dragomir
+    - Dragos
+    - Drake
+    - Drew
+    - Dukker
+    - Dumitru
+    - Dumitru
+    - Dimitrie
+    - Durril
+    - Dustin
+    - Earl
+    - Earnest
+    - Eastwood
+    - Eddy
+    - Edison
+    - Eduard
+    - Eduardo
+    - Ekram
+    - Elam
+    - Eliot
+    - Elton
+    - Emanuel
+    - Emil
+    - Emilian
+    - Enlai
+    - Enrique
+    - Erasmus
+    - Ermin
+    - Ernest
+    - Ernesto
+    - Esteban
+    - Eugen
+    - Eugene
+    - Eusebiu
+    - Eustace
+    - Fabian
+    - Fateh
+    - Fausto
+    - Federico
+    - Felix
+    - Ferguson
+    - Fernando
+    - Fitzroy
+    - Flavian
+    - Flaviu
+    - Flavian
+    - Florentin
+    - Florin
+    - Francisco
+    - Frank
+    - Fred
+    - Gabi
+    - Gabriel
+    - Gale
+    - Gandhi
+    - Gao
+    - Garry
+    - Gelu
+    - Genesis
+    - Geoffrey
+    - George
+    - Geraldo
+    - Gheorghe
+    - Ghita
+    - Gibson
+    - Gilberto
+    - Gonzalo
+    - Gordon
+    - Graham
+    - Grigore
+    - Gurnam
+    - Habib
+    - Hajari
+    - Hamal
+    - Hamilton
+    - Haralambie
+    - Harlow
+    - Hassan
+    - He-ping
+    - Hector
+    - Heracles
+    - Hernando
+    - Homer
+    - Horatiu
+    - Horia
+    - Huang Fu
+    - Humbert
+    - Hung
+    - Hussein
+    - Iacob
+    - Ibrahim
+    - Ignacio
+    - Ikram
+    - Ilie
+    - Illias
+    - Imran
+    - Indivar
+    - Ioan
+    - Ion
+    - Ionut
+    - Isidor
+    - Ismail
+    - Iulian
+    - Iurie
+    - Iustin
+    - Iustinian
+    - Ivan
+    - Jack
+    - Jai
+    - Jal
+    - Jamal
+    - Jameson
+    - Jaser
+    - Jasleen
+    - Javier
+    - Jean
+    - Jefferson
+    - Ji
+    - Jiao-long
+    - Jie
+    - Jin
+    - Jing
+    - Jing-sheng
+    - Joaquin
+    - Joey
+    - Johnson
+    - Jonny
+    - Jorge
+    - Jose
+    - Ju-long
+    - Judas
+    - Judge
+    - Julio
+    - Kailas
+    - Kansas
+    - Karam
+    - Karan
+    - Kareem
+    - Karim
+    - Kensington
+    - Kimberly
+    - Kiran
+    - Kumar
+    - Kun
+    - Larry
+    - Laur
+    - Laurence
+    - Laurențiu
+    - Lawrence
+    - Lazar
+    - Lazaro
+    - Leandro
+    - Lennor
+    - Lenny
+    - Lensar
+    - Leonard
+    - Leonidas
+    - Lewis
+    - Li-liang
+    - Liviu
+    - Lucian
+    - Lucretiu
+    - Luis
+    - Luther
+    - Madalin
+    - Maddox
+    - Madison
+    - Mahari
+    - Majed
+    - Makram
+    - Manchu
+    - Mander
+    - Manole
+    - Manolo
+    - Mansour
+    - Manuel
+    - Marc
+    - Marcel
+    - Marcian
+    - Marcu
+    - Marin
+    - Marius
+    - Martin
+    - Martinez
+    - Mateo
+    - Matthew
+    - Matthias
+    - Mauricio
+    - Maximilian
+    - Memphis
+    - Miguel
+    - Mihai
+    - Mihnea
+    - Mike
+    - Ming yue
+    - Ming-hoa
+    - Mircea
+    - Mitică
+    - Mohammed
+    - Mohan
+    - Moise
+    - Morrison
+    - Mu
+    - Mugur
+    - Mustafa
+    - Namir
+    - Narcis
+    - Nasir
+    - Nasser
+    - Natal
+    - Neculai
+    - Nelson
+    - Nelu
+    - Nicky
+    - Nicoara
+    - Nicolae
+    - Nicu
+    - Nishan
+    - Nistor
+    - Octavian
+    - Olimpiu
+    - Oliver
+    - Oliviu
+    - Omanand
+    - Omar
+    - Oracle
+    - Oreste
+    - Osama
+    - Osbourne
+    - Oscar
+    - Osiris
+    - Osman
+    - Osvaldo
+    - Ovidiu
+    - Oxford
+    - Ozzy
+    - Pablo
+    - Panait
+    - Paraschiv
+    - Parker
+    - Pascal
+    - Pascual
+    - Patriciu
+    - Patrick
+    - Paul
+    - Pavel
+    - Pedro
+    - Peng
+    - Perry
+    - Perseus
+    - Petre
+    - Piao
+    - Pierce
+    - Piroj
+    - Placido
+    - Plato
+    - Pompiliu
+    - Popa
+    - Presley
+    - Pritam
+    - Qing
+    - Qing-nian
+    - Quinto
+    - Quon
+    - Radu
+    - Raed
+    - Rafael
+    - Rafiq
+    - Raman
+    - Ranjit
+    - Rares
+    - Rashad
+    - Raul
+    - Raymond
+    - Raymundo
+    - Razvan
+    - Relu
+    - Remus
+    - Rennie
+    - Ricardo
+    - Richard
+    - Robbie
+    - Robert
+    - Robinson
+    - Rocky
+    - Rodrigo
+    - Roman
+    - Romeo
+    - Romulus
+    - Ronald
+    - Rosemary
+    - Ruben
+    - Rudolph
+    - Ruhan
+    - Rye
+    - Sabin
+    - Saddam
+    - Salim
+    - Sammy
+    - Sandu
+    - Sanjay
+    - Santana
+    - Santiago
+    - Sashi
+    - Scott
+    - Sebastian
+    - Septimiu
+    - Serban
+    - Sereno
+    - Sergiu
+    - Shaan
+    - Shaman
+    - Shamar
+    - Shaun
+    - Shen
+    - Sheng
+    - Sheng Li
+    - Shing
+    - Shuang
+    - Silviu
+    - Simeon
+    - Simion
+    - Simona
+    - Sinclair
+    - Smith
+    - Socrates
+    - Sohan
+    - Song
+    - Sophocles
+    - Sorin
+    - Spencer
+    - Spyridon
+    - Stan
+    - Stanley
+    - Stefan
+    - Steve
+    - Tahir
+    - Tai
+    - Tamir
+    - Tanase
+    - Tarak
+    - Tarun
+    - Tas
+    - Tassos
+    - Taylor
+    - Teo
+    - Teodor
+    - Teodosie
+    - Terrell
+    - Terry
+    - Theodore
+    - Thessaly
+    - Tiana
+    - Tiberiu
+    - Titus
+    - Toader
+    - Tobar
+    - Todd
+    - Toma
+    - Tommy
+    - Tony
+    - Traian
+    - Tudor
+    - Tyler
+    - Valentin
+    - Valer
+    - Valeriu
+    - Valin
+    - Vania
+    - Varuna
+    - Vasile
+    - Vasilis
+    - Veda
+    - Vicente
+    - Victor
+    - Vikram
+    - Vince
+    - Vincenzo
+    - Viorel
+    - Virgil
+    - Vlad
+    - Vladimir
+    - Voinea
+    - Wajid
+    - Walker
+    - Wallace
+    - Wen
+    - Wing
+    - Xander
+    - Xenon
+    - Xin
+    - Xing
+    - Xing-fu
+    - Xue
+    - Yamal
+    - Yamir
+    - Yannis
+    - Yaser
+    - Yat-sen
+    - Ye
+    - Ying
+    - Yogi
+    - Yukio
+    - Yun-qi
+    - Yusuf
+    - Zaharia
+    - Zaida
+    - Zaide
+    - Zamfir
+    - Zavier
+    - Zenon
+    - Zeus
+    - Zhuang
+    - Zoltan
+- lookup: professor
+  examples: |
+    - Adela Almasi
+    - Adina Magda Florea
+    - Adrian Surpateanu
+    - Adriana Cristina Drăghici
+    - Alexandra Ștefania Ghiță
+    - Alexandru Boicea
+    - Alexandru Egner
+    - Alexandru Gradinaru
+    - Alexandru Herisanu
+    - Alexandru Olteanu
+    - Alexandru Predescu
+    - Alexandru Radovici
+    - Alin Dragos Bogdan Moldoveanu
+    - Anca Morar
+    - Andreea Urzica
+    - Andrei Cristian Lambru
+    - Andrei Horia Mogos
+    - Andrei Olaru
+    - Andrei Voinescu
+    - Carmen Odubasteanu
+    - Catalin Leordeanu
+    - Catalin Morosan
+    - Ciprian Dobre
+    - Ciprian-Octavian Truica
+    - Claudia Ifrim
+    - Constantin Eduard Stăniloiu
+    - Constantin Ilas
+    - Cornel Popescu
+    - Costin Gabriel Chiru
+    - Costin Raiciu
+    - Costin-Anton Boiangiu
+    - Cristian Chilipirea
+    - Cristian Gratie
+    - Cristina Stan
+    - Dan Dragomir
+    - Dan Schrager
+    - Dan Stefan Tudose
+    - Daniel Popeanga
+    - Daniel Rosner
+    - Decebal Popescu
+    - Dragos Stefan Niculescu
+    - Dragoș Georgian Corlătescu
+    - Dumitru Clementin Cercel
+    - Dumitru-Cristian Trancă
+    - Elena Simona Apostol
+    - Eliana Dina Andreica
+    - Emil Ioan Slusanschi
+    - Emilian Radoi
+    - Florica Moldoveanu
+    - Florin Pop
+    - Florin Radulescu
+    - Francisc Iacob
+    - Gavril Godza
+    - George Cristian Pătru
+    - George Iordache
+    - George Milescu
+    - George Pantelimon Popescu
+    - George Sarbu
+    - Giorgiana Violeta Vlăsceanu
+    - Irina Mocanu
+    - Iuliu Vasilescu
+    - Laura Cristina Ruse
+    - Laura Mihaela Vasilescu
+    - Laurentiu-Cristian Duca
+    - Liliana Grigoriu
+    - Liviana Nicoleta Tudor
+    - Lorina Negreanu
+    - Lucian Mogosanu
+    - Marian Iordache
+    - Mariana Mocanu
+    - Marios Omar Choudary
+    - Marius Dorian Zaharia
+    - Marius Leordeanu
+    - Matei Popovici
+    - Mihaela Balint
+    - Mihai Carabas
+    - Mihai Daniel Chiroiu
+    - Mihai Dascalu
+    - Mihnea Muraru
+    - Mircea Bardac
+    - Nicolae Tapus
+    - Nirvana Popescu
+    - Oana Balan
+    - Oana Ferche
+    - Octavian Grigorescu
+    - Paul Flondor
+    - Radu Iacob
+    - Razvan Deaconescu
+    - Razvan Musaloiu
+    - Razvan Rughinis
+    - Razvan Tataroiu
+    - Serban Radu
+    - Sergiu Costea
+    - Silvia Cristina Stegaru
+    - Sorin Ciolofan
+    - Sorin Ciureanu
+    - Stefan Ruseti
+    - Stefan Trausan Matu
+    - Traian Popeea
+    - Traian Rebedea
+    - Tudor Berariu
+    - Valentin Cristea
+    - Valentin Lungu
+    - Victor Asavei
+    - Vlad Ciobanu
+    - Vlad Posea
+    - Voichita Iancu
+- lookup: query-word-loc
+  examples: |
+    - unde
+    - de unde
+    - până unde
+    - pe unde
+    - încotro
+    - în ce direcție
+    - în ce sens
+- lookup: query-word-time
+  examples: |
+    - când
+    - de când
+    - până când
+    - cât timp
+    - de cât timp
+    - peste cât timp
+    - acum cât timp
+    - la cât timp
+    - în cât timp
+- lookup: query-word-spec
+  examples: |
+    - ce
+    - pe ce
+    - de ce
+    - la ce
+    - din ce
+    - în ce
+    - sub ce
+    - peste ce
+    - lângă ce
+    - câtre ce
+    - spre ce
+    - dinspre ce
+    - pentru ce
+    - despre ce
+    - de la ce
+    - pe la ce
+    - până la ce
+    - ce fel de
+    - care
+    - pe care
+    - de care
+    - la care
+    - în care
+    - din care
+    - sub care
+    - peste care
+    - lângă care
+    - câtre care
+    - spre care
+    - dinspre care
+    - pentru care
+    - despre care
+    - de la care
+    - pe la care
+    - până la care
+- lookup: query-word-val
+  examples: |
+    - care e
+    - care este
+    - care era
+    - care erau
+    - care a fost
+    - care sunt
+- lookup: query-word-subj
+  examples: |
+    - cine
+    - pe cine
+    - de cine
+    - la cine
+    - din cine
+    - pentru cine
+    - despre cine
+    - câtre cine
+    - spre cine
+    - dinspre cine
+    - de la cine
+    - pe la cine
+    - pe lângă cine
+    - lângă cine
+    - sub cine
+    - de către cine
+    - până la cine
+- lookup: query-word-own
+  examples: |
+    - cui
+    - al cui
+    - a cui
+    - ai cui
+    - ale cui
+    - cărui
+    - cărei
+    - căror
+    - căruia
+    - căreia
+    - cărora
+    - a cărui
+    - al cărui
+    - ai cărui
+    - ale cărui
+    - a cărei
+    - al cărei
+    - ai cărei
+    - ale cărei
+    - a cărora
+    - ai cărora
+    - ale cărora
+- lookup: query-word-numeral
+  examples: |
+    - cât
+    - câtă
+    - câți
+    - câte
+    - câtor
+    - câtora
+    - la câți
+    - al câtelea
+    - a câta
+    - ai câtelea
+    - ale câtelea
+- lookup: room
+  examples: |
+    - AN 030
+    - AN 213
+    - EC 105
+    - EG 105
+    - EG 403
+    - PR 001
+    - PR 002
+    - PR 003
+    - PR 101
+    - PR 102
+    - PR 103
+    - PR 103b
+    - PR 104
+    - PR 105
+    - PR 106
+    - PR 107
+    - PR 108
+    - PR 201
+    - PR 202
+    - PR 203
+    - PR 204
+    - PR 205
+    - PR 206
+    - PR 207
+    - PR 208
+    - PR 301
+    - PR 302
+    - PR 303
+    - PR 304
+    - PR 305
+    - PR 306
+    - PR 307
+    - PR 308
+    - PR 401
+    - PR 402
+    - PR 403
+    - PR 404
+    - PR 405
+    - PR 406
+    - PR 407
+    - PR 408
+    - PR 501
+    - PR 502
+    - PR 503
+    - PR 504
+    - PR 505
+    - PR 506
+    - PR 507
+    - PR 508
+    - PR 601
+    - PR 602
+    - PR 603
+    - PR 604
+    - PR 605
+    - PR 606
+    - PR 607
+    - PR 608
+    - PR 701
+    - PR 702
+    - PR 703
+    - PR 704
+    - PR 705
+    - PR 706
+    - PR 707
+    - PR 708

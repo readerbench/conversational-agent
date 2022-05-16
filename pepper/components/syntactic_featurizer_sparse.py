@@ -226,8 +226,7 @@ class SyntacticFeaturizer(SparseFeaturizer, GraphComponent):
         doc = self.nlp_spacy(text.lower())
         pre_deps = precomputed_deps[text] if text in precomputed_deps else None
         if not pre_deps:
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", text)
-            return
+            raise Exception(f"No manually annotated syntactic features were defined for sentence <{text}>")
 
         word_syntactic_deps = []
         for i, spacy_token in enumerate(doc):

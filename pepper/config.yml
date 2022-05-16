@@ -33,7 +33,6 @@ pipeline:
     epochs: 200
     entity_recognition: False
     number_of_transformer_layers: 3
-  - name: components.syntactic_featurizer_sparse.SyntacticFeaturizer
   - name: components.syntactic_featurizer_dense.SyntacticFeaturizer
   # Classifier for detecting the microworld-specific intent and entities
   - name: components.microworld_classifier.MicroworldClassifier

@@ -45,7 +45,6 @@ class SyntacticFeaturizer(DenseFeaturizer, GraphComponent):
         }
 
     def __init__(self, config: Dict[Text, Any], name: Text) -> None:
-        """Initializes SpacyFeaturizer."""
         super().__init__(name, config)
         self.pooling_operation = self._config[POOLING]
 
@@ -66,7 +65,7 @@ class SyntacticFeaturizer(DenseFeaturizer, GraphComponent):
     def process(self, messages: List[Message]) -> List[Message]:
         """Processes incoming messages and computes and sets features."""
         for message in messages:
-            self._set_spacy_features(message, TEXT)
+            self._set_features(message, TEXT)
         return messages
 
     def process_training_data(self, training_data: TrainingData) -> TrainingData:
@@ -81,7 +80,7 @@ class SyntacticFeaturizer(DenseFeaturizer, GraphComponent):
         self.process(training_data.training_examples)
         return training_data
 
-    def _set_spacy_features(self, message: Message, attribute: Text = TEXT) -> None:
+    def _set_features(self, message: Message, attribute: Text = TEXT) -> None:
         """Adds the spacy word vectors to the messages features."""
         text = message.get(TEXT)
         if not text:
@@ -89,8 +88,7 @@ class SyntacticFeaturizer(DenseFeaturizer, GraphComponent):
 
         pre_deps = precomputed_deps[text] if text in precomputed_deps else None
         if not pre_deps:
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", text)
-            return
+            raise Exception(f"No manually annotated syntactic features were defined for sentence <{text}>")
 
         doc = self.nlp_spacy(text.lower())
         word_syntactic_deps = []

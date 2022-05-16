@@ -1,0 +1,2294 @@
+version: "3.0"
+nlu:
+- intent: generic.general_knowledge
+  examples: |
+    - Cine e [Bill Gates](entity)?
+    - Ce e o [minge](entity)?
+- intent: generic.interaction_examples
+  examples: |
+    - Vreau exemple de întrebări
+    - care sunt exemplele?
+    - vreau ceva exemple
+    - Dă-mi exemplu de ce te pot întreba
+    - Niște exemple de întrebări te rog
+    - vreau exemple
+- intent: generic.goodbye
+  examples: |
+    - pa pa
+    - papa
+    - paa
+    - pa
+    - o zi buna
+    - bye
+    - o zi frumoasă
+    - gata
+- intent: generic.affirm
+  examples: |
+    - dada
+    - sigur
+    - da
+    - da da
+    - yep
+    - daa
+    - dap
+- intent: generic.greet
+  examples: |
+    - hey
+    - hei!
+    - bună ziua
+    - hi
+    - Salut
+    - Bună!
+    - salut
+    - salutare
+    - Hei
+- intent: mem_assistant.store_request
+  examples: |
+    - Memo
+    - Reține te rog
+    - Memorează
+    - Memorează ceva
+    - memo te rog
+    - Vreau să reții ceva
+    - Ține minte
+    - ține minte ceva
+    - Reține ceva
+    - aș vrea să ții ceva în memorie
+    - reține ce îți zic
+    - reține
+- intent: mem_assistant.get_subject
+  examples: |
+    - cine a venit ieri la cursul de astronomie
+    - Spune-mi te rog [cine](query_word_subj) [a inventat becul](action)
+    - de la [cine](query_word_subj) a cumpărat mihaela cireșele
+    - cine a inventat motorul cu reacție
+    - spune-mi te rog cine a luat 10 la arhitectura sistemelor de calcul
+    - [cine](query_word_subj) [m-a tuns ultima dată](action)?
+    - [cine](query_word_subj) [a câștigat locul 1 la olimpiada națională de matematică din 2016](action)
+    - cine a fost la ziua mea acum 3 ani
+    - cine mi-a reparat bateria de la chiuveta de la baie?
+    - [cine](query_word_subj) a fost primul om pe lună?
+    - de la cine a apărut problema
+- intent: generic.thanks
+  examples: |
+    - mulțumesc mult
+    - Îți multumesc mult pentru ajutor
+    - mersi de informație
+    - Nice
+    - Mersi!
+    - super
+    - Cool
+    - Mulțu
+    - merci
+    - super!
+    - Mulțumesc de ajutor
+    - Tare
+- intent: university_guide.find_professor
+  examples: |
+    - Unde il pot gasi pe [Florin Pop](professor)?
+    - Oare unde este domnul profesor [Traian Rebedea](professor)?
+    - Vreau să știu unde ar putea fi domnul [Rughiniș](professor)
+    - Vreau să găsesc pe [Marius Popescu](professor)
+    - Unde este [Răzvan Deaconescu](professor)?
+    - Spune-mi te rog unde are biroul [Ciprian Truică](professor)
+    - Zi-mi și mie unde are [Mariana Mocanu](professor) biroul în facultate
+    - Unde are profesoara [Irina Mocanu](professor) biroul din facultate?
+    - Aș dori să ajung la laborantul [Cosmin Dragomir](professor)
+    - Unde îl găsesc pe asistentul [Emilian Rădoi](professor)?
+    - Spune care e biroul domnului [Gologan](professor)
+    - Unde merg să îl găsesc pe asistentul [Alexandru Negrescu](professor)?
+    - Zi-mi unde îl găsesc pe domnul [Emil Slușanschi](professor)
+    - Unde stă de obicei doamna profesoară [Adina Paunescu](professor)
+    - Unde e biroul lui [Radu Ciobanu](professor)?
+    - Știi unde îl pot găsi pe profesorul [Dan Tudose](professor)?
+- intent: generic.agent_abilities
+  examples: |
+    - Ce pot să te întreb?
+    - Cu ce mă poți ajuta?
+    - Ce știi să faci?
+    - care sunt abilitățile tale?
+    - ce te pot intreba
+    - Care este rolul tău?
+    - vreau ajutor
+    - am nevoie de ajutor
+    - la ce te pricepi
+    - ce știi tu?
+    - Cum poti sa ma ajuti
+    - Ce informații pot afla?
+    - Spune-mi ce te pot întreba
+    - La ce fel de întrebări poți răspunde?
+    - Care sunt tipurile de întrebări la care răspunzi?
+    - mă poți ajuta cu ceva?
+    - ce cunoștințe ai
+    - abilități
+- intent: mem_assistant.get_location
+  examples: |
+    - [unde](query_word_loc) am lăsat ceasul?
+    - știi unde sunt burghiele mici
+    - [Unde](query_word_loc) se află ochelarii
+    - de unde am luat draperiile din sufragerie?
+    - de unde este brelocul meu de la chei?
+    - [Unde](query_word_loc) e buletinul?
+    - pe unde am lăsat pompa de bicicletă
+    - [pe unde](query_word_loc) e sticla de ulei
+    - poți să-mi zici [unde](query_word_loc) este încârcătorul de telefon
+    - unde este setul de baterii pentru mouse?
+    - spune-mi te rog unde a pus Alina dosarul cu actele de la serviciu
+    - zi-mi unde am pus ochelarii de înot
+    - ai putea să îmi zici unde era casa lui Teo?
+    - de unde au venit cartofii în Europa
+    - știi [unde](query_word_loc) am pus cheile
+    - [până unde](query_word_loc) a alergat aseară Marius?
+    - de unde mi-am luat cravata cea grena
+    - unde se află bazinul de înot Dinamo
+    - zi-mi unde am lăsat certificatul meu de naștere
+    - unde mi-am aruncat sculele de construcții
+    - [de unde](query_word_loc) am cumpărat uscătorul de păr
+- intent: mem_assistant.store_following_attr
+  examples: |
+    - ecuația fluxului electromagnetic [e](a_fi) cea care urmează
+    - materiile opționale din anul 1 [sunt](a_fi) următoarele
+    - numerele de telefon ale Georgianei sunt acestea
+    - linkul de la concursul ACM de anul trecut e următorul
+    - tehnologiile folosite de aplicație sunt următoarele
+    - valoarea constantei pi [este](a_fi) următoarea
+    - studenții care s-au înscris la masterul de securitate sunt următorii
+    - teorema lui Pitagora este asta
+    - codul meu IBAN este următorul
+    - dioptriile mele de la ochelari [erau](a_fi) ultima dată cele ce urmează
+    - mailul lui Alex [este](a_fi) următorul
+    - versiunile de Windows 10 [sunt](a_fi) acestea
+    - lunile pe care am decontat abonamentul sunt cele care urmează
+    - membrii lotului de informatică din 2016 sunt cei care urmează
+    - explicatia indicatorului albastru este asta
+    - colegii mei de liceu [erau](a_fi) cei ce urmează
+    - programul de lucru al lui Cristian e ăsta
+    - colegii care au luat 10 la ML [sunt](a_fi) următorii:
+    - codul de acces [este](a_fi) ăsta
+    - numărul de la casă al Mariei [e](a_fi) acesta
+    - adresa mea de la București [e](a_fi) aceasta
+    - modelul SSD-ului meu e ăsta
+- intent: university_guide.find_schedule_fill_slots
+  examples: |
+    - eu fac parte din grupa [311CD](group)
+    - seria [CTI](group)
+    - in grupa [333CC](group)
+    - [seminarul](class_type) de la [Chimie aplicată](course)
+    - [seminarul](class_type)
+    - [curs](class_type)
+    - [seminar](class_type)
+    - mă interesa materia [Calculatoare Numerice 1](course)
+    - [laboratorul](class_type) de la [Proiectare cu Microprocesoare](course)
+    - [Metode Numerice](course) de la seria [CA](group)
+    - [Semnale și sisteme](course), seria [AB](group)
+    - sunt de la seria [AC](group)
+    - pentru seria [CB](group)
+    - [laborator](class_type)
+    - grupa [512AA](group)
+    - materia de [Fizică](course)
+    - la materia de [Arhitectura sistemelor de calcul](course)
+    - [Proiectare Logică](course)
+    - pentru seria [CA](group)
+    - [seminar](class_type) de [Algebră și Geometrie](course)
+    - [3CC](group)
+    - grupa [331CB](group) materia [Sisteme de operare](course)
+- intent: generic.find_transport
+  examples: |
+    - poti sa-mi zici cum sa ajung in Pantelimon?
+    - zi-mi cum ajung pe lacul morii
+    - arată-mi rute către stația de metrou Orizont
+    - dă-mi transport către arena națională
+    - as dori sa ajung la piata unirii
+    - Cum aș putea să ajung până la Universitate?
+    - ce mijloace pot să iau până la farmacia tei?
+    - cum fac să merg in Herăstrău?
+    - as vrea sa merg la dedeman
+    - vreau să merg la dristor
+    - arata-mi directii spre universitate
+    - vreau direcții către palatul parlamentului
+    - vreau sa ma duc la Lujerului
+    - aș dori să mă duc la facultate
+    - trebuie să ajung pe strada lalelelor
+    - Aș vrea să merg în parcul sticlariei
+    - Dă-mi trasee către Voluntari
+    - ce mijloace de transport merg spre promenada
+    - vreau să merg în sectorul 5
+    - Vreau sa vad cum mă duc la Apusului
+    - cum ajung repede in otopeni?
+    - vreau să ajung la casa presei libere
+    - cum merg spre bragadiru?
+- intent: mem_assistant.store_attr
+  examples: |
+    - numele profesoarei mele de biologie din liceu este Mariana Mihai
+    - tipul de baterii de la tastatură este AAA
+    - codul de identificare al cardului meu de de acces la birou este 57627
+    - rank-ul universității Politehnica este 800
+    - numărul blocului fratelui Mihaelei [e](a_fi) 10
+    - limbajul de programare folosit de Thales este C++
+    - adresa de la serviciu este Bulevardul Unirii nr. 0
+    - seria mea de la buletin [este](a_fi) GG2020
+    - codul PIN de la cardul meu de sănătate este 0000
+    - placa mea video este NVidia GeForce GTX950m
+    - Numărul de telefon al lui [Dan](person) [e](a_fi) 123456789
+    - modelul tastaturii mele este logitech mx keys
+    - codul de activare al sistemului de operare [e](a_fi) APCHF6798HJ67GI90
+    - ziua de naștere a Grațielei este pe 12 mai 1995
+    - data de expirare a suplimentelor alimentare din cămară este 30-05-2023
+    - Mailul lui [Alex](person) Marin [este](a_fi) alex@marin.com
+    - tensiunea nominală de alimentare a pompei este 120V
+    - Adresa Elenei [este](a_fi) strada Zorilor numărul 9
+    - materiile la care am luat 9 sunt M1 și M2
+    - numele asistentului de programare paralelă [e](a_fi) Paul Walker
+    - prețul ceasului meu Atlantic a fost 500 de lei
+    - prețul canapelei [a fost](a_fi) de 1300 de lei
+    - telefonul Karinei este 243243
+    - username-ul meu de github [este](a_fi) gabrielboroghina
+    - numărul de la mașină al Elenei este B 07 ELN
+- intent: mem_assistant.get_attr
+  examples: |
+    - care e vărsta de pensionare la bărbați
+    - spune-mi care este seria mea de la buletin
+    - [care](query_word_which) este temperatura medie în Monaco în iunie
+    - [care](query_word_which) [e](a_fi) data de naștere a lui Mihai Popa
+    - care este telefonul Dianei
+    - zi-mi [care](query_word_which) a fost câștigătorul concursului Eestec Olympics de anul trecut
+    - care sunt ministerele cu probleme
+    - [care](query_word_which) e numărul lui Radu
+    - care era modelul tastaturii mele?
+    - zi-mi care e codul PIN de la cardul meu de sănătate
+    - [care](query_word_which) [este](a_fi) mărimea mea la adidași
+    - [care](query_word_which) [sunt](a_fi) datele cardului meu revolut
+    - care e numele profesoarei mele de biologie din liceu
+    - care este numărul de la mașină al Elenei
+    - [care](query_word_which) [sunt](a_fi) tipurile de rețele neurale
+    - [care](query_word_which) [este](a_fi) valoarea de adevăr a propoziției
+    - care e dobânda de la creditul pentru casă?
+    - zi-mi și mie [care](query_word_which) era adresa de căsuță poștală a Karinei Preda
+    - vreau să știu care e numele de familie al lui Sebi
+    - aș vrea să îmi zici te rog care e termenul limită al temei de la algebră
+    - [care](query_word_which) [este](a_fi) diferența de vârstă între mine și Vlad
+    - care era emailul asistentului de la APP?
+    - [care](query_word_which) [e](a_fi) limita de viteză în localitate
+    - care este prețul ceasului meu Atlantic
+    - [care](query_word_which) este telefonul de la frizerie
+    - care este înălțimea vârfului Everest?
+    - care este tipografia centrală
+    - [care](query_word_which) [era](a_fi) denumirea bazei de date de la proiect?
+    - [care](query_word_which) e punctul de topire al aluminiului
+    - [care](query_word_which) [e](a_fi) frecvența procesorului meu
+- intent: mem_assistant.get_timestamp
+  examples: |
+    - [cât de des](query_word_time) se actualizează sistemul de operare?
+    - [până când](query_word_time) trebuie rezolvată problema la vlsi
+    - [când](query_word_time) trebuie să iau pastilele de stomac
+    - când am fost plecat în Germania
+    - în ce perioadă se vor da biletele gratis la operă
+    - în cât timp am urcat pe vârful Omu?
+    - cât de des vin cei de la amenajări stradale să îngrijească plantele
+    - peste [cât timp](query_word_time) se termină starea de urgență?
+    - zi-mi [când](query_word_time) [am fost la sală](action)?
+    - de când s-a deschis McDonalds din Slatina
+    - pentru cât timp o să fie plecat Mihai
+    - [în ce perioadă](time) vor avea loc preselecțiile pentru balul bobocilor
+    - [Când](query_word_time) am avut ultimul examen anul trecut?
+    - când începe vacanța de iarnă
+    - [de când până când](time) se vor închide magazinele
+    - cât timp a durat bătălia de la Oituz
+    - peste cât timp începe sesiunea de comunicări științifice?
+    - de când până când se va lucra la reamenajarea clădirii?
+    - peste [cât timp](query_word_time) [începe sesiunea de examene](action)
+    - când am fost la mare anul trecut
+    - peste cât timp o să se aprindă focul de tabără
+    - [până când](query_word_time) a durat al 2-lea război mondial?
+    - [în care perioadă](time) a fost cel mai frig afară?
+    - [în ce perioadă](time) se va ține concursul de fizică de la Bacău
+    - [de când până când](time) pot citi indexul de energie electrică
+    - [cât timp](query_word_time) [a durat prezentarea temei](action)
+    - [Până când](query_word_time) [trebuie trimisă tema](action)
+    - [în ce interval](time) de timp a avut loc atacul
+    - [în ce interval](time) e deschis magazinul Kaufland de la Giurgiu?
+- intent: university_guide.find_schedule
+  examples: |
+    - Unde se desfășoară [Paradigme de Programare](course)?
+    - Unde se ține [seminarul](class_type) de [Teoria Sistemelor](course) pentru grupa [315CB](group)?
+    - Aș vrea să aflu unde va fi [seminarul](class_type) de la grupa [123A](group)
+    - Vreau să știu unde se desfășoară [seminarul](class_type) grupei [222AC](group)
+    - Zi-mi unde se ține [Analiza Algoritmilor](course)!
+    - Ajută-mă să găsesc sala unde se ține [Programare Orientata pe Obiecte](course)!
+    - Arată-mi sala în care se desfășoară [Elemente de Electronica Analogica](course)!
+    - Unde se ține [cursul](class_type) pentru seria [CB](group)?
+    - Unde o să fie predat laboratorul de la grupa [15](group) de [structuri de date](course)?
+    - Îmi poți spune, te rog, unde se va ține [Retele Locale](course)?
+    - Unde se ține [seminarul](class_type) de la grupa 313CC?
+    - Unde are loc [Instrumente Informatice](course)?
+    - Știi unde se desfășoară [Proiectare Logica](course)?
+    - În ce sală are loc [Mecanica](course)?
+    - Unde se ține [seminar](class_type) de [Engleza](course) pentru grupa [321CC](group)?
+    - Unde se ține [curs](class_type) de [Programare Avansată în Java](course) pentru seria [AC](group)?
+    - Spune-mi unde are loc [Calculatoare Numerice](course) te rog
+    - Mă poți ajuta să găsesc unde are loc [Logica](course)?
+    - Știi unde va fi [fizica](course)?
+    - Zi-mi te rog unde are loc [curs](class_type) pentru seria [CA](group)
+    - Unde se ține [cursul](class_type) de [Electronica Digitala](course) pentru seria [CC](group)?
+    - Aș vrea să știu unde e [seminarul](class_type) de [Mate](course) pentru grupa [142BB](group)
+    - Vreau să aflu unde o să fie [seminarul](class_type) de [fizică](course) de la grupa [31C](group)
+    - Unde trebuie să mă duc pentru a participa la [Istoria Religiilor](course)?
+    - Unde se ține [laboratorul](class_type) pentru grupa [311CC](group)?
+    - Poți să îmi spui unde are loc [laboratorul](class_type) pentru seria [CA](group)?
+    - Știi unde se va ține [Algoritmi Paraleli si Distribuiti](course)?
+    - Unde se predă [Proiectarea Algoritmilor](course)?
+    - Spune-mi te rog unde va avea loc [cursul](class_type) seriei [AA](group)
+    - Aș vrea să aflu unde o să fie predată [teoria sistemelor](course)
+    - Unde se ține [Metode Numerice](course)?
+- intent: university_guide.find_room
+  examples: |
+    - Încotro să o iau către sala [PR 203](room)?
+    - Mă poți îndrepta către sala [PR 002](room)?
+    - Afișează-mi harta etajului corespunzător sălii [PR 303](room)!
+    - Cum pot ajunge la sala [PR 603](room)?
+    - Pe unde se află sala [PR 604](room)?
+    - Unde e [AN 02](room)
+    - Arată-mi calea către sala [PR 701](room)!
+    - În ce loc se află sala [PR 605](room)?
+    - Mă poți îndruma către sala [PR 408](room)?
+    - Explică-mi cum ajung la sala [PR 403](room)!
+    - Cum ajung în [EG413](room)?
+    - Există vreo hartă pentru a vizualiza localizarea sălii [PR 403](room)?
+    - În ce direcție se găsește sala [PR 601](room)?
+    - Unde este localizată sala [PR 708](room)?
+    - Poți să îmi indici drumul către sala [PR 608](room)?
+    - Pe unde să o iau ca să ajung la sala [PR 702](room)?
+    - Mă conduci până la sala [PR 103a](room)?
+    - Îmi poți arăta calea către sala [PR 702](room), te rog?
+    - Poti să mă conduci la sala [PR 701](room), te rog?
+    - Arată-mi harta cu sala [PR 002](room) reprezentată.
+    - Unde se află sala [PR 606](room)?
+    - Vreau să văd harta cu sala [PR 301](room) reprezentată.
+    - Condu-mă la sala [PR 305](room)!
+    - pe unde pot merge către sala [PR 306](room)
+    - Unde e sala [PR 305](room)?
+    - Poți să mă ghidezi te rog către [PR001](room)?
+    - Spune-mi unde găsesc sala [PR 001](room)!
+    - Știi unde se află sala [PR 606](room)?
+    - Care este direcția către sala [PR 605](room)?
+    - caut sala [EC104](room), știi cumva unde este?
+    - Am nevoie de ajutor să găsesc drumul către sala [PR 303](room)!
+    - Care este drumul către sala [PR 706](room)?
+    - Îmi poți arăta o hartă cu sala [PR 106](room) reprezentată.
+    - Care este drumul spre sala [PR 103a](room)?
+    - Zi-mi unde găsesc sala [PR 003](room)!
+    - Ajută-mă să găsesc sala [PR 103b](room)!
+    - Unde găsesc sala [PR 103b](room)?
+    - Arată-mi cum ajung în [EC105](room)
+- intent: mem_assistant.get_specifier
+  examples: |
+    - [care elicopter](query_word_spec)
+    - în [care săptămână](query_word_spec) e examenul de învățare automată
+    - pe [care poziție](query_word_spec) este mașina în parcare
+    - ce os a înghițit acel băiat
+    - care aparat de făcut sandwichuri e la reducere
+    - pe [care masă](query_word_spec) am pus ieri periuța de dinți?
+    - ce fel de pocănit se auzea ieri
+    - la ce fel de neurooftalmologie trebuie să meargă?
+    - care clasificare e corectă
+    - care autoturism este cel mai prietenos cu mediul
+    - [ce floare](query_word_spec) s-a uscat
+    - [ce hackathon](query_word_spec) va avea loc săptămâna viitoare
+    - pe [ce viteză](query_word_spec) am setat aerul condiționat
+    - în [care cameră](query_word_spec) am lăsat încărcătorul de telefon
+    - ce profesor a prezentat la conferință
+    - care dinamometru e afară
+    - [ce fel de procesor](query_word_spec) are telefonul meu
+    - de la [care magazin](query_word_spec) mi-am luat cablul de date?
+    - la [ce apartament](query_word_spec) locuiește verișorul meu
+    - la [care hotel](query_word_spec) s-au cazat Mihai și Alex ieri
+    - ce fel de uscător de păr folosește Alice
+    - la [care salon](query_word_spec) este internat bunicul lui
+    - [ce culoare](query_word_spec) au ochii Andreei
+    - la ce sprânceană e problema
+    - pentru care deversare au fost amedați
+    - la [ce număr](query_word_spec) de telefon se dau informații despre situația actuală
+    - [ce windows](query_word_spec) am acum pe calculator
+    - pentru [ce test](query_word_spec) am învățat acum 2 zile
+    - la ce apartament stă Alex Marin?
+    - care persoane suferă de diabet
+    - pe [ce loc](query_word_spec) am ieșit la olimpiada de info din clasa a 12-a
+    - ce fel de bec am pus la bucătărie
+    - care copil a rupt scaunul de la școală
+    - de la ce magazin am luat tortul de la ziua mea
+    - ce floare este de la expo flora?
+    - [ce fel de baterie](query_word_spec) folosește ceasul de mână
+    - [ce temperatură](query_word_spec) a fost în iulie anul trecut
+    - în [care](query_word_spec) dulap am pus dosarul
+    - [ce fel de imprimantă](query_word_spec) am acasă
+    - în ce zi e născut unchiul meu?
+    - [care emisferă](query_word_spec) este
+- intent: mem_assistant.store_location
+  examples: |
+    - geanta de voiaj este de la Samsonite
+    - pliculețele de praf de copt sunt în cutiuța din primul sertar
+    - roșiile din lădiță sunt de la țară
+    - am cumpărat florile [de la](prep) mireille
+    - cardul de memorie e [sub](prep) cutia telefonului
+    - Clara a venit [de pe](prep) muntele Olimp
+    - buletinul meu se află [în](prep) rucsac
+    - ganterele lui Horia sunt sub canapea
+    - am lăsat geanta în dulapul numărul 4
+    - Daniela stă la blocul 23
+    - perechea de adidași albi este [de la](prep) intersport din Afi
+    - Bonurile de transport sunt în plicul de pe raft
+    - trusa de machiaj a Anisiei este în geamantanul verde
+    - am lăsat suportul de brad la țară în garaj
+    - am pus bateria externă în rucsacul albastru
+    - eu stau la adresa str. Ec. Teod. nr. 17
+    - Alin Dumitru stă în Militari Residence
+    - Am pus foile cu tema la mate [pe](prep) dulapul din sufragerie
+    - Alex stă [în](prep) căminul P5
+    - service-ul gsm este [pe](prep) strada Ecaterina Teodoroiu numărul 12
+    - pungile acestea sunt de la mall
+    - pachetul de creioane colorate este pe polița de pe perete
+    - am luat ochelarii de la mall
+    - Victor stă pe Aleea Romancierilor numărul 12
+    - am lăsat mașina la service-ul auto din Crângași
+    - am luat ornamentele de la dedeman
+    - geaca de iarnă este [în](prep) șifonierul de acasă
+    - am luat veioza [de la](prep) București
+    - cheia franceză e pe balcon
+    - Maria Popescu locuiește [pe](prep) Bulevardul Timișoara numărul 5
+    - gladiolele sunt de la florăria din oraș
+    - telefonul lui Jan este [pe](prep) noptieră
+    - sandalele sunt de la magazinul benvenutti
+    - mi-am pus casca de înot [în](prep) dulapul cu tricouri
+    - cartela mea SIM veche este sub cutia telefonului
+    - eu stau la blocul nr. 8
+    - atlasul de geografie se află pe raftul cu dicționarul
+    - biblioteca se află [la](prep) etajul 5
+    - lămpile solare sunt [de la](prep) bricostore
+    - Cardul de debit este [în](prep) portofelul vechi
+    - cartea e [pe](prep) masă
+    - mi-am așezat prosoapele pe suport
+    - profesorul se află [în](prep) camera vecină
+    - insigna de la facultate este pe rucsacul negru
+    - tricoul meu de alergat e în șifonier pe hol
+- intent: mem_assistant.store_timestamp
+  examples: |
+    - eu merg la sală de 3 ori pe săptămână
+    - bunica lui Alice va face cozonaci [mâine](time) [dimineață](time)
+    - [Mâine](time) vine Mihai pe la mine
+    - la [anul](time) se deschide mall-ul din Slatina
+    - Pe 3 [iulie](time) se termină sesiunea de licență
+    - de pe 23 până pe 27 am fost în concediu
+    - mi-am făcut pașaportul acum un [an](time)
+    - am alergat timp de o oră și jumătate
+    - la [răsărit](time) a început să cânte cocoșul din grădină
+    - [azi](time) am fost în parcul Titan
+    - Vacanța de vară începe pe 30 [iunie](time)
+    - la primăvară e gata blocul
+    - în fiecare an apare un nou telefon Samsung Galaxy
+    - am trimis rezolvările la gazeta matematică miercurea trecută
+    - Jacob locuiește în Bremen de un an și 4 [luni](time)
+    - prezentarea proiectului durează 45 de [minute](time)
+    - mgazinul se aprovizionează în fiecare [săptămână](time)
+    - [luni](time) am fost la alergat
+    - mi-am făcut analize [primăvara](time) trecută
+    - am de prezentat temele peste o [oră](time)
+    - peste o zi expiră prăjiturile
+    - până [sâmbătă](time) e interzis accesul în mall
+    - în [septembrie](time) începe școala
+    - peste 2 [ani](time) termină Nicoleta masterul
+    - am mâncat acum 2 [ore](time)
+    - [săptămâna](time) viitoare încep cursurile de înot
+    - peste 2 [zile](time) începe examenul de bacalaureat
+    - ieri m-am tuns
+    - garanția de la frigider se termină [marțea](time) viitoare
+    - o dată la 4 ani se schimbă primarii
+    - hackathonul s-a organizat weekend-ul trecut
+    - până pe 24 iunie trebuie să trimit lucrarea de diplomă
+    - abonamentul STB îmi expiră pe 23 [aprilie](time)
+    - voi pleca in Monaco peste 3 ore
+    - restricțiile de circulație se încheie la [vară](time)
+    - acum 3 ore și 15 minute președintele John Kennedy a ținut un discurs
+    - examenul la ML este peste 4 zile
+    - virusul a apărut acum 3 luni
+    - din [octombrie](time) apare un nou film la cinema
+    - [ieri](time) [seara](time) a fost foarte frig afară
+    - bătălia de la Mărășești a avut loc în [anul](time) 1917
+    - vineri apare revista historia
+    - meciul dintre Franța și Spania va fi în [weekend](time)
+    - Marc ia vitaminele de 2 ori pe [zi](time)
+    - bazinul de apă se umple o dată la 30 de minute
+    - trebuie să iau antibioticul o dată la 6 [ore](time)
+    - ziua Daianei este în [august](time)
+    - mâine se termină perioada de rodaj a mașinii
+    - curierul o să vină [diseară](time)
+    - evaluarea națională a ținut 2 [ore](time) și 45 de [minute](time)
+    - am terminat proiecul la programare web [alaltăieri](time)
+    - conferința de bioinformatică a fost acum o [lună](time)
+    - aniversarea prieteniei cu Andreea e pe 30 aprilie
+    - în [secolul](time) 19 s-a dezvoltat Imperiul lui Napoleon
+    - Darius și-a schimbat domiciliul [iarna](time) trecută
+    - îmi expiră permisul de conducere pe 25 [februarie](time) 2023
+    - peste 123 de secunde trecem în noul an
+    - de [dimineață](time) trebuie să hrănesc animalele
+    - execuția interogării în baza de date a durat 500 de [milisecunde](time)
+    - tonerul de la imprimantă s-a terminat [alaltăseară](time)
+    - de joi va putea ajunge în Germania cu trenul
+    - mâine la prânz o să tund gazonul
+    - la polul nord este noapte timp de 6 [luni](time)
+    - am udat floarea roșie aseară
+    - plecarea în Franța este pe 5 [martie](time)
+    - coletul cu jacheta va ajunge [miercuri](time)
+    - sesiunea din browser a expirat acum 10 [secunde](time)
+    - [vineri](time) încep promoțiile de black friday
+    - între 3 și 7 ianuarie am fost la conferință în Toronto
+    - acum 5 [decenii](time) nu existau calculatoare
+    - [luna](time) viitoare vine Florin din Spania
+    - am fost la cumpărături după [amiază](time)
+    - concursul va fi pe 12 [ianuarie](time)
+    - alaltăieri după amiază a plouat cu piatră la Botoșani
+    - Dan vine acasă din Germania în fiecare vară
+    - Jack a fost la biserică [duminică](time)
+    - întâlnirea cu managerul este peste o jumătate de [oră](time)
+    - copierea fișierelor de pe un disk pe altul a durat 4 minute
+- regex: room
+  examples: |
+    - [a-zA-Z]{2}\s?[0-9]{2,}\s?[a-zA-Z]?
+- lookup: class_type
+  examples: |
+    - curs
+    - cursul
+    - cursului
+    - cursuri
+    - cursurile
+    - cursurilor
+    - seminar
+    - seminarul
+    - seminarului
+    - seminarii
+    - seminariile
+    - seminariilor
+    - laborator
+    - laboratorul
+    - laboratorului
+    - laboratoare
+    - laboratoarele
+    - laboratoarelor
+    - lab
+    - labul
+    - labului
+    - laburi
+    - laburile
+    - laburilor
+- lookup: course
+  examples: |
+    - Achizitii de Date
+    - Algoritmi Paraleli si Distribuiti
+    - Analiza Algoritmilor
+    - Arhitectura Sistemelor de Calcul
+    - Baze de Date 1
+    - Bazele Electrotehnicii
+    - Biochimie
+    - Calculatoare Numerice 1
+    - Calculatoare Numerice 2
+    - Cultura si Civilizatie
+    - Doctrine Politice
+    - Economia Firmei
+    - Economie Generala
+    - Electronica Digitala
+    - Elemente de Electronica Analogica
+    - Elemente de Grafica pe Calculator
+    - Engleza
+    - Filosofia Culturii Tehnice
+    - Filosofie Cognitivista
+    - Fizica
+    - Fizica Moderna Asistata de Calculator
+    - Franceza
+    - Germana
+    - Grafica Inginereasca
+    - Ingineria Calculatoarelor
+    - Ingineria Programelor
+    - Instrumentatie Virtuala
+    - Introducere in Informatica
+    - Istoria Filosofiei
+    - Istoria Religiilor
+    - Limba Straina 1
+    - Limba Straina 2
+    - Limba Straina 3
+    - Limba Straina 4
+    - Limbaje Formale si Automate
+    - Logica
+    - Matematica 1
+    - Matematica 2
+    - Matematica 3
+    - Mecanica
+    - Metode Numerice
+    - Paradigme de Programare
+    - Politologie
+    - Prelucrarea Informatiei
+    - Programare avansată Java
+    - Programare in Limbaj de Asamblare
+    - Programare Orientata pe Obiecte
+    - Proiectare Logica
+    - Proiectarea Algoritmilor
+    - Proiectarea cu Microprocesoare
+    - Protocoale de Comunicatii
+    - Psihoinventica
+    - Retele Locale
+    - Sisteme de Operare
+    - Structuri de Date
+    - Tehnici de Comunicare
+    - Teoria Sistemelor
+    - Utilizarea Sistemelor de Operare
+- lookup: person
+  examples: |
+    - Aaliyah
+    - Abbey
+    - Abby
+    - Abigail
+    - Abrienda
+    - Acacia
+    - Ada
+    - Addie
+    - Adela
+    - Adelie
+    - Adelina
+    - Adelyn
+    - Adina
+    - Adonia
+    - Adria
+    - Adriana
+    - Adrianne
+    - Afina
+    - Afrodita
+    - Agapia
+    - Agata
+    - Agatha
+    - Aglaia
+    - Agnes
+    - Agrata
+    - Agripina
+    - Aimee
+    - Aisha
+    - Aja
+    - Alecia
+    - Alegria
+    - Aleshanee
+    - Alexandra
+    - Alexandrina
+    - Alice
+    - Alicia
+    - Alima
+    - Alina
+    - Alison
+    - Alissa
+    - Alka
+    - Allegria
+    - Allyson
+    - Alma
+    - Althea
+    - Amalia
+    - Amanda
+    - Amara
+    - Amaryllis
+    - Amaya
+    - Amber
+    - Amena
+    - Ami
+    - Amira
+    - Amora
+    - Amy
+    - Ana
+    - Ana-Maria
+    - Anabela
+    - Anabella
+    - Ananda
+    - Anastacia
+    - Anastasia
+    - Anaya
+    - Anca
+    - Anda
+    - Andra
+    - Andreea
+    - Andromeda
+    - Angela
+    - Angelica
+    - Angeni
+    - Ania
+    - Anica
+    - Aniela
+    - Anisoara
+    - Annabel
+    - Annissa
+    - Annmarie
+    - Antanasia
+    - Antoaneta
+    - Antonia
+    - Aphrodite
+    - Aquene
+    - Arabella
+    - Arden
+    - Argentina
+    - Arianthe
+    - Aris
+    - Artemis
+    - Aryan
+    - Asha
+    - Atalanta
+    - Augusta
+    - Augustina
+    - Aura
+    - Aurelia
+    - Aurica
+    - Aurora
+    - Awinita
+    - Aziza
+    - Barbara
+    - Beatrice
+    - Bela
+    - Belinda
+    - Beth
+    - Bethania
+    - Betina
+    - Betsy
+    - Betty
+    - Bhavna
+    - Bianca
+    - Blanca
+    - Bogdana
+    - Bonita
+    - Bonnie
+    - Brandusa
+    - Bridge
+    - Brinda
+    - Britney
+    - Brook
+    - Bushra
+    - Calista
+    - Callia
+    - Camelia
+    - Carina
+    - Carla
+    - Carlia
+    - Carlita
+    - Carmen
+    - Carola
+    - Carolina
+    - Carolyn
+    - Casilda
+    - Cassandra
+    - Cassie
+    - Catalina
+    - Cate
+    - Catherine
+    - Catlin
+    - Cecilia
+    - Cezara
+    - Chabela
+    - Chameli
+    - Chan
+    - Chan-juan
+    - Channon
+    - Chanter
+    - Chapa
+    - Charisma
+    - Charlotte
+    - Chelsea
+    - Chickoa
+    - Ching Lan
+    - Chiquita
+    - Chira
+    - Christa
+    - Christabel
+    - Christina
+    - Christine
+    - Christy
+    - Chu-hua
+    - Chun
+    - Chyou
+    - Cielo
+    - Cinderella
+    - Cindy
+    - Clara
+    - Clare
+    - Clarissa
+    - Claudia
+    - Clementina
+    - Cleopatra
+    - Cocheta
+    - Codruta
+    - Constanta
+    - Consuelo
+    - Coralia
+    - Corina
+    - Corinthia
+    - Cornelia
+    - Cosmina
+    - Courtney
+    - Crenguta
+    - Crina
+    - Cristina
+    - Cristina
+    - Cristiana
+    - Cybele
+    - Cybill
+    - Cynthia
+    - Da-xia
+    - Daciana
+    - Dafina
+    - Daiana
+    - Dalia
+    - Dalila
+    - Dana
+    - Dani
+    - Daniela
+    - Danna
+    - Dao-ming
+    - Daria
+    - Daruka
+    - Debbie
+    - Debra
+    - Dehateh
+    - Delia
+    - Delores
+    - Denisa
+    - Despina
+    - Devon
+    - Diana
+    - Dida
+    - Die
+    - Divya
+    - Dochia
+    - Doina
+    - Dolores
+    - Dooriya
+    - Dora
+    - Doria
+    - Dorina
+    - Dorotea
+    - Dorothea
+    - Draga
+    - Dumbravita
+    - Ecaterina
+    - Eda
+    - Edith
+    - Ekanta
+    - Ela
+    - Elaine
+    - Electra
+    - Eleftheria
+    - Elena
+    - Elisabeta
+    - Elissa
+    - Eliza
+    - Elizabeta
+    - Elvira
+    - Ema
+    - Emerald
+    - Emilia
+    - Emma
+    - Erica
+    - Esmeralda
+    - Esperanza
+    - Eufrasia
+    - Eufrozina
+    - Eugenia
+    - Euridice
+    - Evea
+    - Evelina
+    - Evelyn
+    - Fahima
+    - Faith
+    - Fang Hua
+    - Fathia
+    - Fei Yen
+    - Felicia
+    - Feng
+    - Fergie
+    - Fernanda
+    - Fevronia
+    - Filoftea
+    - Filofteia
+    - Flavia
+    - Floramaria
+    - Florentina
+    - Florina
+    - Frederica
+    - Freira
+    - Frida
+    - Gabriela
+    - Galatea
+    - Gambhiri
+    - Geanina
+    - Genoveva
+    - Georgeta
+    - Georgia
+    - Georgiana
+    - Geta
+    - Gianina
+    - Gilda
+    - Gina
+    - Ginger
+    - Gizeh
+    - Gloria
+    - Glory
+    - Goldie
+    - Gracie
+    - Graciela
+    - Gratiela
+    - Graziela
+    - Greta
+    - Guan-yin
+    - Hadria
+    - Hannah
+    - Harmony
+    - Harsha
+    - Hateya
+    - Havana
+    - Haven
+    - Hazel
+    - Heaven
+    - Heba
+    - Hecuba
+    - Helen
+    - Hiraani
+    - Hong
+    - Hortensia
+    - Hosanna
+    - Hsiu Mei
+    - Hua
+    - Huan-yue
+    - Hui-ying
+    - Iasmina
+    - Ignacia
+    - Ilaria
+    - Ileana
+    - Iliana
+    - Ilinca
+    - Imala
+    - Indigo
+    - Indira
+    - Insula
+    - Ioana
+    - Iolanda
+    - Irene
+    - Irina
+    - Iris
+    - Isabel
+    - Isabela
+    - Isadora
+    - Isaura
+    - Isra
+    - Istas
+    - Iulia
+    - Iustina
+    - Ivona
+    - Ivy
+    - Izabela
+    - Jackie
+    - Jain
+    - Jamila
+    - Jana
+    - Janette
+    - Jaya
+    - Jeanette
+    - Jeni
+    - Jennifer
+    - Jenny
+    - Jessie
+    - Jia Li
+    - Jiao
+    - Jimena
+    - Jingjing
+    - Joanna
+    - Jocasta
+    - Jody
+    - Joita
+    - Josephina
+    - Juana
+    - Judy
+    - Juliana
+    - Juliet
+    - Jyotika
+    - Kabecka
+    - Kalida
+    - Kalinda
+    - Kalista
+    - Kalonice
+    - Kamari
+    - Kami
+    - Karishma
+    - Karma
+    - Kasia
+    - Kassandra
+    - Kate
+    - Katherine
+    - Kavindra
+    - Keiko
+    - Kendra
+    - Kew
+    - Kilenya
+    - Kim
+    - Kirima
+    - Kirra
+    - Kisa
+    - Krishna
+    - Kristy
+    - Kyra
+    - Labonita
+    - Lacramioara
+    - Lahoma
+    - Lajita
+    - Laksha
+    - Lane
+    - Larisa
+    - Latifah
+    - Latika
+    - Laura
+    - Laurentia
+    - Lavinia
+    - Le
+    - Lei
+    - Leila
+    - Leonor
+    - Lesley
+    - Lethia
+    - Leticia
+    - Letitia
+    - Li hua
+    - Li ming
+    - Li-hua
+    - Lian
+    - Lidia
+    - Lien
+    - Lien-hua
+    - Liliana
+    - Lin Lin
+    - Linda
+    - Lindsay
+    - Ling
+    - Lisandra
+    - Lola
+    - Lolita
+    - Lora
+    - Loredana
+    - Lorena
+    - Louanna
+    - Lucia
+    - Luciana
+    - Lucinda
+    - Lucretia
+    - Lucy
+    - Luiza
+    - Luminita
+    - Lydia
+    - Lyndsey
+    - Lysandra
+    - MINTOdora
+    - Mabel
+    - Macha
+    - Madalina
+    - Maddy
+    - Madeline
+    - Magdalen
+    - Magdalena
+    - Maggie
+    - Mahari
+    - Mahdi
+    - Mahima
+    - Makara
+    - Malini
+    - Malvina
+    - Mandara
+    - Manju
+    - Manuela
+    - Mara
+    - Marcela
+    - Marcie
+    - Margaret
+    - Margareta
+    - Margarita
+    - Maria
+    - Mariana
+    - Maribel
+    - Marilena
+    - Marina
+    - Maritza
+    - Mariuca
+    - Massika
+    - Matilda
+    - Maya
+    - Mayra
+    - Meda
+    - Mee
+    - Mei
+    - Mei-Lien
+    - Mei-Xing
+    - Mei-Zhen
+    - Melania
+    - Melba
+    - Melissa
+    - Memphis
+    - Mercedes
+    - Meryl
+    - Mi
+    - Midori
+    - Migina
+    - Mihaela
+    - Mina
+    - Ming
+    - Mingmei
+    - Mioara
+    - Mirabel
+    - Mirabela
+    - Mirela
+    - Miruna
+    - Missa
+    - Mo Li
+    - Monica
+    - Monisha
+    - Monone
+    - Mora
+    - Muna
+    - Nabila
+    - Nadia
+    - Nailah
+    - Nalini
+    - Namid
+    - Nancy
+    - Narcisa
+    - Nasira
+    - Natalia
+    - Natasa
+    - Nayan
+    - Neena
+    - Niabi
+    - Nicky
+    - Nicola
+    - Nicoleta
+    - Niculina
+    - Nina
+    - Ninarika
+    - Ning
+    - Niu
+    - Noelia
+    - Noella
+    - Noor
+    - Novia
+    - Nuria
+    - Oana
+    - Octavia
+    - Odessa
+    - Ofelia
+    - Okena
+    - Olga
+    - Olimpia
+    - Olive
+    - Olivia
+    - Olympia
+    - Omana
+    - Opal
+    - Ophelia
+    - Osanna
+    - Osceola
+    - Otilia
+    - Ozana
+    - Paloma
+    - Pamela
+    - Pandora
+    - Panthea
+    - Paraschiva
+    - Patricia
+    - Patty
+    - Paula
+    - Paulina
+    - Pemota
+    - Penelope
+    - Perla
+    - Petra
+    - Petrina
+    - Petronela
+    - Petronella
+    - Philomena
+    - Phoebe
+    - Ping
+    - Pooja
+    - Priya
+    - Qiao
+    - Qing yuan
+    - Radha
+    - Raluca
+    - Ramona
+    - Ramya
+    - Rania
+    - Rasha
+    - Raven
+    - Rawnie
+    - Rebeca
+    - Rhea
+    - Riana
+    - Rihana
+    - Rini
+    - Riya
+    - Roberta
+    - Rodica
+    - Romanita
+    - Rong
+    - Ronnie
+    - Rosalia
+    - Rosaline
+    - Rosanna
+    - Rowa
+    - Roxana
+    - Ruby
+    - Ruxandra
+    - Sabah
+    - Sabina
+    - Sahkyo
+    - Saidi
+    - Saima
+    - Sakina
+    - Sakura
+    - Sally
+    - Samara
+    - Sanda
+    - Sandra
+    - Sandy
+    - Saniya
+    - Sanjeet
+    - Sanura
+    - Sara
+    - Sarla
+    - Sasha
+    - Scarlett
+    - Selena
+    - Selina
+    - Senorita
+    - Sequoia
+    - Serafima
+    - Serena
+    - Serenity
+    - Shadow
+    - Shakira
+    - Shakti
+    - Shan
+    - Sharvani
+    - Sheba
+    - Sheela
+    - Shesheba
+    - Shui
+    - Shyla
+    - Silvia
+    - Simina
+    - Simona
+    - Simra
+    - Smaranda
+    - Sofia
+    - Soledad
+    - Somatra
+    - Sonia
+    - Sonora
+    - Sophia
+    - Sorana
+    - Sorina
+    - Stacy
+    - Stana
+    - Stefania
+    - Stela
+    - Suki
+    - Sully
+    - Sumitra
+    - Summer
+    - Sundari
+    - Susie
+    - Suzana
+    - Suzy
+    - Svetlana
+    - Syeira
+    - Tabita
+    - Tahigwa
+    - Taipa
+    - Tamara
+    - Tamera
+    - Tania
+    - Tanika
+    - Tao
+    - Tarika
+    - Tasha
+    - Tatiana
+    - Taylor
+    - Tazara
+    - Teodora
+    - Tereza
+    - Tess
+    - Tessa
+    - Thalia
+    - Thea
+    - Thelma
+    - Theodora
+    - Theresa
+    - Tiffany
+    - Tristana
+    - Troya
+    - Trusha
+    - Umaymah
+    - Umika
+    - Urania
+    - Urja
+    - Usaghi
+    - Valentina
+    - Valeria
+    - Vandana
+    - Vanida
+    - Varsha
+    - Vasanta
+    - Vasilica
+    - Veda
+    - Ventura
+    - Venus
+    - Vera
+    - Veronica
+    - Vicky
+    - Victoria
+    - Vinata
+    - Violeta
+    - Viorela
+    - Virginia
+    - Viveka
+    - Viviana
+    - WINTOna
+    - Wan
+    - Wei
+    - Wendy
+    - Wesley
+    - Wing
+    - Wyanet
+    - Wyoming
+    - Xena
+    - Xi-wang
+    - Xiang
+    - Xiao chen
+    - Xiao hong
+    - Xiao-niao
+    - Xiao-xing
+    - Ximena
+    - Xing xing
+    - Xiu juan
+    - Xiulan
+    - Xue fang
+    - Ya
+    - Yao Niang
+    - Yasmine
+    - Yasmina
+    - Yi
+    - Yi min
+    - Yin
+    - Yogi
+    - Yolanda
+    - Yue
+    - Yue yan
+    - Yumi
+    - Yun
+    - Zamfira
+    - Zamora
+    - Zan
+    - Zandra
+    - Zarita
+    - Zasha
+    - Zaviera
+    - Zenaida
+    - Zenith
+    - Zhi
+    - Zhin
+    - Zina
+    - Zoe
+    - Zonta
+    - Abbott
+    - Abdullah
+    - Achilles
+    - Acoose
+    - Acotas
+    - Adam
+    - Adan
+    - Adarsh
+    - Addison
+    - Adelin
+    - Adli
+    - Adonis
+    - Adri
+    - Adrian
+    - Adriano
+    - Agamemnon
+    - Ahmed
+    - Alabama
+    - Alan
+    - Alastair
+    - Albert
+    - Alberto
+    - Alecu
+    - Alejandro
+    - Alex
+    - Alexander
+    - Alexandru
+    - Alin
+    - Allan
+    - Alonzo
+    - Alvaro
+    - Aman
+    - Amare
+    - Amethyst
+    - Amir
+    - Anando
+    - Anderson
+    - Andreas
+    - Andrei
+    - Andy
+    - Angel
+    - Anghel
+    - Anthony
+    - Anton
+    - Antonio
+    - Apollo
+    - Apostol
+    - Arif
+    - Aristos
+    - Aristotle
+    - Arnav
+    - Ashby
+    - Ashwin
+    - Atanasie
+    - Athanasios
+    - Aubrey
+    - Augustin
+    - Aurel
+    - Aurelio
+    - Austin
+    - Avram
+    - Aweinon
+    - Baatarsaikhan
+    - Bailey
+    - Baldovin
+    - Bao
+    - Barbu
+    - Barclay
+    - Baron
+    - Bartolomeu
+    - Basarab
+    - Basil
+    - Bavol
+    - Beckham
+    - Behar
+    - Benjamin
+    - Benone
+    - Benson
+    - Bentley
+    - Berry
+    - Beval
+    - Billy
+    - Blaise
+    - Blake
+    - Bob
+    - Bogdan
+    - Bolivar
+    - Bono
+    - Boris
+    - Brad
+    - Brandon
+    - Brishen
+    - Brocky
+    - Brown
+    - Bryan
+    - Bujor
+    - Burton
+    - Byron
+    - Calin
+    - Calistrat
+    - Camil
+    - Camlo
+    - Carlos
+    - Carmelo
+    - Carol
+    - Carolos
+    - Carter
+    - Case
+    - Casian
+    - Catalin
+    - Cezar
+    - Chal
+    - Chandler
+    - Chang
+    - Charan
+    - Chardon
+    - Charlie
+    - Charlton
+    - Chavez
+    - Cheng
+    - Chesmu
+    - Chester
+    - Chi
+    - Chico
+    - Chik
+    - Christos
+    - Ciprian
+    - Clark
+    - Claudiu
+    - Clement
+    - Clinton
+    - Codrin
+    - Codrut
+    - Colin
+    - Cong
+    - Conrad
+    - Constantin
+    - Coriander
+    - Cornel
+    - Cortez
+    - Cosmin
+    - Costa
+    - Costel
+    - Costin
+    - Craciun
+    - Cristi
+    - Cristian
+    - Cristofer
+    - Cruz
+    - Cyril
+    - Dalton
+    - Damian
+    - Dan
+    - Daniel
+    - Danior
+    - Danny
+    - Dante
+    - Darshan
+    - Darwin
+    - Dash
+    - David
+    - Davis
+    - Dean
+    - Decebal
+    - Demetrius
+    - Denis
+    - Denzel
+    - Deven
+    - Dewei
+    - Dexter
+    - Dharma
+    - Diego
+    - Dimitrie
+    - Dinesh
+    - Dionisie
+    - Dionysius
+    - Donoma
+    - Dorin
+    - Doru
+    - Dragomir
+    - Dragos
+    - Drake
+    - Drew
+    - Dukker
+    - Dumitru
+    - Dumitru
+    - Dimitrie
+    - Durril
+    - Dustin
+    - Earl
+    - Earnest
+    - Eastwood
+    - Eddy
+    - Edison
+    - Eduard
+    - Eduardo
+    - Ekram
+    - Elam
+    - Eliot
+    - Elton
+    - Emanuel
+    - Emil
+    - Emilian
+    - Enlai
+    - Enrique
+    - Erasmus
+    - Ermin
+    - Ernest
+    - Ernesto
+    - Esteban
+    - Eugen
+    - Eugene
+    - Eusebiu
+    - Eustace
+    - Fabian
+    - Fateh
+    - Fausto
+    - Federico
+    - Felix
+    - Ferguson
+    - Fernando
+    - Fitzroy
+    - Flavian
+    - Flaviu
+    - Flavian
+    - Florentin
+    - Florin
+    - Francisco
+    - Frank
+    - Fred
+    - Gabi
+    - Gabriel
+    - Gale
+    - Gandhi
+    - Gao
+    - Garry
+    - Gelu
+    - Genesis
+    - Geoffrey
+    - George
+    - Geraldo
+    - Gheorghe
+    - Ghita
+    - Gibson
+    - Gilberto
+    - Gonzalo
+    - Gordon
+    - Graham
+    - Grigore
+    - Gurnam
+    - Habib
+    - Hajari
+    - Hamal
+    - Hamilton
+    - Haralambie
+    - Harlow
+    - Hassan
+    - He-ping
+    - Hector
+    - Heracles
+    - Hernando
+    - Homer
+    - Horatiu
+    - Horia
+    - Huang Fu
+    - Humbert
+    - Hung
+    - Hussein
+    - Iacob
+    - Ibrahim
+    - Ignacio
+    - Ikram
+    - Ilie
+    - Illias
+    - Imran
+    - Indivar
+    - Ioan
+    - Ion
+    - Ionut
+    - Isidor
+    - Ismail
+    - Iulian
+    - Iurie
+    - Iustin
+    - Iustinian
+    - Ivan
+    - Jack
+    - Jai
+    - Jal
+    - Jamal
+    - Jameson
+    - Jaser
+    - Jasleen
+    - Javier
+    - Jean
+    - Jefferson
+    - Ji
+    - Jiao-long
+    - Jie
+    - Jin
+    - Jing
+    - Jing-sheng
+    - Joaquin
+    - Joey
+    - Johnson
+    - Jonny
+    - Jorge
+    - Jose
+    - Ju-long
+    - Judas
+    - Judge
+    - Julio
+    - Kailas
+    - Kansas
+    - Karam
+    - Karan
+    - Kareem
+    - Karim
+    - Kensington
+    - Kimberly
+    - Kiran
+    - Kumar
+    - Kun
+    - Larry
+    - Laur
+    - Laurence
+    - Laurențiu
+    - Lawrence
+    - Lazar
+    - Lazaro
+    - Leandro
+    - Lennor
+    - Lenny
+    - Lensar
+    - Leonard
+    - Leonidas
+    - Lewis
+    - Li-liang
+    - Liviu
+    - Lucian
+    - Lucretiu
+    - Luis
+    - Luther
+    - Madalin
+    - Maddox
+    - Madison
+    - Mahari
+    - Majed
+    - Makram
+    - Manchu
+    - Mander
+    - Manole
+    - Manolo
+    - Mansour
+    - Manuel
+    - Marc
+    - Marcel
+    - Marcian
+    - Marcu
+    - Marin
+    - Marius
+    - Martin
+    - Martinez
+    - Mateo
+    - Matthew
+    - Matthias
+    - Mauricio
+    - Maximilian
+    - Memphis
+    - Miguel
+    - Mihai
+    - Mihnea
+    - Mike
+    - Ming yue
+    - Ming-hoa
+    - Mircea
+    - Mitică
+    - Mohammed
+    - Mohan
+    - Moise
+    - Morrison
+    - Mu
+    - Mugur
+    - Mustafa
+    - Namir
+    - Narcis
+    - Nasir
+    - Nasser
+    - Natal
+    - Neculai
+    - Nelson
+    - Nelu
+    - Nicky
+    - Nicoara
+    - Nicolae
+    - Nicu
+    - Nishan
+    - Nistor
+    - Octavian
+    - Olimpiu
+    - Oliver
+    - Oliviu
+    - Omanand
+    - Omar
+    - Oracle
+    - Oreste
+    - Osama
+    - Osbourne
+    - Oscar
+    - Osiris
+    - Osman
+    - Osvaldo
+    - Ovidiu
+    - Oxford
+    - Ozzy
+    - Pablo
+    - Panait
+    - Paraschiv
+    - Parker
+    - Pascal
+    - Pascual
+    - Patriciu
+    - Patrick
+    - Paul
+    - Pavel
+    - Pedro
+    - Peng
+    - Perry
+    - Perseus
+    - Petre
+    - Piao
+    - Pierce
+    - Piroj
+    - Placido
+    - Plato
+    - Pompiliu
+    - Popa
+    - Presley
+    - Pritam
+    - Qing
+    - Qing-nian
+    - Quinto
+    - Quon
+    - Radu
+    - Raed
+    - Rafael
+    - Rafiq
+    - Raman
+    - Ranjit
+    - Rares
+    - Rashad
+    - Raul
+    - Raymond
+    - Raymundo
+    - Razvan
+    - Relu
+    - Remus
+    - Rennie
+    - Ricardo
+    - Richard
+    - Robbie
+    - Robert
+    - Robinson
+    - Rocky
+    - Rodrigo
+    - Roman
+    - Romeo
+    - Romulus
+    - Ronald
+    - Rosemary
+    - Ruben
+    - Rudolph
+    - Ruhan
+    - Rye
+    - Sabin
+    - Saddam
+    - Salim
+    - Sammy
+    - Sandu
+    - Sanjay
+    - Santana
+    - Santiago
+    - Sashi
+    - Scott
+    - Sebastian
+    - Septimiu
+    - Serban
+    - Sereno
+    - Sergiu
+    - Shaan
+    - Shaman
+    - Shamar
+    - Shaun
+    - Shen
+    - Sheng
+    - Sheng Li
+    - Shing
+    - Shuang
+    - Silviu
+    - Simeon
+    - Simion
+    - Simona
+    - Sinclair
+    - Smith
+    - Socrates
+    - Sohan
+    - Song
+    - Sophocles
+    - Sorin
+    - Spencer
+    - Spyridon
+    - Stan
+    - Stanley
+    - Stefan
+    - Steve
+    - Tahir
+    - Tai
+    - Tamir
+    - Tanase
+    - Tarak
+    - Tarun
+    - Tas
+    - Tassos
+    - Taylor
+    - Teo
+    - Teodor
+    - Teodosie
+    - Terrell
+    - Terry
+    - Theodore
+    - Thessaly
+    - Tiana
+    - Tiberiu
+    - Titus
+    - Toader
+    - Tobar
+    - Todd
+    - Toma
+    - Tommy
+    - Tony
+    - Traian
+    - Tudor
+    - Tyler
+    - Valentin
+    - Valer
+    - Valeriu
+    - Valin
+    - Vania
+    - Varuna
+    - Vasile
+    - Vasilis
+    - Veda
+    - Vicente
+    - Victor
+    - Vikram
+    - Vince
+    - Vincenzo
+    - Viorel
+    - Virgil
+    - Vlad
+    - Vladimir
+    - Voinea
+    - Wajid
+    - Walker
+    - Wallace
+    - Wen
+    - Wing
+    - Xander
+    - Xenon
+    - Xin
+    - Xing
+    - Xing-fu
+    - Xue
+    - Yamal
+    - Yamir
+    - Yannis
+    - Yaser
+    - Yat-sen
+    - Ye
+    - Ying
+    - Yogi
+    - Yukio
+    - Yun-qi
+    - Yusuf
+    - Zaharia
+    - Zaida
+    - Zaide
+    - Zamfir
+    - Zavier
+    - Zenon
+    - Zeus
+    - Zhuang
+    - Zoltan
+- lookup: professor
+  examples: |
+    - Adela Almasi
+    - Adina Magda Florea
+    - Adrian Surpateanu
+    - Adriana Cristina Drăghici
+    - Alexandra Ștefania Ghiță
+    - Alexandru Boicea
+    - Alexandru Egner
+    - Alexandru Gradinaru
+    - Alexandru Herisanu
+    - Alexandru Olteanu
+    - Alexandru Predescu
+    - Alexandru Radovici
+    - Alin Dragos Bogdan Moldoveanu
+    - Anca Morar
+    - Andreea Urzica
+    - Andrei Cristian Lambru
+    - Andrei Horia Mogos
+    - Andrei Olaru
+    - Andrei Voinescu
+    - Carmen Odubasteanu
+    - Catalin Leordeanu
+    - Catalin Morosan
+    - Ciprian Dobre
+    - Ciprian-Octavian Truica
+    - Claudia Ifrim
+    - Constantin Eduard Stăniloiu
+    - Constantin Ilas
+    - Cornel Popescu
+    - Costin Gabriel Chiru
+    - Costin Raiciu
+    - Costin-Anton Boiangiu
+    - Cristian Chilipirea
+    - Cristian Gratie
+    - Cristina Stan
+    - Dan Dragomir
+    - Dan Schrager
+    - Dan Stefan Tudose
+    - Daniel Popeanga
+    - Daniel Rosner
+    - Decebal Popescu
+    - Dragos Stefan Niculescu
+    - Dragoș Georgian Corlătescu
+    - Dumitru Clementin Cercel
+    - Dumitru-Cristian Trancă
+    - Elena Simona Apostol
+    - Eliana Dina Andreica
+    - Emil Ioan Slusanschi
+    - Emilian Radoi
+    - Florica Moldoveanu
+    - Florin Pop
+    - Florin Radulescu
+    - Francisc Iacob
+    - Gavril Godza
+    - George Cristian Pătru
+    - George Iordache
+    - George Milescu
+    - George Pantelimon Popescu
+    - George Sarbu
+    - Giorgiana Violeta Vlăsceanu
+    - Irina Mocanu
+    - Iuliu Vasilescu
+    - Laura Cristina Ruse
+    - Laura Mihaela Vasilescu
+    - Laurentiu-Cristian Duca
+    - Liliana Grigoriu
+    - Liviana Nicoleta Tudor
+    - Lorina Negreanu
+    - Lucian Mogosanu
+    - Marian Iordache
+    - Mariana Mocanu
+    - Marios Omar Choudary
+    - Marius Dorian Zaharia
+    - Marius Leordeanu
+    - Matei Popovici
+    - Mihaela Balint
+    - Mihai Carabas
+    - Mihai Daniel Chiroiu
+    - Mihai Dascalu
+    - Mihnea Muraru
+    - Mircea Bardac
+    - Nicolae Tapus
+    - Nirvana Popescu
+    - Oana Balan
+    - Oana Ferche
+    - Octavian Grigorescu
+    - Paul Flondor
+    - Radu Iacob
+    - Razvan Deaconescu
+    - Razvan Musaloiu
+    - Razvan Rughinis
+    - Razvan Tataroiu
+    - Serban Radu
+    - Sergiu Costea
+    - Silvia Cristina Stegaru
+    - Sorin Ciolofan
+    - Sorin Ciureanu
+    - Stefan Ruseti
+    - Stefan Trausan Matu
+    - Traian Popeea
+    - Traian Rebedea
+    - Tudor Berariu
+    - Valentin Cristea
+    - Valentin Lungu
+    - Victor Asavei
+    - Vlad Ciobanu
+    - Vlad Posea
+    - Voichita Iancu
+- lookup: query-word-loc
+  examples: |
+    - unde
+    - de unde
+    - până unde
+    - pe unde
+    - încotro
+    - în ce direcție
+    - în ce sens
+- lookup: query-word-time
+  examples: |
+    - când
+    - de când
+    - până când
+    - cât timp
+    - de cât timp
+    - peste cât timp
+    - acum cât timp
+    - la cât timp
+    - în cât timp
+- lookup: query-word-spec
+  examples: |
+    - ce
+    - pe ce
+    - de ce
+    - la ce
+    - din ce
+    - în ce
+    - sub ce
+    - peste ce
+    - lângă ce
+    - câtre ce
+    - spre ce
+    - dinspre ce
+    - pentru ce
+    - despre ce
+    - de la ce
+    - pe la ce
+    - până la ce
+    - ce fel de
+    - care
+    - pe care
+    - de care
+    - la care
+    - în care
+    - din care
+    - sub care
+    - peste care
+    - lângă care
+    - câtre care
+    - spre care
+    - dinspre care
+    - pentru care
+    - despre care
+    - de la care
+    - pe la care
+    - până la care
+- lookup: query-word-val
+  examples: |
+    - care e
+    - care este
+    - care era
+    - care erau
+    - care a fost
+    - care sunt
+- lookup: query-word-subj
+  examples: |
+    - cine
+    - pe cine
+    - de cine
+    - la cine
+    - din cine
+    - pentru cine
+    - despre cine
+    - câtre cine
+    - spre cine
+    - dinspre cine
+    - de la cine
+    - pe la cine
+    - pe lângă cine
+    - lângă cine
+    - sub cine
+    - de către cine
+    - până la cine
+- lookup: query-word-own
+  examples: |
+    - cui
+    - al cui
+    - a cui
+    - ai cui
+    - ale cui
+    - cărui
+    - cărei
+    - căror
+    - căruia
+    - căreia
+    - cărora
+    - a cărui
+    - al cărui
+    - ai cărui
+    - ale cărui
+    - a cărei
+    - al cărei
+    - ai cărei
+    - ale cărei
+    - a cărora
+    - ai cărora
+    - ale cărora
+- lookup: query-word-numeral
+  examples: |
+    - cât
+    - câtă
+    - câți
+    - câte
+    - câtor
+    - câtora
+    - la câți
+    - al câtelea
+    - a câta
+    - ai câtelea
+    - ale câtelea
+- lookup: room
+  examples: |
+    - AN 030
+    - AN 213
+    - EC 105
+    - EG 105
+    - EG 403
+    - PR 001
+    - PR 002
+    - PR 003
+    - PR 101
+    - PR 102
+    - PR 103
+    - PR 103b
+    - PR 104
+    - PR 105
+    - PR 106
+    - PR 107
+    - PR 108
+    - PR 201
+    - PR 202
+    - PR 203
+    - PR 204
+    - PR 205
+    - PR 206
+    - PR 207
+    - PR 208
+    - PR 301
+    - PR 302
+    - PR 303
+    - PR 304
+    - PR 305
+    - PR 306
+    - PR 307
+    - PR 308
+    - PR 401
+    - PR 402
+    - PR 403
+    - PR 404
+    - PR 405
+    - PR 406
+    - PR 407
+    - PR 408
+    - PR 501
+    - PR 502
+    - PR 503
+    - PR 504
+    - PR 505
+    - PR 506
+    - PR 507
+    - PR 508
+    - PR 601
+    - PR 602
+    - PR 603
+    - PR 604
+    - PR 605
+    - PR 606
+    - PR 607
+    - PR 608
+    - PR 701
+    - PR 702
+    - PR 703
+    - PR 704
+    - PR 705
+    - PR 706
+    - PR 707
+    - PR 708
