@@ -5,7 +5,6 @@ intents:
   - generic.thanks
   - generic.goodbye
   - generic.affirm
-  - generic.general_knowledge
   - generic.agent_abilities
   - generic.interaction_examples
   - generic.find_transport
@@ -55,7 +54,6 @@ actions:
   - action_find_professor
   - action_find_room
   - action_find_schedule
-  - action_general_knowledge
   # mem_assistant
   - action_store_attr
   - action_get_attr

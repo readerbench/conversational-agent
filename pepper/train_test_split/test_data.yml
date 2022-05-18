@@ -1,8 +1,5 @@
 version: "3.0"
 nlu:
-- intent: generic.general_knowledge
-  examples: |
-    - Ce e un [calculator](entity)?
 - intent: generic.interaction_examples
   examples: |
     - arata-mi niște exemple de întrebări

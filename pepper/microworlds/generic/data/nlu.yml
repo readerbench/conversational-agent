@@ -53,12 +53,6 @@ nlu:
       - yep
       - yes
 
-  - intent: generic.general_knowledge
-    examples: |
-      - Ce e o [minge](entity)?
-      - Ce e un [calculator](entity)?
-      - Cine e [Bill Gates](entity)?
-
   - intent: generic.agent_abilities
     examples: |
       - Ce știi să faci?

@@ -22,8 +22,3 @@ stories:
       - action: utter_agent_abilities
       - intent: generic.affirm
       - action: utter_examples
-
-  - story: general_knowledge
-    steps:
-      - intent: generic.general_knowledge
-      - action: action_general_knowledge
