@@ -370,7 +370,7 @@ def export_schedule_rdf(schedule):
         for teacher in activity['teacher']:
             rdf_graph.add((act_id, _.teacher, Literal(teacher)))
 
-    with codecs.open("../../data/kb/schedule.ttl", "w", "utf-8") as rdf_file:
+    with codecs.open("../../kb/schedule.ttl", "w", "utf-8") as rdf_file:
         # Add a description of the data
         rdf_file.write('\n'.join([
             '# This file contains the RDF representation of the courses schedule from',

@@ -14,6 +14,7 @@ nlu:
       - Salut
       - hi
       - hei!
+      - Buna
 
   - intent: generic.thanks
     examples: |
@@ -29,6 +30,9 @@ nlu:
       - Nice
       - mersi mult
       - merci
+      - super!
+      - mulțumesc mult
+      - mersi de informație
 
   - intent: generic.goodbye
     examples: |
@@ -40,6 +44,7 @@ nlu:
       - papa
       - gata
       - o zi frumoasă
+      - o zi buna
 
   - intent: generic.affirm
     examples: |
@@ -71,6 +76,13 @@ nlu:
       - abilități
       - ce cunoștințe ai
       - am nevoie de ajutor
+      - Cum poti sa ma ajuti
+      - ce te pot intreba
+      - vreau ajutor
+      - mă poți ajuta cu ceva?
+      - la ce te pricepi
+      - care sunt lucrurile pe care știi să le faci?
+      - ce știi tu?
 
   - intent: generic.interaction_examples
     examples: |
@@ -79,6 +91,9 @@ nlu:
       - vreau exemple
       - care sunt exemplele?
       - exemple de replici
+      - Niște exemple de întrebări te rog
+      - vreau ceva exemple
+      - arata-mi niște exemple de întrebări
 
   - intent: generic.find_transport
     examples: |
@@ -105,3 +120,9 @@ nlu:
       - vreau să merg în sectorul 5
       - trebuie să ajung pe strada lalelelor
       - dă-mi transport către arena națională
+      - Cum aș putea să ajung până la Universitate?
+      - Dă-mi trasee către Voluntari
+      - vreau rutele de transport spre spitalul floreasca
+      - as vrea sa merg la dedeman
+      - vreau sa ma duc la Lujerului
+      - ce iau ca să ajung în Băneasa

@@ -18,7 +18,7 @@ ENV PATH="/opt/graphdb-free-9.9.0/bin:${PATH}"
 
 WORKDIR /opt/graphdb-free-9.9.0
 
-COPY ./microworlds/university_guide/data/kb ./kb-files/
+COPY microworlds/university_guide/kb ./kb-files/
 
 ## Open port 2222 for SSH access
 #EXPOSE $PORT 2222

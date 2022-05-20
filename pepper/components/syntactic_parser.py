@@ -71,7 +71,7 @@ class SyntacticParser(GraphComponent):
     def __load_lemmas():
         # Extract lemma lookup tables from the compressed binary file (.bin)
         lookups = spacy.lookups.Lookups()
-        lookups.from_disk('./microworlds/mem_assistant/data/lookups')
+        lookups.from_disk('./microworlds/mem_assistant/lookups')
         noun_lemmas = lookups.get_table("noun-lemmas")
         prop_noun_lemmas = lookups.get_table("prop-noun-lemmas")
         verb_lemmas = lookups.get_table("verb-lemmas")

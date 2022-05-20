@@ -1,0 +1,152 @@
+version: "3.0"
+
+nlu:
+  - intent: university_guide.find_professor
+    examples: |
+      - Unde are biroul [Mihai Dascalu](professor)?
+      - Unde este [Răzvan Deaconescu](professor)?
+      - Unde il pot gasi pe [Florin Pop](professor)?
+      - Care e biroul lui [Marius Leordeanu](professor)
+      - Spune-mi te rog unde se află biroul lui [Mihnea Moisescu](professor)
+      - Știi unde îl pot găsi pe profesorul [Dan Tudose](professor)?
+      - Oare unde este domnul profesor [Traian Rebedea](professor)?
+      - Zi-mi și mie unde are [Mariana Mocanu](professor) biroul în facultate
+      - Unde îl găsesc pe asistentul [Emilian Rădoi](professor)?
+      - Spune care e biroul domnului [Gologan](professor)
+      - Unde stă de obicei doamna profesoară [Adina Paunescu](professor)
+      - Vreau să găsesc pe [Marius Popescu](professor)
+      - Aș dori să ajung la laborantul [Cosmin Dragomir](professor)
+      - Unde merg să îl găsesc pe asistentul [Alexandru Negrescu](professor)?
+      - Unde e biroul lui [Radu Ciobanu](professor)?
+      - Spune-mi te rog unde are biroul [Ciprian Truică](professor)
+      - Zi-mi unde îl găsesc pe domnul [Emil Slușanschi](professor)
+      - Unde are profesoara [Irina Mocanu](professor) biroul din facultate?
+      - Știi cumva care e biroul profesorului [Ciprian Dobre](professor)?
+      - Vreau să știu unde ar putea fi domnul [Rughiniș](professor)
+
+  - regex: room
+    examples: |
+      - [a-zA-Z]{2}\s?[0-9]{2,}\s?[a-zA-Z]?
+
+  - intent: university_guide.find_room
+    examples: |
+      - Afișează-mi harta etajului corespunzător sălii [PR 303](room)!
+      - Ajută-mă să găsesc sala [PR 706](room)!
+      - Ajută-mă să găsesc sala [PR 103b](room)!
+      - Am nevoie de ajutor să găsesc drumul către sala [PR 303](room)!
+      - Arată-mi calea către sala [PR 701](room)!
+      - Arată-mi harta cu sala [PR 002](room) reprezentată.
+      - Care este direcția către sala [PR 605](room)?
+      - Care este drumul către sala [PR 706](room)?
+      - Care este drumul spre sala [PR 103a](room)?
+      - Condu-mă la sala [PR 305](room)!
+      - Cum pot ajunge la sala [PR 603](room)?
+      - Există vreo hartă pentru a vizualiza localizarea sălii [PR 403](room)?
+      - Explică-mi cum ajung la sala [PR 403](room)!
+      - Indică-mi drumul către sala [PR 003](room)!
+      - La ce etaj se află sala [PR 604](room)?
+      - Mă conduci până la sala [PR 103a](room)?
+      - Mă poți ghida către sala [PR 608](room)?
+      - Mă poți îndrepta către sala [PR 002](room)?
+      - Mă poți îndruma către sala [PR 408](room)?
+      - Pe unde se află sala [PR 604](room)?
+      - Pe unde să o iau ca să ajung la sala [PR 702](room)?
+      - Poti să mă conduci la sala [PR 701](room), te rog?
+      - Poți să îmi indici drumul către sala [PR 608](room)?
+      - Spune-mi unde găsesc sala [PR 001](room)!
+      - Unde e sala [PR 305](room)?
+      - Unde este localizată sala [PR 708](room)?
+      - Unde găsesc sala [PR 103b](room)?
+      - Unde pot găsi sala [PR 001](room)?
+      - Unde se află sala [PR 606](room)?
+      - Vreau să văd harta cu sala [PR 301](room) reprezentată.
+      - Zi-mi unde găsesc sala [PR 003](room)!
+      - Îmi poți arăta calea către sala [PR 702](room), te rog?
+      - Îmi poți arăta o hartă cu sala [PR 106](room) reprezentată.
+      - Îmi poți explica unde se află sala [PR 302](room), te rog?
+      - În ce direcție se găsește sala [PR 601](room)?
+      - În ce loc se află sala [PR 605](room)?
+      - În ce sens se află sala [PR 307](room)?
+      - Încotro să o iau către sala [PR 203](room)?
+      - Știi unde se află sala [PR 606](room)?
+      - Unde e [AN 02](room)
+      - Cum ajung în [EG413](room)?
+      - Arată-mi cum ajung în [EC105](room)
+      - Cum pot să găsesc sala [PR 204](room)
+      - Poți să mă ghidezi te rog către [PR001](room)?
+      - Mă poți ajuta să ajung la sala [EG 203](room)?
+      - pe unde pot merge către sala [PR 306](room)
+      - caut sala [EC104](room), știi cumva unde este?
+
+  - intent: university_guide.find_schedule
+    examples: |
+      - Ajută-mă să găsesc sala unde se ține [Programare Orientata pe Obiecte](course)!
+      - Arată-mi sala în care se desfășoară [Elemente de Electronica Analogica](course)!
+      - Mă poți ajuta să găsesc unde are loc [Logica](course)?
+      - Spune-mi, te rog, în ce sală pot participa la [Cultura si Civilizatie](course)?
+      - Unde are loc [Instrumente Informatice](course)?
+      - Unde se desfășoară [Paradigme de Programare](course)?
+      - Unde se predă [Proiectarea Algoritmilor](course)?
+      - Unde trebuie să mă duc pentru a participa la [Istoria Religiilor](course)?
+      - Unde va avea loc [Filosofie Cognitivista](course)?
+      - Îmi poți spune, te rog, unde se va ține [Retele Locale](course)?
+      - În ce loc se ține [Ingineria Calculatoarelor](course)?
+      - În ce sală are loc [Mecanica](course)?
+      - Știi unde se desfășoară [Proiectare Logica](course)?
+      - Știi unde se va ține [Algoritmi Paraleli si Distribuiti](course)?
+      - Unde se ține [Metode Numerice](course)?
+      - Unde se ține [laboratorul](class_type) pentru grupa [311CC](group)?
+      - Unde se ține [cursul](class_type) pentru seria [CB](group)?
+      - Zi-mi te rog unde are loc [curs](class_type) pentru seria [CA](group)
+      - Vreau să știu unde se desfășoară [seminarul](class_type) grupei [222AC](group)
+      - Unde se ține [cursul](class_type) de [Electronica Digitala](course) pentru seria [CC](group)?
+      - Unde se ține [seminarul](class_type) de [Teoria Sistemelor](course) pentru grupa [315CB](group)?
+      - Unde se ține [seminar](class_type) de [Engleza](course) pentru grupa [321CC](group)?
+      - Aș vrea să știu unde e [seminarul](class_type) de [Mate](course) pentru grupa [142BB](group)
+      - Zi-mi unde va fi [cursul](class_type) seriei [S1](group) de [analiză matematică](course)
+      - Zi-mi unde se ține [Analiza Algoritmilor](course)!
+      - Spune-mi unde are loc [Calculatoare Numerice](course) te rog
+      - Știi unde va fi [fizica](course)?
+      - Aș vrea să aflu unde o să fie predată [teoria sistemelor](course)
+      - în ce sală va avea loc [semnale și sisteme](course)?
+      - Unde se ține [seminarul](class_type) de la grupa 313CC?
+      - Poți să îmi spui unde are loc [laboratorul](class_type) pentru seria [CA](group)?
+      - Spune-mi te rog unde va avea loc [cursul](class_type) seriei [AA](group)
+      - Arată-mi unde se desfășoară [laborator](class_type) pentru grupa [12](group)
+      - Aș vrea să aflu unde va fi [seminarul](class_type) de la grupa [123A](group)
+      - Unde se ține [curs](class_type) de [Programare Avansată în Java](course) pentru seria [AC](group)?
+      - Aș vrea să îmi zici unde are loc [laboratorul](class_type) de [programare orientată pe obiecte](course) al grupei [333CD](group)
+      - Vreau să aflu unde o să fie [seminarul](class_type) de [fizică](course) de la grupa [31C](group)
+      - Poți să îmi spui unde se ține [cursul](class_type) de la seria [CA](group) de [mecanică](course)?
+      - Unde o să fie predat laboratorul de la grupa [15](group) de [structuri de date](course)?
+
+  - intent: university_guide.find_schedule_fill_slots
+    examples: |
+      - [Proiectare Logică](course)
+      - materia de [Fizică](course)
+      - mă interesa materia [Calculatoare Numerice 1](course)
+      - [curs](class_type)
+      - [seminar](class_type)
+      - [laborator](class_type)
+      - [laboratorul](class_type) de la [Proiectare cu Microprocesoare](course)
+      - [cursul](class_type) de [Programare Orientata pe Obiecte](course)
+      - [seminarul](class_type) de la [Chimie aplicată](course)
+      - [Semnale și sisteme](course), seria [AB](group)
+      - [Metode Numerice](course) de la seria [CA](group)
+      - grupa [331CB](group) materia [Sisteme de operare](course)
+      - [seminar](class_type) de [Algebră și Geometrie](course)
+      - [3CC](group)
+      - in grupa [333CC](group)
+      - grupa [512AA](group)
+      - sunt în grupa [232](group)
+      - sunt de la seria [AC](group)
+      - de la [412C1](group)
+      - seria [CTI](group)
+      - eu fac parte din grupa [311CD](group)
+      - pentru seria [CB](group)
+      - sunt de la grupa [333CD](group)
+      - pentru seria [CA](group)
+      - [511AC](group)
+      - [seminarul](class_type)
+      - [cursul](class_type) de [Proiectare logică](course)
+      - la materia de [Arhitectura sistemelor de calcul](course)
