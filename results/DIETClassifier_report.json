@@ -1,0 +1,122 @@
+{
+  "a_fi": {
+    "precision": 0.16666666666666666,
+    "recall": 0.125,
+    "f1-score": 0.14285714285714288,
+    "support": 8,
+    "confused_with": {}
+  },
+  "person": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "query_word_spec": {
+    "precision": 0.8181818181818182,
+    "recall": 0.75,
+    "f1-score": 0.7826086956521738,
+    "support": 12,
+    "confused_with": {}
+  },
+  "professor": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1-score": 0.8571428571428571,
+    "support": 8,
+    "confused_with": {}
+  },
+  "prep": {
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1-score": 0.3333333333333333,
+    "support": 8,
+    "confused_with": {}
+  },
+  "course": {
+    "precision": 1.0,
+    "recall": 0.9565217391304348,
+    "f1-score": 0.9777777777777777,
+    "support": 23,
+    "confused_with": {}
+  },
+  "class_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "query_word_time": {
+    "precision": 0.25,
+    "recall": 0.16666666666666666,
+    "f1-score": 0.2,
+    "support": 6,
+    "confused_with": {}
+  },
+  "room": {
+    "precision": 0.9473684210526315,
+    "recall": 1.0,
+    "f1-score": 0.972972972972973,
+    "support": 18,
+    "confused_with": {}
+  },
+  "group": {
+    "precision": 0.7777777777777778,
+    "recall": 0.875,
+    "f1-score": 0.823529411764706,
+    "support": 8,
+    "confused_with": {
+      "room": 1
+    }
+  },
+  "action": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {
+      "prep": 1
+    }
+  },
+  "query_word_subj": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "query_word_which": {
+    "precision": 0.4,
+    "recall": 0.5,
+    "f1-score": 0.4444444444444445,
+    "support": 4,
+    "confused_with": {}
+  },
+  "time": {
+    "precision": 0.5333333333333333,
+    "recall": 0.42105263157894735,
+    "f1-score": 0.47058823529411764,
+    "support": 19,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.7663551401869159,
+    "recall": 0.640625,
+    "f1-score": 0.6978723404255319,
+    "support": 128
+  },
+  "macro avg": {
+    "precision": 0.5280948583580163,
+    "recall": 0.4853029312411463,
+    "f1-score": 0.5003753479456804,
+    "support": 128
+  },
+  "weighted avg": {
+    "precision": 0.6926539241095162,
+    "recall": 0.640625,
+    "f1-score": 0.660684085620147,
+    "support": 128
+  }
+}
