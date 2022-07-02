@@ -1,0 +1,106 @@
+[
+  {
+    "text": "ok",
+    "intent": "generic.affirm",
+    "intent_prediction": {
+      "name": "generic.goodbye",
+      "confidence": 0.9061856865882874
+    }
+  },
+  {
+    "text": "Mi-ai fost de mare ajutor",
+    "intent": "generic.thanks",
+    "intent_prediction": {
+      "name": "mem_assistant.store_request",
+      "confidence": 0.644639253616333
+    }
+  },
+  {
+    "text": "care sunt lucrurile pe care știi să le faci?",
+    "intent": "generic.agent_abilities",
+    "intent_prediction": {
+      "name": "mem_assistant.get_attr",
+      "confidence": 0.9993880987167358
+    }
+  },
+  {
+    "text": "Help",
+    "intent": "generic.agent_abilities",
+    "intent_prediction": {
+      "name": "generic.goodbye",
+      "confidence": 0.4518815577030182
+    }
+  },
+  {
+    "text": "hotelul la care ne-am cazat anul trecut la mare e acesta:",
+    "intent": "mem_assistant.store_following_attr",
+    "intent_prediction": {
+      "name": "mem_assistant.get_specifier",
+      "confidence": 0.9997890591621399
+    }
+  },
+  {
+    "text": "programul de la notarul de la Universitate este acesta:",
+    "intent": "mem_assistant.store_following_attr",
+    "intent_prediction": {
+      "name": "mem_assistant.store_attr",
+      "confidence": 0.6007753610610962
+    }
+  },
+  {
+    "text": "sunt în grupa 232",
+    "intent": "university_guide.find_schedule_fill_slots",
+    "intent_prediction": {
+      "name": "university_guide.find_room",
+      "confidence": 0.7733731865882874
+    }
+  },
+  {
+    "text": "cursul de Programare Orientata pe Obiecte",
+    "intent": "university_guide.find_schedule_fill_slots",
+    "intent_prediction": {
+      "name": "university_guide.find_schedule",
+      "confidence": 0.9992755055427551
+    }
+  },
+  {
+    "text": "cum pot ajunge rapid la laserul de la Măgurele",
+    "intent": "generic.find_transport",
+    "intent_prediction": {
+      "name": "mem_assistant.get_specifier",
+      "confidence": 0.3414122760295868
+    }
+  },
+  {
+    "text": "sala laboratorului de PP este EG321",
+    "intent": "mem_assistant.store_attr",
+    "intent_prediction": {
+      "name": "university_guide.find_room",
+      "confidence": 0.9488828182220459
+    }
+  },
+  {
+    "text": "suprafața apartamentului de la București este de 58mp",
+    "intent": "mem_assistant.store_attr",
+    "intent_prediction": {
+      "name": "mem_assistant.store_location",
+      "confidence": 0.9999711513519287
+    }
+  },
+  {
+    "text": "am mers cu mașina până la Iași",
+    "intent": "mem_assistant.store_location",
+    "intent_prediction": {
+      "name": "mem_assistant.get_timestamp",
+      "confidence": 0.4286946952342987
+    }
+  },
+  {
+    "text": "chitara mea este de la Andrei",
+    "intent": "mem_assistant.store_location",
+    "intent_prediction": {
+      "name": "mem_assistant.store_attr",
+      "confidence": 0.754787802696228
+    }
+  }
+]

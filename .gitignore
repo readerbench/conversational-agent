@@ -1,5 +1,4 @@
 models/
-results/*_errors.json
 graphdb/graphdb-free-9.9.0
 __pycache__/
 .rasa/
